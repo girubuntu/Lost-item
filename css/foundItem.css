@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100&display=swap');
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Roboto', sans-serif;
+    margin: 0;
+    
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    max-width: 80%;
+}
+label {
+    font-size: 20px;
+}
+span {
+    display: block;
+    font-size: 10px;
+    padding: 10px;
+}
+
+input {
+    padding: 10px;
+}
+select {
+    padding: 10px;
+}
+.lead {
+    padding: 20px;
+    font-size: 30px;
+    margin-top: 4rem;
+}
+.btn {
+    padding: 20px;
+    background-color: rgb(41, 41, 119);
+    color: #fff;
+    margin-left: 50px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    border: none;
+}
+
+
+.submit-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 5rem;
+    max-width: 100%;
+    background-color: #ffffff;
+    color: #333;
+    padding: 15px;
+}
+.submit-container .submit-found {
+    width: 50%;
+    
+
+}
+
+.submit-container .submit-found ul {
+    margin: 30px;
+    list-style: none;
+}
+.submit-container .submit-found ul li {
+    padding: 10px;
+}
+.submit-container .submit-found ul li i{
+    color: rgb(41, 41, 119);
+    margin-right: 10px;
+}
+.submit-container .submit-found p{
+    font-size: 15px;
+    line-height: 25px;
+    margin: 2rem;
+}
+.submit-container .submit-found p strong {
+    color: red;
+}
+.submit-container .submit-loggo {
+    padding: 50px 0;
+    text-align: center;
+    margin: 45px;
+    width: 50%;
+    
+}
+.submit-container .submit-loggo img {
+    width: 500px;
+    height: 400px;
+    
+}
+
+/* submit form section */
+.submit-form-container {
+    margin: 50px;
+    
+    max-width: 100%;
+}
+.submit-form-container .col-sm-6 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+/* location information section */
+
+#location-info {
+   
+    background-color: rgb(247, 243, 243);
+    width: 100%;
+}
+.local-info-container {
+    margin: 50px;
+    padding: 10px;
+}
+.address-content {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+}
+.address-content .local-info-address {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+.address-content .local-info-map {
+    border: 2px solid #333;
+    
+}
+/* contact information section */
+.contact-info-container {
+    margin: 50px;
+    
+}
+.contact-info-address {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+.contact-info-address #phone {
+    margin-bottom: 2rem;
+}
+#publishBtn {
+    padding: 15px;
+    background-color: rgb(41, 41, 119);
+    color: #fff;
+    margin-left: 10px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    border: none;
+}
+/* footer */
+#main-footer {
+    background: rgb(2, 2, 34);
+    color: white;
+    
+  }
+  #main-footer .footer-content {
+    
+    display: flex;
+    flex-direction: column;
+  }
+  #main-footer img {
+    width: 100px;
+    border-radius: 10px;
+    margin-top: 15px;
+  }
+  #main-footer a {
+    color: white;
+    text-decoration: none;
+  }
+  #main-footer li {
+      list-style: none;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #333;
+      padding: 5px 0;
+  }
+ 
+  
+  #main-footer .footer-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1.5rem;
+    margin: 40px;    
+  }
+  #main-footer .footer-container .footer-group {
+      padding: 1rem;
+      width: 100%;
+  }
+  #main-footer .footer-container .footer-group p {
+      line-height: 1.35rem;
+      font-size: 15px;
+  }
+  #main-footer .footer-container .social-media-contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1.5rem;
+    margin: 40px;
+  }
+  #main-footer .footer-container .social-media-contact .fab {
+      border: 1px solid #333;
+      padding: 1rem;
+      border-radius: 50%;
+  }
+  #main-footer .footer-container .social-media-contact .fa-facebook-f {
+      padding: .95rem;
+      padding-left: 20px;
+      padding-right: 20px;
+  }
+  #main-footer .footer-lastChild {
+    background: #333;
+    grid-column: 1 / span 4;
+    text-align: center;
+    font-size: 0.75rem;
+    padding: 0.5rem;
+  }
+ 
