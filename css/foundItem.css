@@ -110,7 +110,7 @@ select {
 
 #location-info {
    
-    background-color: rgb(247, 243, 243);
+    
     width: 100%;
 }
 .local-info-container {
@@ -118,19 +118,24 @@ select {
     padding: 10px;
 }
 .address-content {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    
+    /* gap: 1rem; */
 }
 .address-content .local-info-address {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    margin-bottom: 50px;
+    /* gap: 2rem; */
 }
-.address-content .local-info-map {
-    border: 2px solid #333;
-    
+.local-info-address-item {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    max-width: 80%;
 }
+
 /* contact information section */
 .contact-info-container {
     margin: 50px;

@@ -87,7 +87,7 @@
         <h2 class="lead">Location Information</h2>
             <div class="address-content">
             <div class="local-info-address">
-                <div class="form-group">
+                <div class="local-info-address-item">
                     <label for="item-found">Where Found <small class="required">*</small><span class="label-detail">Please provide approximate location of the found(Bar, restaurant, building,hospital...)</span></label>
                     <select name="item-found-loc" id="item-found-loc" >
                         <option value="Bar">Bar</option>
@@ -98,14 +98,22 @@
                         <option value="Building">Building</option>
                   </select>
                 </div>
-                <div class="form-group">
+                <div class="local-info-address-item">
                     <label for="item-found">Zip Code <small class="required">*</small><span class="label-detail">Please provide your zip code</span></label>
                     <input type="text" placeholder="Zip code">
                 </div>
             </div> 
         
             <div class="local-info-map">
-                <map name=""></map>
+                <p class="map"><iframe
+                    width="600"
+                    height="350"
+                    style="width: 100%;"
+                    loading="lazy"
+                    allowfullscreen
+                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyApF_hdL8NGNJwMVufQDAS48-0lF0_rRMs
+                      &q=stade amahoro kigali">
+                  </iframe></p>
             </div>
         </div>
         </div>
