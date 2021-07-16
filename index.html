@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href='css/lostItem.css' rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <title>Lost-items</title>
+</head>
+<body>
+    <nav class=" top-nav navbar navbar-expand-sm">
+        <a class="navbar-brand ml-5" href="/index.html"><img src='https://irihano.rw/assets/img/newirihano.png'  width='150px'></a>
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"><i class="fas fa-bars" style="color:#fff;"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="nav navbar-nav ml-auto my-lg-0">
+                <li class='nav-item'><a class="nav-link"  href='/index.html'>HOME</a></li>
+                <li class='nav-item'><a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown" href='#'>BUSINESS AGENT</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Link 1</a>
+                        <a class="dropdown-item" href="#">Link 2</a>
+                        <a class="dropdown-item" href="#">Link 3</a>
+                      </div>
+                </li>
+                <li class='nav-item'><a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown" href='#'>IRIHANO ONLINE</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Link 1</a>
+                        <a class="dropdown-item" href="#">Link 2</a>
+                        <a class="dropdown-item" href="#">Link 3</a>
+                      </div>
+                </li>
+                <li class='nav-item'><a class="nav-link" href='#'>PARTNERS</a></li>
+                <li class='nav-item'><a class="nav-link" href='#'>FAQ</a></li>
+                <li class='nav-item'><a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown" href='#'>ABOUT</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Link 1</a>
+                        <a class="dropdown-item" href="#">Link 2</a>
+                        <a class="dropdown-item" href="#">Link 3</a>
+                      </div>
+                </li>
+                <li class='nav-item'><a class="nav-link" href='/css/contact.html'>REQUEST</a></li>
+                <li class='nav-item'><a class="nav-link" href='/css/contact.html'>LOGIN</a></li>
+            </ul>
+        </div>
+        
+    </nav>
+    <nav class="second-nav navbar navbar-expand-sm sticky-top">
+        <div class='container'>
+            <a class="navbar-brand" href="#"><img src="https://www.lostings.com/public/assets/images/black_logo.png" width='70%'></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sec_navbarSupportedContent" aria-controls="sec_navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="sec_navbarSupportedContent">
+            <ul class="nav navbar-nav ml-auto">
+                <li class='nav-item'><a class="nav-link"  href='index.html'>SUBMIT LOST ITEM</a></li>
+                <li class='nav-item'><a class="nav-link"  href='foundItem.html'>SUBMIT FOUND ITEM</a></li>
+                <li class='nav-item'><a class="nav-link" href='#'>VIEW RECENT POSTS</a></li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+    <main class='container mt-5'>
+        <div class='row mt-5'>
+            <div class='col-sm-5 col-sm-pull-7 feature_list'>
+                <h1>Submit Lost Property</h1>
+                <ul>
+                    <li>Our Matching System Finds Lost Property</li>
+                    <li>Receive Notifications of Matching Found Items</li>
+                    <li>Extended Reach Out with Local Networks</li>
+                </ul>
+                <button class='btn btn-outline-info scroll-btn mt-3 btn-lg'>Submit Lost Item</button><br><br>
+                <strong class="required text-danger">*</strong>
+                <small>Please be descriptive when submitting your lost property report, the more information you give us the better chance you have of retrieving your items.</small>
+            </div>
+            <div class='col-sm-7 col-sm-push-5'>
+                <div class='losting_image'><img src='https://www.lostings.com/public/assets/images/submit_lost_property.jpg' class='img-responsive' alt='image' width='100%'></div>
+            </div>
+        </div>
+        <form class='row'>
+            <div class='col-sm-6 mb-5'>
+                <div class='form-group'>
+                    <label for="item_name" class="control-label lbl-descriptive">Item Lost
+                        <small class="required">*</small>
+                        <span class="label-detail">(Dog, Jacket, Smartphone, Wallet, etc.) This field may auto-populate</span>
+                    </label>
+                    <input class="form-control " placeholder="Item Lost" name="item_name" type="text">
+                </div>
+                <div class='form-group'>
+                    <label for="category_id" class="control-label lbl-descriptive">Category
+                        <small class="required">*</small>
+                        <span class="label-detail">(Animals/Pets, Clothing, Electronics, Personal Accessories etc.) This is required.</span>
+                    </label>
+                    <input class="form-control " placeholder="Search Category" name="category_id" type="text">
+                </div>
+                <div class='form-group search-frm'>
+                    <label for="brand" class="control-label lbl-descriptive">Brand
+                        <small class="required">*</small>
+                        <span class="label-detail">(Canada, Louis Vuitton, Apple, etc)</span>
+                    </label>
+                    <input id="search_sub_cat" class="form-control" placeholder="Search Brand" name="brand" type="text">
+                </div>
+                <div class='form-group'>
+                    <label for="primary_color" class="control-label lbl-descriptive">Primary Color
+                        <small class="required">*</small>
+                        <span class="label-detail">Please add the color that best represents the lost property (Red, Blue, Black, etc.) </span>
+                    </label>
+                    <input class="form-control" placeholder="Search Primary Color" name="primary_color" type="text">
+                </div>
+                <div class='form-group search-frm'>
+                    <label for="secondary_color" class="control-label lbl-descriptive">Secondary color
+                        <small class="required">*</small>
+                        <span class="label-detail">Please add a color that is less dominant (Leave blank if not applicable)</span>
+                    </label>
+                    <input class="form-control" placeholder="Search Secondary Color" name="secondary_color" type="text">
+                </div>
+                
+            </div>
+            <div class='col-sm-6 mb-5'>
+                <div class="form-group">
+                    <label for="date" class="control-label lbl-descriptive">Date Lost
+                        <small class="required">*</small>
+                        <span class="label-detail">Please add the approximate date of when the item was lost.</span>
+                    </label>
+                    <div class="input-group date">
+                        <input class="form-control" placeholder="Date Lost" name="incident_date" type="date">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="date" class="control-label lbl-descriptive">Time Lost
+                        <small class="required">*</small>
+                        <span class="label-detail">Please add the approximate time of when the item was lost.</span>
+                    </label>
+                    <div class="input-group time">
+                        <input id="incident_time" class="form-control" placeholder="Time Lost" name="incident_time" type="time">
+                    </div>
+                </div>
+                <div class="form-group upload_image">
+                    <label class="control-label lbl-descriptive">Upload Image
+                    <span class="label-detail">(This image will be display on the website.)<span>
+                    </span></span></label>
+                    <input placeholder="Upload an image or file of the item" class="form-control" id="upload_image_name" name="upload_image" type="file">
+                </div>
+                <div class='form-group'>
+                    <label for="additional_info" class="control-label lbl-descriptive">Additional Information
+                        <span class="label-detail">Please provide any additional details/description of your found property.</span>
+                    </label>
+                    <input class="form-control" placeholder="Additional information" name="additional_info" type="text">
+                </div>
+            </div><br><br>
+            <h4 class='mb-5'>Location Information</h4>
+            <div class='row mb-5'>
+                <div class='col-sm-6'>
+                    <div class=" form-group">
+                        <label for="where_type" class="control-label lbl-descriptive">Where Found
+                            <small class="required">*</small>
+                            <span class="label-detail">Please provide an approximate location of the found property (Bar, Restaurant, Park, etc.)<span></label>
+                       
+                            <div >
+                               <div class="dropdown-menu open" role="combobox" style="max-height: 243px; overflow: hidden;">
+   
+                                <ul class="dropdown-menu inner" role="listbox" aria-expanded="false" style="max-height: 200px; overflow-y: auto;">
+                                    <li data-original-index="0" class="active selected"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="true"><span class="text">Select Type</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                    <li data-original-index="1"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Bar</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                    <li data-original-index="2"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Taxi</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                    <li data-original-index="3"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Restaurant</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                    <li data-original-index="4"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Hotel</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li class="divider" data-optgroup="1div"></li>
+                                    <li class="dropdown-header " data-optgroup="1"><span class="text">Airport</span></li><li data-original-index="5" data-optgroup="1"><a tabindex="0" class="opt  " data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Airport of Departure</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                    <li data-original-index="6" data-optgroup="1"><a tabindex="0" class="opt  " data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Airport of Arrival</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="7" data-optgroup="1"><a tabindex="0" class="opt  " data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">TSA Checkpoint</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                    <li data-original-index="8" data-optgroup="1"><a tabindex="0" class="opt  " data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Airport Shuttle</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                    <li class="divider" data-optgroup="1div"></li><li data-original-index="9"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Pet Services</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                    <li data-original-index="10"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Educational Institute</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="11"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Public Transportation</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                    <li data-original-index="12"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Museum</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="13"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Park</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="14"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Rental Car</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="15"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Venu</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="16"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Misc.</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div><select id="location_type" class="form-control js-select" data-live-search="true" data-size="5" data-type="found" name="location_type" tabindex="-98"><option selected="selected" value="">Select Type</option><option value="1">Bar</option><option value="2">Taxi</option><option value="4">Restaurant</option><option value="12">Hotel</option><optgroup label="Airport"><option value="3">Airport of Departure</option><option value="15">Airport of Arrival</option><option value="16">TSA Checkpoint</option><option value="17">Airport Shuttle</option></optgroup><option value="9">Pet Services</option><option value="14">Educational Institute</option><option value="11">Public Transportation</option><option value="7">Museum</option><option value="5">Park</option><option value="6">Rental Car</option><option value="8">Venu</option><option value="13">Misc.</option></select>
+                            </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="zip_code" class="control-label lbl-descriptive">Zip Code
+                        <span class="label-detail">Please provide your zip code(10004, 10028, 10002, etc.) This field may auto-populate.<span>
+                        </span></span></label>
+                        <input id="zip_code" class="form-control" placeholder="Zip Code" maxlength="5" name="zip_code" type="text">
+                    </div>
+                </div>
+                
+            </div>
+            <h4 class='mb-5'>Contact Information</h4>
+            <div class='row'>
+                <br>
+                <div class='col-md-6'>
+                    <div class="form-group">
+                        <label for="firstname" class="control-label lbl-descriptive">First Name
+                            <small class="required">*</small>
+                            <span class="label-detail">Please enter the first name  (This will apear on your submission).</span>
+                        </label>
+                        <div class="input-group date">
+                            <input id="incident_date" class="form-control" placeholder="First Name" name="firstname" type="text">
+                        </div>
+                    </div>  
+                </div>
+                <div class='col-md-6'>
+                    <div class="form-group">
+                        <label for="lastname" class="control-label lbl-descriptive">Last Name
+                            <small class="required">*</small>
+                            <span class="label-detail">Please enter the last name  (This will apear on your submission).</span>
+                        </label>
+                        <div class="input-group date">
+                            <input id="incident_date" class="form-control" placeholder="Last Name" name="lastname" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class='col-md-6'>
+                    <div class="form-group">
+                        <label for="phone" class="control-label lbl-descriptive">Phone Number
+                            <small class="required">*</small>
+                            <span class="label-detail">Please enter the phone number to display on your submission</span>
+                        </label>
+                        <div class="input-group date">
+                            <input id="incident_date" class="form-control" placeholder="Phone Number" name="phone" type="tel">
+                        </div>
+                    </div>
+                </div>
+                <div class='col-md-6'>
+                    <div class="form-group">
+                        <label for="email" class="control-label lbl-descriptive">Email
+                            <small class="required">*</small>
+                            <span class="label-detail">Please enter your email(This will appear on your submission)</span>
+                        </label>
+                        <div class="input-group date">
+                            <input id="incident_date" class="form-control" placeholder="Email" name="email" type="email">
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <button class='btn btn-outline-info submit mt-3 mb-5 pr-5 pl-5 btn-lg'>Publish</button>
+        </form>
+    </main>
+    <!--footer-->
+   <footer id="main-footer">
+    <div class="footer-content">
+    <div class="footer-container">
+      <div class="footer-group">
+        <img src="./img/irihano.png" alt="" />
+        <p>
+            IRIHANO LIMITED is private technology company working in Rwanda,our mission is to help citizens to Apply&Pay Digital Services by working on behalf of Business owners. like E-Government services, Partners to citizens, Business owners.
+        </p>
+      </div>
+      <div class="footer-group">
+        <h3>Popular Online Services</h3>
+        
+            <a href="#"><li>&gt; Irembo</li></a>
+            <a href="#"><li>&gt; RRA</li></a>
+            <a href="#"><li>&gt; RDB</li></a>
+            <a href="#"><li>&gt; BPMIS</li></a>
+            <a href="#"><li>&gt; IECMS</li></a>
+
+            
+        
+      </div>
+      <div class="footer-group">
+        <h3>Useful Linkks</h3>
+        
+            <a href="#"><li>&gt; Testimonial</li></a>
+            <a href="#"><li>&gt; Partners</li></a>
+            <a href="#"><li>&gt; News</li></a>
+            <a href="#"><li>&gt; FAQ</li></a>
+            <a href="#"><li>&gt; Contact us</li></a>
+        </div>
+        <div class="footer-group">
+          <h3>Information</h3>
+          
+              <li>Muhanga-Nyamabuye</li>
+              <li>Muhanga-Kigali, National Road</li>
+              <li>Nyamabuye Sector office</li>
+              <li>Rwanda-Southern Province</li>
+              <li>Phone:+250782761021</li>
+              <li>Email:info@irihano.co.rw</li>
+              
+          <div class="social-media-contact">
+              <div>
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+              </div>
+              <div>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+              </div>
+              <div>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+              </div>
+              <div>
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+          </div>
+        </div>
+        
+      </div>
+      <div class="footer-lastChild">
+          <p>Copyright &copy; All Right Reserved</p>
+        </div>
+  </div>
+    </footer>
+</body>
+</html>
