@@ -1,153 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/foundItem.css">
     <script src="https://kit.fontawesome.com/e8a97f7b71.js" crossorigin="anonymous"></script>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Found Item</title>
 </head>
+
 <body>
-    <nav>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3">
+        <div class="container">
+            <a href="#" class="navbar-brand">Irihano Found Items</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Submit Lost items</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Submit found items</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">View recent Posts</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
 
     </nav>
-    <div class="submit-container">
-        <div class="submit-found">
-            <h2 class="lead">Submit Found Property</h2>
-            <ul>
-                <li><i class="fas fa-check-square"></i>Our Matching Finds Found Property</li>
-                <li><i class="fas fa-check-square"></i>Receive Notifications of Matching Lost Items</li>
-                <li><i class="fas fa-check-square"></i>Helps us FInd The owner of What was Lost</li>
-                
-                
-                
-            </ul>
-            <input type="submit" value="Submit Found Item" class="btn" id="submit-found-btn">
+    <!-- showcase -->
+    <section class="p-5">
+        <div class="container mt-5">
+            <div class='row mt-5'>
+                <div class='col-sm-5 col-sm-pull-7 feature_list'>
+                    <h1>Submit Found Property</h1>
+                    <ul>
+                        <li>Our Matching System Finds Found Property</li>
+                        <li>Receive Notifications of Matching Found Items</li>
+                        <li>Extended Reach Out with Local Networks</li>
+                    </ul>
+                    <button class='btn btn-outline-info scroll-btn mt-3 btn-lg'>Submit Found Item</button><br><br>
+                    <strong class="required text-danger">*</strong>
+                    <small>Please be descriptive when submitting your Found property report, the more information you give us the better chance you have of retrieving your items.</small>
+                </div>
+                <div class='col-sm-7 col-sm-push-5'>
+                    <div class='losting_image'><img src='./img/submit_found_property.jpg' class='img-responsive d-none d-sm-block' alt='image' width='100%'></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <p>
-                <strong class="required">*</strong>
-                Please be descriptive when reporting found property, the more information you give us the better chance we have of reuniting the lost property to the owner.
-            </p>          
-            
+  
+<form class="container">
+    <div class='row mb-5'>
+    <div class='col-sm-6 mb-5'>
+        <div class='form-group'>
+            <label for="item_name" class="control-label lbl-descriptive">Item Found
+                <small class="required">*</small>
+                <span class="label-detail">(Dog, Jacket, Smartphone, Wallet, etc.) This field may auto-populate</span>
+            </label>
+            <input class="form-control " placeholder="Item Found" name="item_name" type="text">
+        </div>
+        <div class='form-group'>
+            <label for="category_id" class="control-label lbl-descriptive">Category
+                <small class="required">*</small>
+                <span class="label-detail">(Animals/Pets, Clothing, Electronics, Personal Accessories etc.) This is required.</span>
+            </label>
+            <input class="form-control " placeholder="Search Category" name="category_id" type="text">
+        </div>
+        <div class='form-group search-frm'>
+            <label for="brand" class="control-label lbl-descriptive">Brand
+                <small class="required">*</small>
+                <span class="label-detail">(Canada, Louis Vuitton, Apple, etc)</span>
+            </label>
+            <input id="search_sub_cat" class="form-control" placeholder="Search Brand" name="brand" type="text">
+        </div>
+        <div class='form-group'>
+            <label for="primary_color" class="control-label lbl-descriptive">Primary Color
+                <small class="required">*</small>
+                <span class="label-detail">Please add the color that best represents the Found property (Red, Blue, Black, etc.) </span>
+            </label>
+            <input class="form-control" placeholder="Search Primary Color" name="primary_color" type="text">
+        </div>
+        <div class='form-group search-frm'>
+            <label for="secondary_color" class="control-label lbl-descriptive">Secondary color
+                <small class="required">*</small>
+                <span class="label-detail">Please add a color that is less dominant (Leave blank if not applicable)</span>
+            </label>
+            <input class="form-control" placeholder="Search Secondary Color" name="secondary_color" type="text">
         </div>
         
-        <div class="submit-loggo">
-            <img src="./img/Lost-and-found.jpg" alt="">
+    </div>
+    <div class='col-sm-6 mb-5'>
+        <div class="form-group">
+            <label for="date" class="control-label lbl-descriptive">Date Found
+                <small class="required">*</small>
+                <span class="label-detail">Please add the approximate date of when the item was Found.</span>
+            </label>
+            <div class="input-group date">
+                <input class="form-control" placeholder="Date Found" name="incident_date" type="date">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="date" class="control-label lbl-descriptive">Time Found
+                <small class="required">*</small>
+                <span class="label-detail">Please add the approximate time of when the item was Found.</span>
+            </label>
+            <div class="input-group time">
+                <input id="incident_time" class="form-control" placeholder="Time Found" name="incident_time" type="time">
+            </div>
+        </div>
+        <div class="form-group upload_image">
+            <label class="control-label lbl-descriptive">Upload Image
+            <span class="label-detail">(This image will be display on the website.)<span>
+            </span></span></label>
+            <input placeholder="Upload an image or file of the item" class="form-control" id="upload_image_name" name="upload_image" type="file">
+        </div>
+        <div class='form-group'>
+            <label for="additional_info" class="control-label lbl-descriptive">Additional Information
+                <span class="label-detail">Please provide any additional details/description of your found property.</span>
+            </label>
+            <input class="form-control" placeholder="Additional information" name="additional_info" type="text">
         </div>
     </div>
-    <div class="submit-form-container">
-        <div class="col-sm-6">
-            <div class="form-group">
-                <label for="item-found">Item Found <small class="required">*</small><span class="label-detail">(Id, Wallet, Phone,etc...)</span></label>
-                <input type="text" id="item-found" placeholder="Item found">
-            </div>
-            <div class="form-group">
-                <label for="categpry">Category <small class="required">*</small><span class="label-detail">(Electonix, Personal accessories, clothing,etc...)</span></label>
-                <input type="text" id="category" placeholder="category">
-            </div>
-            <div class="form-group">
-                <label for="brand">Brand <small class="required">*</small><span class="label-detail">(nike, D&G, iphone,etc...)</span></label>
-                <input type="text" id="brand" placeholder="Brand">
-            </div>
-            <div class="form-group">
-                <label for="item-found">Primary Color <small class="required">*</small><span class="label-detail">(black, white, red,etc...)</span></label>
-                <input type="text" id="item-pColor" placeholder="Primary Color">
-            </div>
-            <div class="form-group">
-                <label for="item-found">Secondary Color <small class="required">*</small><span class="label-detail">(black, white, red...)</span></label>
-                <input type="text" id="item-sColor" placeholder="Secondary Color">
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="form-group">
-                <label for="date">Date Found <small class="required">*</small><span class="label-detail">Please add the approximate date</span></label>
-                <input type="date" id="date-found" >
-            </div>
-            <div class="form-group">
-                <label for="time">Time Found <small class="required">*</small><span class="label-detail">Please add the approximate time</span></label>
-                <input type="time" id="time-found" >
-            </div>
-            <div class="form-group" id="upload-image-container">
-                
-                <form class="imgUploadForm">
-                    <label for="uploadImg">Upload Image<span class="label-detail">This image will display on the website</span></label>
-                    <input type="file" name="img" id="upload-image-imgUploadForm">
-                </form>
-            </div>
-            <div class="form-group">
-                <label for="addInfo">Additional information <small class="required">*</small><span class="label-detail">Please add useful addition information</span></label>
-                <input type="text" id="addInfo" placeholder="Provide additional Information">
-            </div>
-        </div>
     </div>
+    <h4 class='mb-5'>Location Information</h4>
+    <div class='row mb-5'>
+        <div class='col-sm-6'>
+            <div class=" form-group">
+                <label for="where_type" class="control-label lbl-descriptive">Where Found
+                    <small class="required">*</small>
+                    <span class="label-detail">Please provide an approximate location of the found property (Bar, Restaurant, Park, etc.)<span></label>
+               
+                    <div >
+                       <div class="dropdown-menu open" role="combobox" style="max-height: 243px; overflow: hidden;">
 
-    <section id="location-info">
-        <div class="local-info-container">
-        <h2 class="lead">Location Information</h2>
-            <div class="address-content">
-            <div class="local-info-address">
-                <div class="local-info-address-item">
-                    <label for="item-found">Where Found <small class="required">*</small><span class="label-detail">Please provide approximate location of the found(Bar, restaurant, building,hospital...)</span></label>
-                    <select name="item-found-loc" id="item-found-loc" >
-                        <option value="Bar">Bar</option>
-                        <option value="Restaurant">Restaurant</option>
-                        <option value="Hospital">Hospital</option>
-                        <option value="Market">Market</option>
-                        <option value="School">School</option>
-                        <option value="Building">Building</option>
-                  </select>
-                </div>
-                <div class="local-info-address-item">
-                    <label for="item-found">Zip Code <small class="required">*</small><span class="label-detail">Please provide your zip code</span></label>
-                    <input type="text" placeholder="Zip code">
-                </div>
-            </div> 
-        
-            <div class="local-info-map">
-                <p class="map"><iframe
-                    width="600"
-                    height="350"
-                    style="width: 100%;"
-                    loading="lazy"
-                    allowfullscreen
+                        <ul class="dropdown-menu inner" role="listbox" aria-expanded="false" style="max-height: 200px; overflow-y: auto;">
+                            <li data-original-index="0" class="active selected"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="true"><span class="text">Select Type</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                            <li data-original-index="1"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Bar</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                            <li data-original-index="2"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Taxi</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                            <li data-original-index="3"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Restaurant</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                            <li data-original-index="4"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Hotel</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li class="divider" data-optgroup="1div"></li>
+                            <li class="dropdown-header " data-optgroup="1"><span class="text">Airport</span></li><li data-original-index="5" data-optgroup="1"><a tabindex="0" class="opt  " data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Airport of Departure</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                            <li data-original-index="6" data-optgroup="1"><a tabindex="0" class="opt  " data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Airport of Arrival</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="7" data-optgroup="1"><a tabindex="0" class="opt  " data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">TSA Checkpoint</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                            <li data-original-index="8" data-optgroup="1"><a tabindex="0" class="opt  " data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Airport Shuttle</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                            <li class="divider" data-optgroup="1div"></li><li data-original-index="9"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Pet Services</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                            <li data-original-index="10"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Educational Institute</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="11"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Public Transportation</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                            <li data-original-index="12"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Museum</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="13"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Park</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="14"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Rental Car</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="15"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Venu</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="16"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Misc.</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div><select id="location_type" class="form-control js-select" data-live-search="true" data-size="5" data-type="found" name="location_type" tabindex="-98"><option selected="selected" value="">Select Type</option><option value="1">Bar</option><option value="2">Taxi</option><option value="4">Restaurant</option><option value="12">Hotel</option><optgroup label="Airport"><option value="3">Airport of Departure</option><option value="15">Airport of Arrival</option><option value="16">TSA Checkpoint</option><option value="17">Airport Shuttle</option></optgroup><option value="9">Pet Services</option><option value="14">Educational Institute</option><option value="11">Public Transportation</option><option value="7">Museum</option><option value="5">Park</option><option value="6">Rental Car</option><option value="8">Venu</option><option value="13">Misc.</option></select>
+                    </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="zip_code" class="control-label lbl-descriptive">Zip Code
+                <span class="label-detail">Please provide your zip code(10004, 10028, 10002, etc.) This field may auto-populate.<span>
+                </span></span></label>
+                <input id="zip_code" class="form-control" placeholder="Zip Code" maxlength="5" name="zip_code" type="text">
+            </div>
+        </div>
+        <div class="local-info-map mb-5">
+            <p class="map"><iframe width="600" height="350" style="width: 100%;" loading="lazy" allowfullscreen
                     src="https://www.google.com/maps/embed/v1/place?key=AIzaSyApF_hdL8NGNJwMVufQDAS48-0lF0_rRMs
-                      &q=stade amahoro kigali">
-                  </iframe></p>
-            </div>
+              &q=stade amahoro kigali">
+                </iframe></p>
         </div>
-        </div>
-    </div>
-    </section>
-    <section id="contact-info">
-        <div class="contact-info-container">
-        <h2 class="lead">Contact Information</h2>
-            
-            <div class="contact-info-address">
-                <div class="form-group">
-                    <label for="first-name">First Name <small class="required">*</small><span class="label-detail">Please provide your First Name</span></label>
-                    <input type="text" id="first-name" placeholder="First Name">
-                </div>
-                <div class="form-group">
-                    <label for="last-name">Last Name <small class="required">*</small><span class="label-detail">Please provide your Last Name</span></label>
-                    <input type="text" id="last-name" placeholder="Last Name">
-                </div>
-                <div class="form-group">
-                    <label for="phone-number">Phone Number <small class="required">*</small><span class="label-detail">Please provide your Phone Number</span></label>
-                    <input type="number" id="phone" placeholder="Phone Number">
-                </div>
-                <div class="form-group">
-                    <label for="email">Email <small class="required">*</small><span class="label-detail">Please provide your Email</span></label>
-                    <input type="email" id="email" placeholder="Email">
-                </div>
-            </div>
-            <input type="button" value="Publish" id="publishBtn">
         
-            
+    </div>
+    <h4 class='mb-5'>Contact Information</h4>
+    <div class='row'>
+        <br>
+        <div class='col-md-6'>
+            <div class="form-group">
+                <label for="firstname" class="control-label lbl-descriptive">First Name
+                    <small class="required">*</small>
+                    <span class="label-detail">Please enter the first name  (This will apear on your submission).</span>
+                </label>
+                <div class="input-group date">
+                    <input id="incident_date" class="form-control" placeholder="First Name" name="firstname" type="text">
+                </div>
+            </div>  
         </div>
-    </section>
-   <!--footer-->
-   <footer id="main-footer">
+        <div class='col-md-6'>
+            <div class="form-group">
+                <label for="lastname" class="control-label lbl-descriptive">Last Name
+                    <small class="required">*</small>
+                    <span class="label-detail">Please enter the last name  (This will apear on your submission).</span>
+                </label>
+                <div class="input-group date">
+                    <input id="incident_date" class="form-control" placeholder="Last Name" name="lastname" type="text">
+                </div>
+            </div>
+        </div>
+        <div class='col-md-6'>
+            <div class="form-group">
+                <label for="phone" class="control-label lbl-descriptive">Phone Number
+                    <small class="required text-danger">*</small>
+                    <span class="label-detail">Please enter the phone number to display on your submission</span>
+                </label>
+                <div class="input-group date">
+                    <input id="incident_date" class="form-control" placeholder="Phone Number" name="phone" type="tel">
+                </div>
+            </div>
+        </div>
+        <div class='col-md-6'>
+            <div class="form-group">
+                <label for="email" class="control-label lbl-descriptive">Email
+                    <small class="required">*</small>
+                    <span class="label-detail">Please enter your email(This will appear on your submission)</span>
+                </label>
+                <div class="input-group date">
+                    <input id="incident_date" class="form-control" placeholder="Email" name="email" type="email">
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <button class='btn btn-outline-info submit mt-3 mb-5 pr-5 pl-5 btn-lg'>Publish</button>
+</form>
+   
+<!-- Footer -->
+<footer id="main-footer">
     <div class="footer-content">
     <div class="footer-container">
       <div class="footer-group">
@@ -157,7 +241,7 @@
         </p>
       </div>
       <div class="footer-group">
-        <h3>Popular Online Services</h3>
+        <h3>Online Services</h3>
         
             <a href="#"><li>&gt; Irembo</li></a>
             <a href="#"><li>&gt; RRA</li></a>
@@ -212,5 +296,10 @@
       </div>
 </div>
   </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
 </body>
+
 </html>
