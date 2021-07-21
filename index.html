@@ -16,12 +16,13 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Raleway:300,400,400i,500,500i,700,800,900" rel="stylesheet">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <title>Lost-items</title>
 </head>
 
 <body>
+    
     <nav class=" top-nav navbar navbar-expand-lg fixed-top">
         <a class="navbar-brand ml-5" href="/index.html"><img src='https://irihano.rw/assets/img/newirihano.png'  width='150px'></a>
         <!-- <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -62,30 +63,14 @@
         </div>
         
     </nav>
-    <nav class="second-nav navbar navbar-expand-sm" style="margin-top:80px">
-        <div class='container'>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sec_navbarSupportedContent" aria-controls="sec_navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="sec_navbarSupportedContent">
-            <ul class="nav navbar-nav ml-auto">
-                <li class='nav-item'><a class="nav-link"  href='index.html'>SUBMIT LOST ITEM</a></li>
-                <li class='nav-item'><a class="nav-link"  href='foundItem.html'>SUBMIT FOUND ITEM</a></li>
-                <li class='nav-item'><a class="nav-link" href='#'>VIEW RECENT POSTS</a></li>
-            </ul>
-        </div>
-        </div>
-    </nav>
-    <main class='container mt-5'>
-        <div class='row mt-5'>
-            <div class='col-sm-5 col-sm-pull-7 feature_list'>
+    <main class='container' style="margin-top:140px">
+        <div class='row mt-4'>
+            <div class='col-sm-5 feature_list'>
                 <h1>Submit Lost Property</h1>
-                <ul>
-                    <li>Our Matching System Finds Lost Property</li>
-                    <li>Receive Notifications of Matching Found Items</li>
-                    <li>Extended Reach Out with Local Networks</li>
-                </ul>
-                <button class='btn scroll-btn mt-3 btn-lg'>Submit Lost Item</button><br><br>
+                <p class='mb-5 mt-4'>
+                    Our  system connects lost and found properties from all around the country with their owners. For every  lost property, we send a notification to the owner when the system receives a matching found item.
+                </p>
+                <button class='btn scroll-btn mt-4 btn-lg'>Submit Lost Item</button><br><br>
                 <strong class="required text-danger">*</strong>
                 <small>Please be descriptive when submitting your lost property report, the more information you give us the better chance you have of retrieving your items.</small>
             </div>
@@ -164,8 +149,7 @@
                     <input class="form-control" placeholder="Additional information" name="additional_info" type="text">
                 </div>
             </div><br><br>
-            <h4 class='mb-5'>Location Information</h4>
-            <div class='row mb-5'>
+            <div class='col-sm-12'><h4 class=' mb-5'>Location Information</h4></div>
                 <div class='col-sm-6'>
                     <div class=" form-group">
                         <label for="where_type" class="control-label lbl-descriptive">Where Found
@@ -237,10 +221,7 @@
                         </iframe></p>
                 </div> -->
                 
-            </div>
-            <h4 class='mb-5'>Contact Information</h4>
-            <div class='row'>
-                <br>
+            <div class='col-sm-12'><h4 class='mb-5 mt-5'>Contact Information</h4></div>
                 <div class='col-md-6'>
                     <div class="form-group">
                         <label for="firstname" class="control-label lbl-descriptive">First Name
@@ -285,9 +266,7 @@
                         </div>
                     </div>
                 </div>
-                
-            </div>
-            <button class='btn submit mt-3 mb-5 pr-5 pl-5 btn-lg'>Publish</button><br><br>
+            <button class='btn submit m-3 mb-5 btn-lg'>Publish</button><br><br>
 
             <!-- <div id="shiva"><span class="count">232</span> Happy clients </div>
             <div id="shiva"><span class="count">521</span> Projects </div>
@@ -366,4 +345,3 @@
     
 </body>
 </html>
-#242464

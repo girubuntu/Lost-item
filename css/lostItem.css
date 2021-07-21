@@ -1,4 +1,7 @@
 
+body{
+  font-family: 'Open Sans', sans-serif;
+}
 .top-nav{
     height: 80px;
     background-color:rgb(34, 34, 102);
@@ -15,7 +18,6 @@ padding:12px;
     height: 80px;
     background-color: rgb(255, 255, 255);
     border-bottom: 1px solid rgb(24, 24, 64);
-    font-family: 'Open Sans', sans-serif;
     font-size: 12px;
 }
 
@@ -41,30 +43,27 @@ padding:12px;
 }
 .form-group{
     padding:10px;
-    font-family: 'Open Sans', sans-serif;
 }
 .form-group span{
     display: block;
     font-size: small;
 }
-h1{
-    font-family: sans-serif;
-}
+
 
 .scroll-btn {
     display: inline-block;
     border-radius: 0%;
-    border: 1px solid rgb(24,24,64);
+    border: 1px solid rgb(34, 34, 102);
     -webkit-transform: translate(0, -50%);
     transform: translate(0, -50%);
   }
   .scroll-btn:hover{
     background-color: white;
-    color:rgb(24,24,64);
+    color:rgb(34, 34, 102);
   }
   .submit{
     color: white;
-    background-color:rgb(24,24,64);
+    background-color:rgb(34, 34, 102);
     border-radius: 0%;
   }
   .submit:hover{
