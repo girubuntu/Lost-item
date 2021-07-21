@@ -1,7 +1,16 @@
+nav {
+  background: rgb(34, 34, 102);
 
+}
+.nav-item a{
+  color: white;
+}
+form .btn {
+  background-color: rgb(34, 34, 102);
+}
 
 #main-footer {
-    background: rgb(2, 2, 34);
+    background: rgb(34, 34, 102);
     color: white;
     
   }
