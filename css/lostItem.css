@@ -2,30 +2,12 @@
 body{
   font-family: 'Open Sans', sans-serif;
 }
-.top-nav{
-    height: 80px;
-    background-color:rgb(34, 34, 102);
-    color:white;
-    font-weight: bolder;
-    font-size: 14px;
-    font-family: 'Open Sans', sans-serif;
-}
-.top-nav li{
-padding:12px;
+nav {
+  background: rgb(34, 34, 102);
 
 }
-.second-nav{
-    height: 80px;
-    background-color: rgb(255, 255, 255);
-    border-bottom: 1px solid rgb(24, 24, 64);
-    font-size: 12px;
-}
-
-.top-nav  a{
-    color: rgb(255, 255, 255);
-}
-.second-nav  a{
-    color:black;
+.nav-item a{
+  color: white;
 }
 .feature_list ul {
     list-style-type:none;
@@ -57,21 +39,14 @@ padding:12px;
     -webkit-transform: translate(0, -50%);
     transform: translate(0, -50%);
   }
-  .scroll-btn:hover{
+.scroll-btn:hover{
     background-color: white;
     color:rgb(34, 34, 102);
   }
-  .submit{
-    color: white;
-    background-color:rgb(34, 34, 102);
-    border-radius: 0%;
+  form .btn {
+    background-color: rgb(34, 34, 102);
+    width: auto;
   }
-  .submit:hover{
-    color:white;
-  }
-.btn{
-  font-family: 'Open Sans', sans-serif;
-}
 
 
 
