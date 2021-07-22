@@ -9,19 +9,8 @@ nav {
 .nav-item a{
   color: white;
 }
-.feature_list ul {
-    list-style-type:none;
-    padding:10px 0 10px 0;
-  }
-.feature_list ul li::before {
-    content: "\2713";
-    color: rgb(6, 66, 105);
-    display: inline-block; 
-    width: 3em;
-
-  }
-.feature_list li{
-    padding: 10px 0 10px 0;
+nav li{
+  margin-right: 20px;
 }
 .form-group{
     padding:10px;
@@ -48,23 +37,6 @@ nav {
     width: auto;
   }
 
-
-
-
-.feature_list ul {
-  list-style-type:none;
-  padding:10px 0 10px 0;
-}
-.feature_list ul li::before {
-  content: "\2713";
-  color: rgb(6, 66, 105);
-  display: inline-block; 
-  width: 3em;
-
-}
-.feature_list li{
-  padding: 10px 0 10px 0;
-}
 .form-group{
   padding:10px;
   font-family: 'Open Sans', sans-serif;
@@ -72,9 +44,6 @@ nav {
 .form-group span{
   display: block;
   font-size: small;
-}
-h1{
-  font-family: sans-serif;
 }
 
 #main-footer {
@@ -140,32 +109,6 @@ h1{
   text-align: center;
   font-size: 0.75rem;
   padding: 0.5rem;
-}
-
-.feature_list ul {
-  list-style-type:none;
-  padding:10px 0 10px 0;
-}
-.feature_list ul li::before {
-  content: "\2713";
-  color: rgb(6, 66, 105);
-  display: inline-block; 
-  width: 3em;
-
-}
-.feature_list li{
-  padding: 10px 0 10px 0;
-}
-.form-group{
-  padding:10px;
-  font-family: 'Open Sans', sans-serif;
-}
-.form-group span{
-  display: block;
-  font-size: small;
-}
-h1{
-  font-family: sans-serif;
 }
 
 @media screen and (max-width: 600px){
