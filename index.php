@@ -1,3 +1,27 @@
+<?php
+    // require('config/config');
+    // require('config/db.php');
+    
+    // if(isset($_POST['submit'])) {
+    // //    $first_name = mysqli_real_escape_string($conn, $_POST['first_name']);
+    // //    $last_name = mysqli_real_escape_string($conn,$_POST['last_name']);
+    // //    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    // //    $phone_number = mysqli_real_escape_string($conn, $_POST['phone_number']);
+
+
+    // //    $query = "INSERT INTO posts(title, author, body) VALUES('$title', '$author', '$body')";
+
+    // //     if(mysqli_query($conn, $query)) {
+    // //         header('Location: '.ROOT_URL.'');
+    // //     } else {
+    // //         echo 'ERROR: '.mysqli_error($conn);
+    // //     }
+
+    //     echo 'submitted';
+    // }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -56,8 +80,8 @@
                             Our system connects lost and found properties from all around the country with their owners. For every lost property, we send a notification to the owner when the system receives a matching found item.<br>
                             <br><strong>Click the button below to the corresponding action you want</strong>
                         </p>
-                        <a href="./index.html"><button type="button" class="btn btn-outline-secondary">Lost Item</button></a>
-                        <a href="/foundItem.html"><button type="button" class="btn btn-outline-secondary">Found Item</button></a>
+                        <a href="./index.php"><button type="button" class="btn btn-outline-secondary">Lost Item</button></a>
+                        <a href="./foundItem.php"><button type="button" class="btn btn-outline-secondary">Found Item</button></a>
                         <a href="#"><button type="button" class="btn btn-outline-secondary">View Post</button></a>
                         <br><br>
                         <strong class="required text-danger">*</strong>

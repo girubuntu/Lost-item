@@ -1,59 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+    require('config/config.php');
+    require('config/db.php');
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/foundItem.css">
-    <script src="https://kit.fontawesome.com/e8a97f7b71.js" crossorigin="anonymous"></script>
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>Found Item</title>
-</head>
+    
+   
+    if(isset($_POST['submit'])) { 
 
-<body>
     
 
+       $first_name = mysqli_real_escape_string($conn, $_POST['first_name']);
+       $last_name = mysqli_real_escape_string($conn,$_POST['last_name']);
+       $email = mysqli_real_escape_string($conn, $_POST['email']);
+       $phone_number = mysqli_real_escape_string($conn, $_POST['phone_number']);
+    
+       
+       $query = "INSERT INTO user(first_name, last_name, email, phone_number) VALUES('$first_name', '$last_name', '$email', '$phone_number')";
 
-    <nav class="navbar navbar-expand-lg sticky-top mb-5">
-        <a class="navbar-brand ml-5" href="/index.html"><img src='https://irihano.rw/assets/img/newirihano.png'  width='150px'></a>
-        <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navMenu"
-        >
-        <i class="fas fa-bars" style="color:#fff;"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navMenu">
-            <ul class="navbar-nav text-center text-light ml-auto my-lg-0">
-                <li class="nav-item"><a class="nav-link"  href='/index.html'>HOME</a></li>
-                <li class="nav-item"><a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown" href='#'>BUSINESS AGENT</a></li>
-                <li class="nav-item"><a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown" href='#'>IRIHANO ONLINE</a></li>
-                <li class="nav-item"><a class="nav-link" href='#'>PARTNERS</a></li>
-                <li class="nav-item"><a class="nav-link" href='#'>FAQ</a></li>
-                <li class="nav-item"><a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown" href='#'>ABOUT</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Link 1</a>
-                        <a class="dropdown-item" href="#">Link 2</a>
-                        <a class="dropdown-item" href="#">Link 3</a>
-                      </div>
-                </li>
-                <li class="nav-item"><a class="nav-link" href='/css/contact.html'>REQUEST</a></li>
-                <li class="nav-item"><a class="nav-link" href='/css/contact.html'>LOGIN</a></li>
-                
-            </ul>
-        </div>
-    </nav>
+        if(mysqli_query($conn, $query)) {
+            
+            echo "<script>setTimeout(function(){alert('Contact saved')}, 3000);</script>";
+            // header('Location: '.ROOT_URL.'');
+        } else {
+            echo 'ERROR: '.mysqli_error($conn);
+        }
 
+        
+    }
+
+?>
+
+    <?php include('inc/header.php'); ?>
+
+    
 
   
     <!-- showcase -->
     <section >
         <div class="container">
+           
             <div class='row'>
                 <div class='col-sm-5 col-sm-pull-7 feature_list'>
                     <h1>Submit Found Property</h1>
@@ -61,7 +45,7 @@
                         Our system connects lost and found properties from all around the country with their owners. For every lost property, we send a notification to the owner when the system receives a matching found item.<br>
                         <br><strong>Click the button below to the corresponding action you want</strong>
                     </p>
-                    <a href="./index.html"><button type="button" class="btn btn-outline-secondary">Lost Item</button></a>
+                    <a href="./index.php"><button type="button" class="btn btn-outline-secondary">Lost Item</button></a>
                     <a href="#"><button type="button" class="btn btn-outline-secondary">Found Item</button></a>
                     <a href="#"><button type="button" class="btn btn-outline-secondary">View Post</button></a>
                     <br><br>
@@ -76,7 +60,7 @@
     </section>
 
   
-<form class="container">
+<form class="container" action="<?php htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
     <div class='row mb-5'>
     <div class='col-sm-6 mb-5'>
         <div class='form-group'>
@@ -217,13 +201,7 @@
                 <input id="zip_code" class="form-control" placeholder="Village" maxlength="5" name="zip_code" type="text">
             </div>
         </div>
-        <div class="local-info-map mb-5">
-            <p class="map"><iframe width="600" height="350" style="width: 100%;" loading="lazy" allowfullscreen
-                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyApF_hdL8NGNJwMVufQDAS48-0lF0_rRMs
-              &q=stade amahoro kigali">
-                </iframe></p>
-        </div>
-        
+    
     </div>
     <h4 class='mb-5'>Contact Information</h4>
     <div class='row'>
@@ -235,7 +213,7 @@
                     <span class="label-detail">Please enter the first name  (This will apear on your submission).</span>
                 </label>
                 <div class="input-group date">
-                    <input id="incident_date" class="form-control" placeholder="First Name" name="firstname" type="text">
+                    <input id="incident_date" class="form-control" placeholder="First Name" name="first_name" type="text" required>
                 </div>
             </div>  
         </div>
@@ -246,7 +224,7 @@
                     <span class="label-detail">Please enter the last name  (This will apear on your submission).</span>
                 </label>
                 <div class="input-group date">
-                    <input id="incident_date" class="form-control" placeholder="Last Name" name="lastname" type="text">
+                    <input id="incident_date" class="form-control" placeholder="Last Name" name="last_name" type="text" required>
                 </div>
             </div>
         </div>
@@ -257,7 +235,7 @@
                     <span class="label-detail">Please enter the phone number to display on your submission</span>
                 </label>
                 <div class="input-group date">
-                    <input id="incident_date" class="form-control" placeholder="Phone Number" name="phone" type="tel">
+                    <input id="incident_date" class="form-control" placeholder="Phone Number" name="phone_number" type="tel" required>
                 </div>
             </div>
         </div>
@@ -268,86 +246,14 @@
                     <span class="label-detail">Please enter your email(This will appear on your submission)</span>
                 </label>
                 <div class="input-group date">
-                    <input id="incident_date" class="form-control" placeholder="Email" name="email" type="email">
+                    <input id="incident_date" class="form-control" placeholder="Email" name="email" type="email" required>
                 </div>
             </div>
         </div>
         
     </div>
     
-    <button class='btn btn-outline-info submit mt-3 mb-5 pr-5 pl-5 btn-lg text-light'>Publish</button>
+    <button name="submit" class='btn btn-outline-info submit mt-3 mb-5 pr-5 pl-5 btn-lg text-light'>Publish</button>
 </form>
    
-<!-- Footer -->
-<footer id="main-footer">
-    <div class="footer-content">
-    <div class="footer-container">
-      <div class="footer-group">
-        <img src="./img/irihano.png" alt="" />
-        <p>
-            IRIHANO LIMITED is private technology company working in Rwanda,our mission is to help citizens to Apply&Pay Digital Services by working on behalf of Business owners. like E-Government services, Partners to citizens, Business owners.
-        </p>
-      </div>
-      <div class="footer-group">
-        <h3>Online Services</h3>
-        
-            <a href="#"><li>&gt; Irembo</li></a>
-            <a href="#"><li>&gt; RRA</li></a>
-            <a href="#"><li>&gt; RDB</li></a>
-            <a href="#"><li>&gt; BPMIS</li></a>
-            <a href="#"><li>&gt; IECMS</li></a>
-
-            
-        
-      </div>
-      <div class="footer-group">
-        <h3>Useful Linkks</h3>
-        
-            <a href="#"><li>&gt; Testimonial</li></a>
-            <a href="#"><li>&gt; Partners</li></a>
-            <a href="#"><li>&gt; News</li></a>
-            <a href="#"><li>&gt; FAQ</li></a>
-            <a href="#"><li>&gt; Contact us</li></a>
-
-            
-        
-      </div>
-      <div class="footer-group">
-        <h3>Information</h3>
-        
-            <li>Muhanga-Nyamabuye</li>
-            <li>Muhanga-Kigali, National Road</li>
-            <li>Nyamabuye Sector office</li>
-            <li>Rwanda-Southern Province</li>
-            <li>Phone:+250782761021</li>
-            <li>Email:info@irihano.co.rw</li>
-            
-        <div class="social-media-contact">
-            <div>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-            </div>
-            <div>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-            </div>
-            <div>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
-            <div>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-        </div>
-      </div>
-      
-    </div>
-    <div class="footer-lastChild">
-        <p>Copyright &copy; All Right Reserved</p>
-      </div>
-</div>
-  </footer>
-  <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-    </script>
-</body>
-
-</html>
+<?php include('inc/footer.php'); ?>
