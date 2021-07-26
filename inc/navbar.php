@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg sticky-top mb-5">
-        <a class="navbar-brand ml-5" href="/index.html"><img src='https://irihano.rw/assets/img/newirihano.png'  width='150px'></a>
+        <a class="navbar-brand ml-5" href="index.php"><img src='https://irihano.rw/assets/img/newirihano.png'  width='150px'></a>
         <button
             class="navbar-toggler"
             type="button"
@@ -10,7 +10,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navMenu">
             <ul class="navbar-nav text-center text-light ml-auto my-lg-0">
-                <li class="nav-item"><a class="nav-link"  href='/index.html'>HOME</a></li>
+                <li class="nav-item"><a class="nav-link"  href='index.php'>HOME</a></li>
                 <li class="nav-item"><a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown" href='#'>BUSINESS AGENT</a></li>
                 <li class="nav-item"><a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown" href='#'>IRIHANO ONLINE</a></li>
                 <li class="nav-item"><a class="nav-link" href='#'>PARTNERS</a></li>
