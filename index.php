@@ -1,3 +1,27 @@
+<?php
+    // require('config/config');
+    // require('config/db.php');
+    
+    // if(isset($_POST['submit'])) {
+    // //    $first_name = mysqli_real_escape_string($conn, $_POST['first_name']);
+    // //    $last_name = mysqli_real_escape_string($conn,$_POST['last_name']);
+    // //    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    // //    $phone_number = mysqli_real_escape_string($conn, $_POST['phone_number']);
+
+
+    // //    $query = "INSERT INTO posts(title, author, body) VALUES('$title', '$author', '$body')";
+
+    // //     if(mysqli_query($conn, $query)) {
+    // //         header('Location: '.ROOT_URL.'');
+    // //     } else {
+    // //         echo 'ERROR: '.mysqli_error($conn);
+    // //     }
+
+    //     echo 'submitted';
+    // }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,7 +67,7 @@
     <!-- <a href="#" >LOGO</a> -->
     
     <div class="logo mr-auto">
-      <a href="index.html"><img src="assets/img/newirihano.png" style="height: 50px;width: 150px;margin-left: 40px;" alt="" class="img-fluid"></a>
+      <a href="index.php"><img src="assets/img/newirihano.png" style="height: 50px;width: 150px;margin-left: 40px;" alt="" class="img-fluid"></a>
     </div>
     
     
@@ -130,8 +154,8 @@
                 <section>
                   <h2><a style="color: inherit;"href="lostItem.html">LOST AND FIND</a></h2>
                   <ul style="color: black;"class="mega-links">
-                    <li><a style="color: black;"href="lostItem.html">Submit Lost Property</a></li>
-                    <li><a style="color: black;"href="foundItem.html">Submit Found Property</a></li>
+                    <li><a style="color: black;"href="lostItem.php">Submit Lost Property</a></li>
+                    <li><a style="color: black;"href="foundItem.php">Submit Found Property</a></li>
                     <li><a style="color: black;"href="viewPosts.html">View Recent Posts</a></li>
                     <li><a style="color: black;"href="#"></a></li>
                   </ul>
