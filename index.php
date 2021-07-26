@@ -152,7 +152,7 @@
               </div>
               <div class="col">
                 <section>
-                  <h2><a style="color: inherit;"href="lostItem.html">LOST AND FIND</a></h2>
+                  <h2><a style="color: inherit;"href="lostItem.php">LOST AND FIND</a></h2>
                   <ul style="color: black;"class="mega-links">
                     <li><a style="color: black;"href="lostItem.php">Submit Lost Property</a></li>
                     <li><a style="color: black;"href="foundItem.php">Submit Found Property</a></li>
