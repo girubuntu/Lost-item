@@ -45,7 +45,7 @@
                         Our system connects lost and found properties from all around the country with their owners. For every lost property, we send a notification to the owner when the system receives a matching found item.<br>
                         <br><strong>Click the button below to the corresponding action you want</strong>
                     </p>
-                    <a href="index.php"><button type="button" class="btn btn-outline-secondary">Lost Item</button></a>
+                    <a href="lostItem.php"><button type="button" class="btn btn-outline-secondary">Lost Item</button></a>
                     <a href="foundItem.php"><button type="button" class="btn btn-outline-secondary">Found Item</button></a>
                     <a href="viewPosts.html"><button type="button" class="btn btn-outline-secondary">View Post</button></a>
                     <br><br>
