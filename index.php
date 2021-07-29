@@ -156,7 +156,7 @@
                   <ul style="color: black;"class="mega-links">
                     <li><a style="color: black;"href="lostItem.php">Submit Lost Property</a></li>
                     <li><a style="color: black;"href="foundItem.php">Submit Found Property</a></li>
-                    <li><a style="color: black;"href="viewPosts.html">View Recent Posts</a></li>
+                    <li><a style="color: black;"href="viewPosts.php">View Recent Posts</a></li>
                     <li><a style="color: black;"href="#"></a></li>
                   </ul>
                 </section>

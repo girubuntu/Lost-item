@@ -1,52 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <script src="https://kit.fontawesome.com/e8a97f7b71.js" crossorigin="anonymous"></script>
-         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <link rel="stylesheet" href="./css/lostItem.css">
-        <link rel="stylesheet" href="./css/viewPosts.css">
-        <title>Found Item</title>
-    </head>
+<?php include('inc/header.php'); ?>
 
-<body>
-    
-    <nav class="navbar navbar-expand-lg sticky-top mb-3">
-        <a class="navbar-brand ml-5" href="index.php"><img src='https://irihano.rw/assets/img/newirihano.png'  width='150px'></a>
-        <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navMenu"
-        >
-        <i class="fas fa-bars" style="color:#fff;"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navMenu">
-            <ul class="navbar-nav text-center text-light ml-auto my-lg-0">
-                <li class="nav-item"><a class="nav-link"  href='index.php'>HOME</a></li>
-                <li class="nav-item"><a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown" href='#'>BUSINESS AGENT</a></li>
-                <li class="nav-item"><a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown" href='#'>IRIHANO ONLINE</a></li>
-                <li class="nav-item"><a class="nav-link" href='#'>PARTNERS</a></li>
-                <li class="nav-item"><a class="nav-link" href='#'>FAQ</a></li>
-                <li class="nav-item"><a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown" href='#'>ABOUT</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Link 1</a>
-                        <a class="dropdown-item" href="#">Link 2</a>
-                        <a class="dropdown-item" href="#">Link 3</a>
-                      </div>
-                </li>
-                <li class="nav-item"><a class="nav-link" href='/css/contact.html'>REQUEST</a></li>
-                <li class="nav-item"><a class="nav-link" href='/css/contact.html'>LOGIN</a></li>
-                
-            </ul>
-        </div>
-    </nav>
+<head>
+    <link rel="stylesheet" href="./css/viewPosts.css">
+    <title>Recent Posts</title>
+</head>
 
     <main class='container-fluid mb-5'>
         <ul class="nav nav-tabs justify-content-center text-dark mb-5">
@@ -146,76 +103,7 @@
                 </div>
         </section>
     </main>
+    
     <!--footer-->
-    <footer id="main-footer">
-        <div class="footer-content">
-        <div class="footer-container">
-          <div class="footer-group">
-            <img src="./img/irihano.png" alt="" />
-            <p>
-                IRIHANO LIMITED is private technology company working in Rwanda,our mission is to help citizens to Apply&Pay Digital Services by working on behalf of Business owners. like E-Government services, Partners to citizens, Business owners.
-            </p>
-          </div>
-          <div class="footer-group">
-            <h3>Online Services</h3>
-            
-                <a href="#"><li>&gt; Irembo</li></a>
-                <a href="#"><li>&gt; RRA</li></a>
-                <a href="#"><li>&gt; RDB</li></a>
-                <a href="#"><li>&gt; BPMIS</li></a>
-                <a href="#"><li>&gt; IECMS</li></a>
     
-                
-            
-          </div>
-          <div class="footer-group">
-            <h3>Useful Linkks</h3>
-            
-                <a href="#"><li>&gt; Testimonial</li></a>
-                <a href="#"><li>&gt; Partners</li></a>
-                <a href="#"><li>&gt; News</li></a>
-                <a href="#"><li>&gt; FAQ</li></a>
-                <a href="#"><li>&gt; Contact us</li></a>
-    
-                
-            
-          </div>
-          <div class="footer-group">
-            <h3>Information</h3>
-            
-                <li>Muhanga-Nyamabuye</li>
-                <li>Muhanga-Kigali, National Road</li>
-                <li>Nyamabuye Sector office</li>
-                <li>Rwanda-Southern Province</li>
-                <li>Phone:+250782761021</li>
-                <li>Email:info@irihano.co.rw</li>
-                
-            <div class="social-media-contact">
-                <div>
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                </div>
-                <div>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                </div>
-                <div>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-                <div>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-            </div>
-          </div>
-          
-        </div>
-        <div class="footer-lastChild">
-            <p>Copyright &copy; All Right Reserved</p>
-          </div>
-    </div>
-      </footer>
-      <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-    </script>
-    <script src="index.js"></script>
-</body>
-</html>    
+    <?php include('inc/footer.php'); ?>
