@@ -153,7 +153,7 @@
                   <h2><a style="color: inherit;"href="lostItem.html">LOST AND FIND</a></h2>
                   <ul style="color: black;"class="mega-links">
                     <li><a style="color: black;"href="lostItem.html">Submit Lost Property</a></li>
-                    <li><a style="color: black;"href="foundItem.html">Submit Found Property</a></li>
+                    <li><a style="color: black;"href="foundItem.php">Submit Found Property</a></li>
                     <li><a style="color: black;"href="viewPosts.html">View Recent Posts</a></li>
                     <li><a style="color: black;"href="#"></a></li>
                   </ul>
@@ -244,29 +244,6 @@
   </header>
  
 
-<<<<<<< HEAD:index.php
-    <main class='container'>
-        <section >
-            <div class="container">
-                <div class='row'>
-                    <div class='col-sm-5 col-sm-pull-7 feature_list'>
-                        <h1>Submit Lost Property</h1>
-                        <p>
-                            Our system connects lost and found properties from all around the country with their owners. For every lost property, we send a notification to the owner when the system receives a matching found item.<br>
-                            <br><strong>Click the button below to the corresponding action you want</strong>
-                        </p>
-                        <a href="./index.php"><button type="button" class="btn btn-outline-secondary">Lost Item</button></a>
-                        <a href="./foundItem.php"><button type="button" class="btn btn-outline-secondary">Found Item</button></a>
-                        <a href="#"><button type="button" class="btn btn-outline-secondary">View Post</button></a>
-                        <br><br>
-                        <strong class="required text-danger">*</strong>
-                        <small>Please be descriptive when submitting your Found property report, the more information you give us the better chance you have of retrieving your items.</small>
-                    </div>
-                    <div class='col-sm-7 col-sm-push-5'>
-                        <div class='losting_image'><img src='https://www.lostings.com/public/assets/images/submit_lost_property.jpg' class='img-responsive d-none d-sm-block' alt='image' width='100%'></div>
-                    </div>
-                </div>
-=======
   <!--<section id="hero" class="d-flex align-items-center">-->
 
   <!--  <div class="container-fluid" data-aos="zoom-out" data-aos-delay="100" style="background-image: url(assets/img/1.jpg);width: 100%;-->
@@ -305,7 +282,6 @@
                 <p class="animate__animated animate__fadeInUp">online services are solution to everyone. because the people can apply and pay with mobile without loose its time by going to the bank.</p>
                 <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Welcome to irihano BK agent</a>
               </div>
->>>>>>> main:index.html
             </div>
           </div>
   <!-- Slide 2 -->
