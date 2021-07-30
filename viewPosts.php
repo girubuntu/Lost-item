@@ -1,3 +1,20 @@
+<?php
+
+require('config/config.php');
+require('config/db.php');
+
+$query = 'SELECT * FROM lost_item';
+
+$result = mysqli_query($conn,$query);
+
+$posts = mysqli_fetch_all($result,MYSQLI_ASSOC);
+
+mysqli_free_result($result);
+
+mysqli_close($conn);
+
+?>
+
 <?php include('inc/header.php'); ?>
 
 <head>
@@ -33,72 +50,25 @@
             </li>
         </ul>
         <section id='posts'>
+            
                 <div class="container my-4">
                     <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
-                        <div class="col">
-                            <div class="card h-100 shadow-sm">
-                                <img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/20A5/production/_89175380_img_20151128_082037.jpg" class="card-img-top" alt="...">
-                                
-                                <div class="card-body">
-                                    <h4 class="card-title text-center">Service card (ikarita y'akazi)</h4>
-                                    <div class='text-center'>Saepe, iste optio laudantium sed aliquam sequi.</div>
-                                    <div class="text-center my-4"> <a href="#" class="btn">View Details</a> </div>
+                        <?php foreach($posts  as $post): ?>
+                            <div class="col">
+                                <div class="card h-100 shadow-sm">
+                                    <?php echo '<img src="data:image;base64,'.base64_encode($post['item_image']).'" alt="image" style="width:100%; height:160px;" class="card-img-top" >' ?>
+                                    
+                                    <div class="card-body">
+                                        <h4 class="card-title text-center"><?php echo $post['item_name']; ?></h4>
+                                        <div class='text-center'>Lost <?php echo $post['incident_date']; ?>  at <?php echo $post['incident_time']; ?>
+                                            Location: <?php echo $post['district']; ?>
+                                        </div>
+                                        <div class="text-center my-4"> <a href="#" class="btn">View Details</a> </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col">
-                            <div class="card h-100 shadow-sm">
-                                <!-- <div class="label-top2 shadow-sm">LOST</div> -->
-                                <img src="https://image.winudf.com/v2/image1/Y29tLmdlbmVyYWxpLnNlcnZpY2VjYXJkX3NjcmVlbl81XzE1NjcwMjgyNDVfMDM2/screen-5.jpg?fakeurl=1&type=.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h4 class="card-title text-center">Service card (ikarita y'akazi)</h4>
-                                    <div class='text-center'>Saepe, iste optio laudantium sed aliquam sequi.</div>
-                                    <div class="text-center my-4"> <a href="#" class="btn">View Details</a> </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card h-100 shadow-sm">
-                                <!-- <div class="label-top shadow-sm">FOUND</div> -->
-                                <img src="https://www.freepnglogos.com/uploads/notebook-png/download-laptop-notebook-png-image-png-image-pngimg-2.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h4 class="card-title text-center">Service card (ikarita y'akazi)</h4>
-                                    <div class='text-center'>Saepe, iste optio laudantium sed aliquam sequi.</div>
-                                    <div class="text-center my-4"> <a href="#" class="btn">View Details</a> </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card h-100 shadow-sm">
-                                
-                                <img src="https://img2.thejournal.ie/article/4815890/river?version=4816075&width=1340" class="card-img-top" alt="..."> 
-                                <div class="card-body">
-                                    <h4 class="card-title text-center">Service card (ikarita y'akazi)</h4>
-                                    <div class='text-center'>Saepe, iste optio laudantium sed aliquam sequi.</div>
-                                    <div class="text-center my-4"> <a href="#" class="btn">View Details</a> </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card h-100 shadow-sm">
-                                <img src="https://www.freepnglogos.com/uploads/notebook-png/download-laptop-notebook-png-image-png-image-pngimg-2.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h4 class="card-title text-center">Service card (ikarita y'akazi)</h4>
-                                    <div class='text-center'>Saepe, iste optio laudantium sed aliquam sequi.</div>
-                                    <div class="text-center my-4"> <a href="#" class="btn">View Details</a> </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card h-100 shadow-sm">
-                                <img src="https://img2.thejournal.ie/article/4815890/river?version=4816075&width=1340" class="card-img-top" alt="..."> 
-                                <div class="card-body">
-                                    <h4 class="card-title text-center">Service card (ikarita y'akazi)</h4>
-                                    <div class='text-center'>Saepe, iste optio laudantium sed aliquam sequi.</div>
-                                    <div class="text-center my-4"> <a href="#" class="btn">View Details</a> </div>
-                                </div>
-                            </div>
-                        </div>
+                        <?php endforeach; ?>
+                       
                     </div>
                 </div>
         </section>
