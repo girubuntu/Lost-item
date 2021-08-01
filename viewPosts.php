@@ -3,7 +3,7 @@
 require('config/config.php');
 require('config/db.php');
 
-$query = 'SELECT * FROM lost_item';
+$query = 'SELECT * FROM lost_item UNION ALL SELECT *  FROM founditem ORDER BY created_at DESC';
 
 $result = mysqli_query($conn,$query);
 
@@ -60,7 +60,10 @@ mysqli_close($conn);
                                     
                                     <div class="card-body">
                                         <h4 class="card-title text-center"><?php echo $post['item_name']; ?></h4>
-                                        <div class='text-center'>Lost <?php echo $post['incident_date']; ?>  at <?php echo $post['incident_time']; ?>
+                                        <div class='text-center'><?php
+                                            if ($post['status'] == 'lost')
+                                            echo "Lost"; 
+                                            else echo "Found";?> on <?php echo $post['incident_date']; ?> <br>
                                             Location: <?php echo $post['district']; ?>
                                         </div>
                                         <div class="text-center my-4"> <a href="#" class="btn">View Details</a> </div>
