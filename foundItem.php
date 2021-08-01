@@ -32,7 +32,9 @@
     <?php include('inc/header.php'); ?>
 
     
-
+    <head>
+        <title>Lost Item</title>
+    </head>
   
     <!-- showcase -->
     <section >
@@ -47,7 +49,7 @@
                     </p>
                     <a href="lostItem.php"><button type="button" class="btn btn-outline-secondary">Lost Item</button></a>
                     <a href="foundItem.php"><button type="button" class="btn btn-outline-secondary">Found Item</button></a>
-                    <a href="viewPosts.html"><button type="button" class="btn btn-outline-secondary">View Post</button></a>
+                    <a href="viewPosts.php"><button type="button" class="btn btn-outline-secondary">View Post</button></a>
                     <br><br>
                     <strong class="required text-danger">*</strong>
                     <small>Please be descriptive when submitting your Found property report, the more information you give us the better chance you have of retrieving your items.</small>
@@ -66,7 +68,7 @@
         <div class='form-group'>
             <label for="item_name" class="control-label lbl-descriptive">Item Found
                 <small class="required">*</small>
-                <span class="label-detail">(Dog, Jacket, Smartphone, Wallet, etc.) This field may auto-populate</span>
+                <span class="label-detail">(Dog, Jacket, Smartphone, Wallet, etc.)</span>
             </label>
             <input class="form-control " placeholder="Item Found" name="item_name" type="text">
         </div>
