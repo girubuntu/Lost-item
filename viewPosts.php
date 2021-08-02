@@ -64,7 +64,7 @@ mysqli_close($conn);
                                             if ($post['status'] == 'lost')
                                             echo "Lost"; 
                                             else echo "Found";?> on <?php echo $post['incident_date']; ?> <br>
-                                            Location: <?php echo $post['district']; ?>
+                                            Location: <?php echo $post['district'];?> - <?php echo $post['sector'];?>
                                         </div>
                                         <div class="text-center my-4"> <a href="#" class="btn">View Details</a> </div>
                                     </div>
