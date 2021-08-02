@@ -5,8 +5,12 @@
     
    
     if(isset($_POST['submit']) && isset($_FILES['item_image'])) { 
-        $item_image = rand(1000,10000)."-".$_FILES['item_image']['name'];
-        $target = './uploads';
+        //$item_image = rand(1000,10000)."-".$_FILES['item_image']['name'];
+
+        $item_image = $_FILES['item_image']['name'];
+    
+        $target = "uploads/";
+        $file_location = $target . basename($_FILES["item_image"]["name"]);
     
        $item_name = mysqli_real_escape_string($conn, $_POST['item_name']);
        $category = mysqli_real_escape_string($conn,$_POST['category']);
@@ -37,8 +41,10 @@
 
         if(mysqli_query($conn, $query)) {
             
-            echo "<script>setTimeout(function(){alert('post saved')}, 3000);</script>";
-            move_uploaded_file($item_image, "$target/$item_image");
+            echo "<script>setTimeout(function(){alert('Post saved')}, 3000);</script>";
+            // move_uploaded_file($tempName, $tempName);
+
+            move_uploaded_file($_FILES['item_image']['tmp_name'], $file_location);
 
             // header('Location: '.ROOT_URL.'');
         } else {
