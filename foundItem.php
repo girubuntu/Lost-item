@@ -4,10 +4,16 @@
 
     
 
-    if(isset($_POST['submit']) && isset($_FILES['uploadImage'])) { 
+    if(isset($_POST['submit']) && isset($_FILES['item_image'])) { 
 
-    $uploadImage = $_FILES['uploadImage']['name'];
-    $target = './uploads';
+    $item_image = $_FILES['item_image']['name'];
+    // $tempName = $_FILES['item_image']['tmp_name'];
+    // $target = 'C:/xampp/htdocs/lost-item/uploads';
+
+
+    $target = "uploads/";
+    $file_location = $target . basename($_FILES["item_image"]["name"]);
+
 
 
        $item_name =mysqli_real_escape_string($conn, $_POST['item_name']);
@@ -32,16 +38,18 @@
        $email = mysqli_real_escape_string($conn, $_POST['email']);
        $phone_number = mysqli_real_escape_string($conn, $_POST['phone_number']);
 
-
+       
     
        
-       $query = "INSERT INTO foundItem(item_name, category_name, brand, primary_color, incident_date, incident_time, uploadImage, additional_info, location_type, province, district, sector, cell, village, first_name, last_name, phone_number, email)
-        VALUES('$item_name', '$category_name', '$brand', '$primary_color', '$incident_date', '$incident_time', '$uploadImage', '$additional_info', '$location_type', '$province', '$district', '$sector', '$cell', '$village', '$first_name', '$last_name', '$phone_number', '$email')";
+       $query = "INSERT INTO foundItem(item_name, category_name, brand, primary_color, incident_date, incident_time, item_image, additional_info, location_type, province, district, sector, cell, village, first_name, last_name, phone_number, email)
+        VALUES('$item_name', '$category_name', '$brand', '$primary_color', '$incident_date', '$incident_time', '$item_image', '$additional_info', '$location_type', '$province', '$district', '$sector', '$cell', '$village', '$first_name', '$last_name', '$phone_number', '$email')";
 
         if(mysqli_query($conn, $query)) {
             
             echo "<script>setTimeout(function(){alert('Contact saved')}, 3000);</script>";
-            move_uploaded_file($uploadImage, "$target/$uploadImage");
+            // move_uploaded_file($tempName, $tempName);
+
+            move_uploaded_file($_FILES['item_image']['tmp_name'], $file_location);
 
             // header('Location: '.ROOT_URL.'');
         } else {
@@ -141,7 +149,7 @@
             <label class="control-label lbl-descriptive">Upload Image
             <span class="label-detail">(This image will be display on the website.)<span>
             </span></span></label>
-            <input type="file" name="uploadImage" placeholder="Upload an image or file of the item" class="form-control" id="upload_image_name">
+            <input type="file" name="item_image" placeholder="Upload an image or file of the item" class="form-control" id="upload_image_name">
         </div>
         <div class='form-group'>
             <label for="additional_info" class="control-label lbl-descriptive">Additional Information

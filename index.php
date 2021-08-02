@@ -51,6 +51,7 @@
   <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <script src="assets/js/main.js"></script>
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
@@ -66,11 +67,12 @@
     <!-- <a href="#" >LOGO</a> -->
     
     <div class="logo mr-auto">
-      <a href="index.html"><img src="assets/img/newirihano.png" style="height: 50px;width: 150px;margin-left: 40px;" alt="" class="img-fluid"></a>
+      <a href="index.php"><img src="assets/img/newirihano.png" style="height: 50px;width: 150px;margin-left: 40px;" alt="" class="img-fluid"></a>
     </div>
     
     
-    <nav>
+    <nav >
+      
       <ul class="menu-items">
         <li><a href="index.html" class="menu-item">HOME</a> </li>
         
@@ -150,11 +152,17 @@
               </div>
               <div class="col">
                 <section>
-                  <h2><a style="color: inherit;"href="lostItem.html">LOST AND FIND</a></h2>
+                  <h2><a style="color: inherit;"href="lostItem.php">LOST AND FIND</a></h2>
                   <ul style="color: black;"class="mega-links">
+<<<<<<< HEAD
                     <li><a style="color: black;"href="lostItem.html">Submit Lost Property</a></li>
                     <li><a style="color: black;"href="foundItem.php">Submit Found Property</a></li>
                     <li><a style="color: black;"href="viewPosts.html">View Recent Posts</a></li>
+=======
+                    <li><a style="color: black;"href="lostItem.php">Submit Lost Property</a></li>
+                    <li><a style="color: black;"href="foundItem.php">Submit Found Property</a></li>
+                    <li><a style="color: black;"href="viewPosts.php">View Recent Posts</a></li>
+>>>>>>> 735fe7f75126c44abd13d5a8887b0c90a33588c6
                     <li><a style="color: black;"href="#"></a></li>
                   </ul>
                 </section>
