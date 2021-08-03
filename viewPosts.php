@@ -28,22 +28,22 @@ mysqli_close($conn);
               <a class="nav-link active" data-toggle="tab" href="/viewPosts.html">All</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" data-toggle="tab" href="/viewPosts.html">ID  Cards</a>
+              <a class="nav-link" data-toggle="tab" href="/viewPosts.html">Animals/Pets</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" data-toggle="tab" href="#main-footer">Bank Cards</a>
+              <a class="nav-link" data-toggle="tab" href="#main-footer">Electronics</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Driving Licence</a>
+              <a class="nav-link" href="#">Clothing</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Land Documents</a>
+              <a class="nav-link" href="#">Personal Accessories</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">School Cards</a>
+                <a class="nav-link" href="#">Cards</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Insurance Cards</a>
+                <a class="nav-link" href="#">Documents</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Others</a>
