@@ -15,7 +15,7 @@
         $file_location = $target . basename($_FILES["item_image"]["name"]);
     
        $item_name = mysqli_real_escape_string($conn, $_POST['item_name']);
-       $category = mysqli_real_escape_string($conn,$_POST['category']);
+       $category_name = mysqli_real_escape_string($conn,$_POST['category_name']);
        $brand = mysqli_real_escape_string($conn, $_POST['brand']);
        $primary_color = mysqli_real_escape_string($conn, $_POST['primary_color']);
        $secondary_color = mysqli_real_escape_string($conn, $_POST['secondary_color']);
@@ -38,8 +38,8 @@
        $phone_number = mysqli_real_escape_string($conn, $_POST['phone_number']);
     
        
-       $query = "INSERT INTO lost_item(item_name,category,brand,primary_color,secondary_color,incident_date,incident_time,item_image,additional_info,location_type,province,district,sector,cell,village,first_name, last_name, email, phone_number) 
-       VALUES('$item_name','$category','$brand','$primary_color','$secondary_color','$incident_date','$incident_time','$item_image','$additional_info','$location_type','$province','$district','$sector','$cell','$village','$first_name', '$last_name', '$email', '$phone_number')";
+       $query = "INSERT INTO lost_item(item_name,category_name,brand,primary_color,secondary_color,incident_date,incident_time,item_image,additional_info,location_type,province,district,sector,cell,village,first_name, last_name, email, phone_number) 
+       VALUES('$item_name','$category_name','$brand','$primary_color','$secondary_color','$incident_date','$incident_time','$item_image','$additional_info','$location_type','$province','$district','$sector','$cell','$village','$first_name', '$last_name', '$email', '$phone_number')";
 
         if(mysqli_query($conn, $query)) {
 
@@ -119,12 +119,12 @@
                         <small class="required">*</small>
                         <span class="label-detail">(Animals/Pets, Clothing, Electronics, Personal Accessories etc.)</span>
                     </label>
-                    <select class="form-select" name='category' required>
+                    <select class="form-select" name='category_name' required>
                         <option selected="selected" value="">Select Category</option>
                         <option value="Animals/Pets">Animals/Pets</option>
                         <option value="Electronics">Electronics</option>
                         <option value="Clothing">Clothing</option>
-                        <option value="Materials">Materials</option>
+                        <option value="Materials">Tools and Materials</option>
                         <option value="Cards">Cards</option>
                         <option value="Documents">Documents</option>
                         <option value="Personal Accessories">Personal Accessories</option>
