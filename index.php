@@ -135,58 +135,7 @@
           </div>
         </li>
         <li>
-          <a href="#" class="menu-item">IRIHANO ONLINE<i style="padding: 6px;" class="fa fa-chevron-down"></i></a>
-          <div class="mega-menu">
-            <div class="contents">
-              <div class="col">
-                <section>
-                  <h2></h2>
-                  <a href="#" class="img-wrapper"
-                    ><span class="img"
-                      ><img
-                        src="assets/img/4.png"
-                        alt="Random Image" /></span
-                  ></a>
-                  <p>Get support for online services.</p>
-                </section>
-              </div>
-              <div class="col">
-                <section>
-                  <h2><a style="color: inherit;"href="lostItem.php">LOST AND FIND</a></h2>
-                  <ul style="color: black;"class="mega-links">
-                    <li><a style="color: black;"href="lostItem.php">Submit Lost Property</a></li>
-                    <li><a style="color: black;"href="foundItem.php">Submit Found Property</a></li>
-                    <li><a style="color: black;"href="viewPosts.php">View Recent Posts</a></li>
-                    <li><a style="color: black;"href="#"></a></li>
-                  </ul>
-                </section>
-              </div>
-              <div class="col">
-                <section>
-                  <h2></h2>
-                  <ul class="mega-links">
-                    <li><a style="color: black;"href="#"></a></li>
-                    <li><a style="color: black;"href="#"></a></li>
-                    <li><a style="color: black;"href="#"></a></li>
-                    <li><a style="color: black;"href="#"></a></li>
-                    <li><a style="color: black;"href="#"></a></li>
-                  </ul>
-                </section>
-              </div>
-              <div class="col">
-                <section>
-                  <h2></h2>
-                  <ul class="mega-links">
-                    <li><a style="color: black;"href="#"></a></li>
-                    <li><a style="color: black;"href="#"></a></li>
-                    <li><a style="color: black;"href="#"></a></li>
-                    <li><a style="color: black;"href="#"></a></li>
-                    <li><a style="color: black;"href="#"></a></li>
-                  </ul>
-                </section>
-              </div>
-            </div>
-          </div>
+          <a href="lostItem.php" class="menu-item">LOST AND FOUND<i style="padding: 6px;"></i></a>
         </li>
         <li><a href="#clients" class="menu-item">PATERNERS</a></li>
         <li><a href="faq.html" class="menu-item">FAQ</a></li>
