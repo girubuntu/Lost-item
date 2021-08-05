@@ -20,6 +20,9 @@ nav li{
     font-size: small;
 }
 
+.required{
+  color:rgb(255,0,0);
+}
 
 .scroll-btn {
     display: inline-block;
