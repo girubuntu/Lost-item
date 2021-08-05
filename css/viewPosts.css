@@ -48,15 +48,14 @@
 }
 
 .card h4 {
-    height: 56px;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .card-img-top {
     width: 100%;
     max-height: 180px;
     object-fit: contain;
-    padding: 20px
+    padding: 10px
 }
 
 .card h2 {

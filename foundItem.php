@@ -1,3 +1,4 @@
+
 <?php
     require('config/config.php');
     require('config/db.php');
@@ -7,9 +8,12 @@
     if(isset($_POST['submit']) && isset($_FILES['item_image'])) { 
 
     $item_image = $_FILES['item_image']['name'];
+<<<<<<< HEAD
     // $tempName = $_FILES['item_image']['tmp_name'];
     // $target = 'C:/xampp/htdocs/lost-item/uploads';
 
+=======
+>>>>>>> aa657952f533b6d314baf5d95a15bdd3aef0aaa1
 
     $target = "uploads/";
     $file_location = $target . basename($_FILES["item_image"]["name"]);

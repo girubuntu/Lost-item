@@ -56,7 +56,7 @@ mysqli_close($conn);
                         <?php foreach($posts  as $post): ?>
                             <div class="col">
                                 <div class="card h-100 shadow-sm">
-                                    <?php echo '<img src="data:image;base64,'.base64_encode($post['item_image']).'" alt="image" style="width:100%; height:160px;" class="card-img-top" >' ?>
+                                    <img src="uploads/<?php echo $post['item_image'];?>" alt='image' style='width:100%; height:180px;' class='card-img-top' >
                                     
                                     <div class="card-body">
                                         <h4 class="card-title text-center"><?php echo $post['item_name']; ?></h4>
@@ -64,9 +64,9 @@ mysqli_close($conn);
                                             if ($post['status'] == 'lost')
                                             echo "Lost"; 
                                             else echo "Found";?> on <?php echo $post['incident_date']; ?> <br>
-                                            Location: <?php echo $post['district']; ?>
+                                            Location: <?php echo $post['district'];?> - <?php echo $post['sector'];?>
                                         </div>
-                                        <div class="text-center my-4"> <a href="#" class="btn">View Details</a> </div>
+                                        <div class="text-center my-4"> <a href='itemDetails.php?item_id=<?php echo " $post[item_id]";?> ' class="btn">View Details</a>' </div>
                                     </div>
                                 </div>
                             </div>
