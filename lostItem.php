@@ -124,7 +124,7 @@
                         <option value="Animals/Pets">Animals/Pets</option>
                         <option value="Electronics">Electronics</option>
                         <option value="Clothing">Clothing</option>
-                        <option value="Materials">Tools and Materials</option>
+                        <option value="Tools and Materials">Tools and Materials</option>
                         <option value="Cards">Cards</option>
                         <option value="Documents">Documents</option>
                         <option value="Personal Accessories">Personal Accessories</option>
