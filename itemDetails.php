@@ -14,12 +14,14 @@ echo "Data Error";
 exit;
 }  
 
-$query = "SELECT *  FROM lost_item where id=?";
+$query =  "SELECT * FROM `founditem` WHERE `id` = '{$item_id}'";
 $result = mysqli_query($conn,$query);
 
-$post = mysqli_fetch_all($result,MYSQLI_ASSOC);
+$post = mysqli_fetch_array($result,MYSQLI_ASSOC);
 
+echo $post[1];
 mysqli_free_result($result);
+
 
 mysqli_close($conn);
 

@@ -7,60 +7,54 @@
 
     if(isset($_POST['submit']) && isset($_FILES['item_image'])) { 
 
-    $item_image = $_FILES['item_image']['name'];
-<<<<<<< HEAD
-    // $tempName = $_FILES['item_image']['tmp_name'];
-    // $target = 'C:/xampp/htdocs/lost-item/uploads';
+        $item_image = $_FILES['item_image']['name'];
 
-=======
->>>>>>> aa657952f533b6d314baf5d95a15bdd3aef0aaa1
-
-    $target = "uploads/";
-    $file_location = $target . basename($_FILES["item_image"]["name"]);
+        $target = "uploads/";
+        $file_location = $target . basename($_FILES["item_image"]["name"]);
 
 
 
-       $item_name =mysqli_real_escape_string($conn, $_POST['item_name']);
-       $category_name = mysqli_real_escape_string($conn, $_POST['category_name']);
-       $brand = mysqli_real_escape_string($conn, $_POST['brand']);
-       $primary_color = mysqli_real_escape_string($conn, $_POST['primary_color']);
-       $incident_date = mysqli_real_escape_string($conn, date('Y-m-d', strtotime($_POST['incident_date'])));
-       $incident_time = mysqli_real_escape_string($conn, $_POST['incident_time']);
-       
-       $additional_info = mysqli_real_escape_string($conn, $_POST['additional_info']);
-
-       $location_type = mysqli_real_escape_string($conn, $_POST['location_type']);
-       $province = mysqli_real_escape_string($conn, $_POST['province']);
-       $district = mysqli_real_escape_string($conn, $_POST['district']);
-       $sector = mysqli_real_escape_string($conn, $_POST['sector']);
-       $cell = mysqli_real_escape_string($conn, $_POST['cell']);
-       $village = mysqli_real_escape_string($conn, $_POST['village']);
+        $item_name =mysqli_real_escape_string($conn, $_POST['item_name']);
+        $category_name = mysqli_real_escape_string($conn, $_POST['category_name']);
+        $brand = mysqli_real_escape_string($conn, $_POST['brand']);
+        $primary_color = mysqli_real_escape_string($conn, $_POST['primary_color']);
+        $incident_date = mysqli_real_escape_string($conn, date('Y-m-d', strtotime($_POST['incident_date'])));
+        $incident_time = mysqli_real_escape_string($conn, $_POST['incident_time']);
         
+        $additional_info = mysqli_real_escape_string($conn, $_POST['additional_info']);
 
-       $first_name = mysqli_real_escape_string($conn, $_POST['first_name']);
-       $last_name = mysqli_real_escape_string($conn,$_POST['last_name']);
-       $email = mysqli_real_escape_string($conn, $_POST['email']);
-       $phone_number = mysqli_real_escape_string($conn, $_POST['phone_number']);
-
-       
-    
-       
-       $query = "INSERT INTO foundItem(item_name, category_name, brand, primary_color, incident_date, incident_time, item_image, additional_info, location_type, province, district, sector, cell, village, first_name, last_name, phone_number, email)
-        VALUES('$item_name', '$category_name', '$brand', '$primary_color', '$incident_date', '$incident_time', '$item_image', '$additional_info', '$location_type', '$province', '$district', '$sector', '$cell', '$village', '$first_name', '$last_name', '$phone_number', '$email')";
-
-        if(mysqli_query($conn, $query)) {
+        $location_type = mysqli_real_escape_string($conn, $_POST['location_type']);
+        $province = mysqli_real_escape_string($conn, $_POST['province']);
+        $district = mysqli_real_escape_string($conn, $_POST['district']);
+        $sector = mysqli_real_escape_string($conn, $_POST['sector']);
+        $cell = mysqli_real_escape_string($conn, $_POST['cell']);
+        $village = mysqli_real_escape_string($conn, $_POST['village']);
             
-            echo "<script>setTimeout(function(){alert('Contact saved')}, 3000);</script>";
-            // move_uploaded_file($tempName, $tempName);
 
-            move_uploaded_file($_FILES['item_image']['tmp_name'], $file_location);
-
-            // header('Location: '.ROOT_URL.'');
-        } else {
-            echo 'ERROR: '.mysqli_error($conn);
-        }
+        $first_name = mysqli_real_escape_string($conn, $_POST['first_name']);
+        $last_name = mysqli_real_escape_string($conn,$_POST['last_name']);
+        $email = mysqli_real_escape_string($conn, $_POST['email']);
+        $phone_number = mysqli_real_escape_string($conn, $_POST['phone_number']);
 
         
+        
+        
+        $query = "INSERT INTO foundItem(item_name, category_name, brand, primary_color, incident_date, incident_time, item_image, additional_info, location_type, province, district, sector, cell, village, first_name, last_name, phone_number, email)
+            VALUES('$item_name', '$category_name', '$brand', '$primary_color', '$incident_date', '$incident_time', '$item_image', '$additional_info', '$location_type', '$province', '$district', '$sector', '$cell', '$village', '$first_name', '$last_name', '$phone_number', '$email')";
+
+            if(mysqli_query($conn, $query)) {
+                
+                echo "<script>setTimeout(function(){alert('Contact saved')}, 3000);</script>";
+                // move_uploaded_file($tempName, $tempName);
+
+                move_uploaded_file($_FILES['item_image']['tmp_name'], $file_location);
+
+                // header('Location: '.ROOT_URL.'');
+            } else {
+                echo 'ERROR: '.mysqli_error($conn);
+            }
+
+            
     }
 
 ?>
