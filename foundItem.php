@@ -112,14 +112,14 @@
     <div class='col-sm-6 mb-5'>
         <div class='form-group'>
             <label for="item_name" class="control-label lbl-descriptive">Item Found
-                <small class="required">*</small>
+            <small class="required text-danger">*</small>
                 <span class="label-detail">(Dog, Jacket, Smartphone, Wallet, etc.) This field may auto-populate</span>
             </label>
             <input class="form-control " placeholder="Item Found" name="item_name" type="text" required>
         </div>
         <div class='form-group'>
                     <label for="category_id" class="control-label lbl-descriptive">Category
-                        <small class="required">*</small>
+                    <small class="required text-danger">*</small>
                         <span class="label-detail">(Animals/Pets, Clothing, Electronics, Personal Accessories etc.)</span>
                     </label>
                     <select class="form-select" name='category_name' required>
@@ -136,21 +136,21 @@
                 </div>
         <div class='form-group search-frm'>
             <label for="brand" class="control-label lbl-descriptive">Brand
-                <small class="required">*</small>
+            <small class="required text-danger">*</small>
                 <span class="label-detail">(Canada, Louis Vuitton, Apple, etc)</span>
             </label>
             <input id="search_sub_cat" class="form-control" placeholder="Search Brand" name="brand" type="text" required>
         </div>
         <div class='form-group'>
             <label for="primary_color" class="control-label lbl-descriptive">Primary Color
-                <small class="required">*</small>
+            <small class="required text-danger">*</small>
                 <span class="label-detail">Please add the color that best represents the Found property (Red, Blue, Black, etc.) </span>
             </label>
             <input class="form-control" placeholder="Search Primary Color" name="primary_color" type="text" required>
         </div>
         <div class='form-group'>
             <label for="secondary_color" class="control-label lbl-descriptive">Secondary Color
-                <small class="required">*</small>
+                
                 <span class="label-detail">Please add the color that best represents the Found property (Red, Blue, Black, etc.) </span>
             </label>
             <input class="form-control" placeholder="Search Secondary Color" name="secondary_color" type="text">
@@ -161,7 +161,7 @@
     <div class='col-sm-6 mb-5'>
         <div class="form-group">
             <label for="date" class="control-label lbl-descriptive">Date Found
-                <small class="required">*</small>
+            <small class="required text-danger">*</small>
                 <span class="label-detail">Please add the approximate date of when the item was Found.</span>
             </label>
             <div class="input-group date">
@@ -170,7 +170,7 @@
         </div>
         <div class="form-group">
             <label for="date" class="control-label lbl-descriptive">Time Found
-                <small class="required">*</small>
+            <small class="required text-danger">*</small>
                 <span class="label-detail">Please add the approximate time of when the item was Found.</span>
             </label>
             <div class="input-group time">
@@ -196,7 +196,7 @@
         <div class='col-sm-6'>
             <div class=" form-group">
                 <label for="where_type" class="control-label lbl-descriptive">Where Found
-                    <small class="required">*</small>
+                <small class="required text-danger">*</small>
                     <span class="label-detail">Please provide an approximate location of the found property (Bar, Restaurant, Park, etc.)<span></label>
                
                     <div >
@@ -224,6 +224,7 @@
         <div class="col-sm-6">
             <div class="form-group">
                 <label for="zip_code" class="control-label lbl-descriptive">Province
+                <small class="required text-danger">*</small>
                 <span class="label-detail">Please provide your the province.<span>
                 </span></span></label>
                 <input id="zip_code" class="form-control" placeholder="Province" name="province" type="text" required>
@@ -232,6 +233,7 @@
         <div class="col-sm-6">
             <div class="form-group">
                 <label for="zip_code" class="control-label lbl-descriptive">District
+                <small class="required text-danger">*</small>
                 <span class="label-detail">Please provide the district<span>
                 </span></span></label>
                 <input id="zip_code" class="form-control" placeholder="District" name="district" type="text" required>
@@ -240,6 +242,7 @@
         <div class="col-sm-6">
             <div class="form-group">
                 <label for="zip_code" class="control-label lbl-descriptive">Sector
+                <small class="required text-danger">*</small>
                 <span class="label-detail">Please provide the sector<span>
                 </span></span></label>
                 <input id="zip_code" class="form-control" placeholder="Sector" name="sector" type="text" required>
@@ -272,7 +275,7 @@
         <div class='col-md-6'>
             <div class="form-group">
                 <label for="firstname" class="control-label lbl-descriptive">First Name
-                    <small class="required">*</small>
+                <small class="required text-danger">*</small>
                     <span class="label-detail">Please enter the first name  (This will apear on your submission).</span>
                 </label>
                 <div class="input-group date">
@@ -283,7 +286,7 @@
         <div class='col-md-6'>
             <div class="form-group">
                 <label for="lastname" class="control-label lbl-descriptive">Last Name
-                    <small class="required">*</small>
+                <small class="required text-danger">*</small>
                     <span class="label-detail">Please enter the last name  (This will apear on your submission).</span>
                 </label>
                 <div class="input-group date">
@@ -305,7 +308,7 @@
         <div class='col-md-6'>
             <div class="form-group">
                 <label for="email" class="control-label lbl-descriptive">Email
-                    <small class="required">*</small>
+                    
                     <span class="label-detail">Please enter your email(This will appear on your submission)</span>
                 </label>
                 <div class="input-group date">

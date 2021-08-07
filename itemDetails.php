@@ -45,7 +45,7 @@ if(isset($item_id)) {
             <div class="form-group">
                 <label for="firstname" class="control-label lbl-descriptive">Status</label>
                 <div class="input-group date">
-                    <input id="incident_date" class="form-control" name="status" type="text" value="<?php echo $data['status']?>">
+                    <input id="incident_date" class="form-control" name="status" type="text" disabled value="<?php echo $data['status']?>">
                 </div>
             </div>  
         </div>
@@ -53,7 +53,7 @@ if(isset($item_id)) {
         <div class="form-group">
             <label for="firstname" class="control-label lbl-descriptive">Item Name</label>
             <div class="input-group date">
-                <input id="incident_date" class="form-control" name="item_name" type="text" value="<?php echo $data['item_name']; ?>">
+                <input id="incident_date" class="form-control" name="item_name" disabled type="text" value="<?php echo $data['item_name']; ?>">
             </div>
         </div>  
     </div>
@@ -61,7 +61,7 @@ if(isset($item_id)) {
             <div class="form-group">
                 <label for="firstname" class="control-label lbl-descriptive">Category Name</label>
                 <div class="input-group date">
-                    <input id="incident_date" class="form-control" name="category_name" type="text" value="<?php echo $data['category_name']; ?>">
+                    <input id="incident_date" class="form-control" disabled name="category_name" type="text" value="<?php echo $data['category_name']; ?>">
                 </div>
             </div>  
         </div>
@@ -69,7 +69,7 @@ if(isset($item_id)) {
             <div class="form-group">
                 <label for="firstname" class="control-label lbl-descriptive">Brand Name</label>
                 <div class="input-group date">
-                    <input id="incident_date" class="form-control" name="brand" type="text" value="<?php echo $data['brand']; ?>">
+                    <input id="incident_date" class="form-control" disabled name="brand" type="text" value="<?php echo $data['brand']; ?>">
                 </div>
             </div>  
         </div>
@@ -77,7 +77,7 @@ if(isset($item_id)) {
             <div class="form-group">
                 <label for="firstname" class="control-label lbl-descriptive">primary color</label>
                 <div class="input-group date">
-                    <input id="incident_date" class="form-control"  name="primary_color" type="text" value="<?php echo $data['primary_color']; ?>">
+                    <input id="incident_date" class="form-control" disabled name="primary_color" type="text" value="<?php echo $data['primary_color']; ?>">
                 </div>
             </div>  
         </div>
@@ -85,7 +85,7 @@ if(isset($item_id)) {
             <div class="form-group">
                 <label for="firstname" class="control-label lbl-descriptive">Secondary color</label>
                 <div class="input-group date">
-                    <input id="incident_date" class="form-control" name="secondary_color" type="text" 
+                    <input id="incident_date" class="form-control" disabled name="secondary_color" type="text" 
                     value="<?php echo
                         $retVal = (!empty($data['secondary_color'])) ? $data['secondary_color'] : 'no data found' ;
                     ?>">
@@ -96,7 +96,7 @@ if(isset($item_id)) {
             <div class="form-group">
                 <label for="firstname" class="control-label lbl-descriptive"><?php echo $data['status']?> Date</label>
                 <div class="input-group date">
-                    <input id="incident_date" class="form-control" name="incident_date" type="text" value="<?php echo $data['incident_date']; ?>">
+                    <input id="incident_date" class="form-control" disabled name="incident_date" type="text" value="<?php echo $data['incident_date']; ?>">
                 </div>
             </div>  
         </div>
@@ -104,7 +104,7 @@ if(isset($item_id)) {
             <div class="form-group">
                 <label for="firstname" class="control-label lbl-descriptive"><?php echo $data['status']?> Time</label>
                 <div class="input-group date">
-                    <input id="incident_date" class="form-control" name="incident_time" type="text" value="<?php echo $data['incident_time']; ?>">
+                    <input id="incident_date" class="form-control" disabled name="incident_time" type="text" value="<?php echo $data['incident_time']; ?>">
                 </div>
             </div>  
         </div>
@@ -112,7 +112,7 @@ if(isset($item_id)) {
             <div class="form-group">
                 <label for="firstname" class="control-label lbl-descriptive">Location</label>
                 <div class="input-group date">
-                    <input id="incident_date" class="form-control" name="location_type" type="text" value="<?php echo $data['location_type']; ?>">
+                    <input id="incident_date" class="form-control" disabled name="location_type" type="text" value="<?php echo $data['location_type']; ?>">
                 </div>
             </div>  
         </div>
@@ -120,7 +120,7 @@ if(isset($item_id)) {
             <div class="form-group">
                 <label for="firstname" class="control-label lbl-descriptive">Province</label>
                 <div class="input-group date">
-                    <input id="incident_date" class="form-control" name="province" type="text" value="<?php echo $data['province']; ?>">
+                    <input id="incident_date" class="form-control" disabled name="province" type="text" value="<?php echo $data['province']; ?>">
                 </div>
             </div>  
         </div>
@@ -128,7 +128,7 @@ if(isset($item_id)) {
             <div class="form-group">
                 <label for="firstname" class="control-label lbl-descriptive">District</label>
                 <div class="input-group date">
-                    <input id="incident_date" class="form-control" name="district" type="text" value="<?php echo $data['district']; ?>">
+                    <input id="incident_date" class="form-control" disabled name="district" type="text" value="<?php echo $data['district']; ?>">
                 </div>
             </div>  
         </div>
@@ -136,7 +136,7 @@ if(isset($item_id)) {
             <div class="form-group">
                 <label for="firstname" class="control-label lbl-descriptive">Sector</label>
                 <div class="input-group date">
-                    <input id="incident_date" class="form-control" name="sector" type="text" value="<?php echo $data['sector']; ?>">
+                    <input id="incident_date" class="form-control" disabled name="sector" type="text" value="<?php echo $data['sector']; ?>">
                 </div>
             </div>  
         </div>
@@ -144,7 +144,7 @@ if(isset($item_id)) {
             <div class="form-group">
                 <label for="firstname" class="control-label lbl-descriptive">Cell</label>
                 <div class="input-group date">
-                    <input id="incident_date" class="form-control" name="cell" type="text"  value="<?php echo
+                    <input id="incident_date" class="form-control" disabled name="cell" type="text"  value="<?php echo
                         $retVal = (!empty($data['cell'])) ? $data['cell'] : 'no data found' ;
                     ?>"> 
                 </div>
@@ -154,7 +154,7 @@ if(isset($item_id)) {
             <div class="form-group">
                 <label for="firstname" class="control-label lbl-descriptive">Village</label>
                 <div class="input-group date">
-                    <input id="incident_date" class="form-control" name="village" type="text"value="<?php echo
+                    <input id="incident_date" class="form-control" disabled name="village" type="text"value="<?php echo
                         $retVal = (!empty($data['village'])) ? $data['village'] : 'no data found' ;
                     ?>">
                 </div>
@@ -164,7 +164,7 @@ if(isset($item_id)) {
             <div class="form-group">
                 <label for="firstname" class="control-label lbl-descriptive">First name</label>
                 <div class="input-group date">
-                    <input id="incident_date" class="form-control" name="first_name" type="text" value="<?php echo $data['first_name']; ?>">
+                    <input id="incident_date" class="form-control" disabled name="first_name" type="text" value="<?php echo $data['first_name']; ?>">
                 </div>
             </div>  
         </div>
@@ -172,7 +172,7 @@ if(isset($item_id)) {
             <div class="form-group">
                 <label for="firstname" class="control-label lbl-descriptive">Last name</label>
                 <div class="input-group date">
-                    <input id="incident_date" class="form-control" name="last_name" type="text" value="<?php echo $data['last_name']; ?>">
+                    <input id="incident_date" class="form-control" disabled name="last_name" type="text" value="<?php echo $data['last_name']; ?>">
                 </div>
             </div>  
         </div>
@@ -180,7 +180,7 @@ if(isset($item_id)) {
             <div class="form-group">
                 <label for="firstname" class="control-label lbl-descriptive">Phone number</label>
                 <div class="input-group date">
-                    <input id="incident_date" class="form-control" name="phone_number" type="text" value="<?php echo '0'.$data['phone_number']; ?>">
+                    <input id="incident_date" class="form-control" disabled name="phone_number" type="text" value="<?php echo '0'.$data['phone_number']; ?>">
                 </div>
             </div>  
         </div>
@@ -188,16 +188,28 @@ if(isset($item_id)) {
             <div class="form-group">
                 <label for="firstname" class="control-label lbl-descriptive">Email</label>
                 <div class="input-group date">
-                    <input id="incident_date" class="form-control" name="email" type="text" value="<?php echo
+                    <input id="incident_date" class="form-control" disabled name="email" type="text" value="<?php echo
                         $retVal = (!empty($data['email'])) ? $data['email'] : 'no data found' ;
                     ?>">
+                </div>
+            </div>  
+        </div>
+        <div class='col-md-6'>
+            <div class="form-group">
+                <label for="firstname" class="control-label lbl-descriptive">Additional information</label>
+                <div class="input-group date">
+                
+                    <textarea class="form-control pl-0" id="exampleFormControlTextarea1" rows="4" cols="50" disabled>
+                        <?php echo
+                        $retVal = (!empty($data['additional_info'])) ? $data['additional_info'] : 'no data found' ;
+                    ?></textarea> 
                 </div>
             </div>  
         </div>
         <div class='col-md-6 m-auto'>
             
             
-            <img src="uploads/<?php echo $data['item_image'];?>" alt='image' style='width:auto; height:auto;' class='card-img-top' >
+            <img src="uploads/<?php echo $data['item_image'];?>" alt='image' style='width:100%; height:auto;' class='card-img-top' >
             
         </div>
         
