@@ -137,7 +137,7 @@
         <li>
           <a href="lostItem.php" class="menu-item">LOST AND FOUND<i style="padding: 6px;"></i></a>
         </li>
-        <li><a href="#clients" class="menu-item">PATERNERS</a></li>
+        <li><a href="#clients" class="menu-item">PARTNERS</a></li>
         <li><a href="faq.html" class="menu-item">FAQ</a></li>
         <li>
           <a href="#" class="menu-item">ABOUT<i style="padding: 6px;" class="fa fa-chevron-down"></i></a>
