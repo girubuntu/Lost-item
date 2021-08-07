@@ -1,4 +1,4 @@
-<footer id="main-footer">
+<footer id="main-footer" class="mt-5">
     <div class="footer-content">
     <div class="footer-container">
       <div class="footer-group">
