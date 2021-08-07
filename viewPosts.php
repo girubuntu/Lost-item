@@ -3,7 +3,7 @@
 require('config/config.php');
 require('config/db.php');
 
-$query = 'SELECT * FROM lost_item UNION ALL SELECT *  FROM founditem ORDER BY created_at DESC';
+$query = "SELECT * FROM lost_item UNION ALL SELECT *  FROM founditem ORDER BY created_at DESC";
 
 $result = mysqli_query($conn,$query);
 
@@ -72,7 +72,7 @@ mysqli_close($conn);
                                             else echo "Found";?> on <?php echo $post['incident_date']; ?> <br>
                                             Location: <?php echo $post['district'];?> - <?php echo $post['sector'];?>
                                         </div>
-                                        <div class="text-center my-4"> <a href='itemDetails.php?item_id=<?php echo " $post[item_id]";?> ' class="btn">View Details</a> </div>
+                                        <div class="text-center my-4"> <a href="itemDetails.php?id=<?php echo $post['item_id']?> " class="btn">View Details</a> </div>
                                     </div>
                                 </div>
                             </div>

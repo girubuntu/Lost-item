@@ -157,7 +157,6 @@
                     <li><a style="color: black;"href="lostItem.php">Submit Lost Property</a></li>
                     <li><a style="color: black;"href="foundItem.php">Submit Found Property</a></li>
                     <li><a style="color: black;"href="viewPosts.php">View Recent Posts</a></li>
->>>>>>> 735fe7f75126c44abd13d5a8887b0c90a33588c6
                     <li><a style="color: black;"href="#"></a></li>
                   </ul>
                 </section>

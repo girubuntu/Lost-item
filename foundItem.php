@@ -1,7 +1,9 @@
 
 <?php
+    session_start();
     require('config/config.php');
     require('config/db.php');
+    
 
     
 
@@ -18,6 +20,7 @@
         $category_name = mysqli_real_escape_string($conn, $_POST['category_name']);
         $brand = mysqli_real_escape_string($conn, $_POST['brand']);
         $primary_color = mysqli_real_escape_string($conn, $_POST['primary_color']);
+        $secondary_color = mysqli_real_escape_string($conn, $_POST['secondary_color']);
         $incident_date = mysqli_real_escape_string($conn, date('Y-m-d', strtotime($_POST['incident_date'])));
         $incident_time = mysqli_real_escape_string($conn, $_POST['incident_time']);
         
@@ -39,12 +42,12 @@
         
         
         
-        $query = "INSERT INTO foundItem(item_name, category_name, brand, primary_color, incident_date, incident_time, item_image, additional_info, location_type, province, district, sector, cell, village, first_name, last_name, phone_number, email)
-            VALUES('$item_name', '$category_name', '$brand', '$primary_color', '$incident_date', '$incident_time', '$item_image', '$additional_info', '$location_type', '$province', '$district', '$sector', '$cell', '$village', '$first_name', '$last_name', '$phone_number', '$email')";
+        $query = "INSERT INTO foundItem(item_name, category_name, brand, primary_color, secondary_color, incident_date, incident_time, item_image, additional_info, location_type, province, district, sector, cell, village, first_name, last_name, phone_number, email)
+            VALUES('$item_name', '$category_name', '$brand', '$primary_color','$secondary_color', '$incident_date', '$incident_time', '$item_image', '$additional_info', '$location_type', '$province', '$district', '$sector', '$cell', '$village', '$first_name', '$last_name', '$phone_number', '$email')";
 
             if(mysqli_query($conn, $query)) {
                 
-                echo "<script>setTimeout(function(){alert('Contact saved')}, 3000);</script>";
+                $_SESSION['status'] = 'Your  post has been submitted successfully!';
                 // move_uploaded_file($tempName, $tempName);
 
                 move_uploaded_file($_FILES['item_image']['tmp_name'], $file_location);
@@ -59,9 +62,23 @@
 
 ?>
 
-    <?php include('inc/header.php'); ?>
-
+<?php include('inc/header.php'); 
     
+    ?>
+    <div class='col-md-12  mb-4'>
+    <?php
+        if(isset($_SESSION['status']))
+        {
+            ?>
+            <div class='alert alert-success alert-dismissible fade show text-center' role='alert'>
+                <?php echo $_SESSION['status']; ?>
+                <button type='button' class='btn-close' data-bs-dismiss='alert' arial-label='close'></button>
+            </div>
+            <?php
+            unset($_SESSION['status']);
+        }
+            ?>
+    </div>
 
   
     <!-- showcase -->
@@ -75,9 +92,9 @@
                         Our system connects lost and found properties from all around the country with their owners. For every lost property, we send a notification to the owner when the system receives a matching found item.<br>
                         <br><strong>Click the button below to the corresponding action you want</strong>
                     </p>
-                    <a href="./index.php"><button type="button" class="btn btn-outline-secondary">Lost Item</button></a>
-                    <a href="#"><button type="button" class="btn btn-outline-secondary">Found Item</button></a>
-                    <a href="#"><button type="button" class="btn btn-outline-secondary">View Post</button></a>
+                    <a href="lostitem.php"><button type="button" class="btn btn-outline-secondary">Lost Item</button></a>
+                    <a href="#"><button type="button" class="btn btn-outline-secondary active">Found Item</button></a>
+                    <a href="viewPosts.php"><button type="button" class="btn btn-outline-secondary">View Post</button></a>
                     <br><br>
                     <strong class="required text-danger">*</strong>
                     <small>Please be descriptive when submitting your Found property report, the more information you give us the better chance you have of retrieving your items.</small>
@@ -98,28 +115,45 @@
                 <small class="required">*</small>
                 <span class="label-detail">(Dog, Jacket, Smartphone, Wallet, etc.) This field may auto-populate</span>
             </label>
-            <input class="form-control " placeholder="Item Found" name="item_name" type="text">
+            <input class="form-control " placeholder="Item Found" name="item_name" type="text" required>
         </div>
         <div class='form-group'>
-            <label for="category_id" class="control-label lbl-descriptive">Category
-                <small class="required">*</small>
-                <span class="label-detail">(Animals/Pets, Clothing, Electronics, Personal Accessories etc.) This is required.</span>
-            </label>
-            <input class="form-control " placeholder="Search Category" name="category_name" type="text">
-        </div>
+                    <label for="category_id" class="control-label lbl-descriptive">Category
+                        <small class="required">*</small>
+                        <span class="label-detail">(Animals/Pets, Clothing, Electronics, Personal Accessories etc.)</span>
+                    </label>
+                    <select class="form-select" name='category_name' required>
+                        <option selected="selected" value="">Select Category</option>
+                        <option value="Animals/Pets">Animals/Pets</option>
+                        <option value="Electronics">Electronics</option>
+                        <option value="Clothing">Clothing</option>
+                        <option value="Tools and Materials">Tools and Materials</option>
+                        <option value="Cards">Cards</option>
+                        <option value="Documents">Documents</option>
+                        <option value="Personal Accessories">Personal Accessories</option>
+                        <option value="Others">Others</option>
+                    </select>
+                </div>
         <div class='form-group search-frm'>
             <label for="brand" class="control-label lbl-descriptive">Brand
                 <small class="required">*</small>
                 <span class="label-detail">(Canada, Louis Vuitton, Apple, etc)</span>
             </label>
-            <input id="search_sub_cat" class="form-control" placeholder="Search Brand" name="brand" type="text">
+            <input id="search_sub_cat" class="form-control" placeholder="Search Brand" name="brand" type="text" required>
         </div>
         <div class='form-group'>
             <label for="primary_color" class="control-label lbl-descriptive">Primary Color
                 <small class="required">*</small>
                 <span class="label-detail">Please add the color that best represents the Found property (Red, Blue, Black, etc.) </span>
             </label>
-            <input class="form-control" placeholder="Search Primary Color" name="primary_color" type="text">
+            <input class="form-control" placeholder="Search Primary Color" name="primary_color" type="text" required>
+        </div>
+        <div class='form-group'>
+            <label for="secondary_color" class="control-label lbl-descriptive">Secondary Color
+                <small class="required">*</small>
+                <span class="label-detail">Please add the color that best represents the Found property (Red, Blue, Black, etc.) </span>
+            </label>
+            <input class="form-control" placeholder="Search Secondary Color" name="secondary_color" type="text">
         </div>
        
         
@@ -131,7 +165,7 @@
                 <span class="label-detail">Please add the approximate date of when the item was Found.</span>
             </label>
             <div class="input-group date">
-                <input class="form-control" placeholder="Date Found" name="incident_date" type="date">
+                <input class="form-control" placeholder="Date Found" name="incident_date" type="date" required>
             </div>
         </div>
         <div class="form-group">
@@ -140,7 +174,7 @@
                 <span class="label-detail">Please add the approximate time of when the item was Found.</span>
             </label>
             <div class="input-group time">
-                <input id="incident_time" class="form-control" placeholder="Time Found" name="incident_time" type="time">
+                <input id="incident_time" class="form-control" placeholder="Time Found" name="incident_time" type="time" required>
             </div>
         </div>
         <div class="form-group upload_image">
@@ -170,7 +204,7 @@
 
                         <ul class="dropdown-menu inner" role="listbox" aria-expanded="false" style="max-height: 200px; overflow-y: auto;">
       
-                            </ul></div><select id="location_type" class="form-control js-select" data-live-search="true" data-size="5" data-type="found" name="location_type" tabindex="-98">
+                            </ul></div><select id="location_type" class="form-control js-select" required data-live-search="true" data-size="5" data-type="found" name="location_type" tabindex="-98">
                                 <option selected="selected" value="">Select Type</option>
                                 <option value="Bar">Bar</option>
                                 <option value="Taxi">Taxi</option>
@@ -192,7 +226,7 @@
                 <label for="zip_code" class="control-label lbl-descriptive">Province
                 <span class="label-detail">Please provide your the province.<span>
                 </span></span></label>
-                <input id="zip_code" class="form-control" placeholder="Province" name="province" type="text">
+                <input id="zip_code" class="form-control" placeholder="Province" name="province" type="text" required>
             </div>
         </div>
         <div class="col-sm-6">
@@ -200,7 +234,7 @@
                 <label for="zip_code" class="control-label lbl-descriptive">District
                 <span class="label-detail">Please provide the district<span>
                 </span></span></label>
-                <input id="zip_code" class="form-control" placeholder="District" name="district" type="text">
+                <input id="zip_code" class="form-control" placeholder="District" name="district" type="text" required>
             </div>
         </div>
         <div class="col-sm-6">
@@ -208,7 +242,7 @@
                 <label for="zip_code" class="control-label lbl-descriptive">Sector
                 <span class="label-detail">Please provide the sector<span>
                 </span></span></label>
-                <input id="zip_code" class="form-control" placeholder="Sector" name="sector" type="text">
+                <input id="zip_code" class="form-control" placeholder="Sector" name="sector" type="text" required>
             </div>
         </div>
         <div class="col-sm-6">
