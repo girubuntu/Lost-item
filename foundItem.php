@@ -93,7 +93,7 @@
                         <br><strong>Click the button below to the corresponding action you want</strong>
                     </p>
                     <a href="lostitem.php"><button type="button" class="btn btn-outline-secondary">Lost Item</button></a>
-                    <a href="#"><button type="button" class="btn btn-outline-secondary active">Found Item</button></a>
+                    <a href="#"><button type="button" class="btn btn-outline-secondary" style='background-color:rgb(34, 34, 102);color:white;'>Found Item</button></a>
                     <a href="viewPosts.php"><button type="button" class="btn btn-outline-secondary">View Post</button></a>
                     <br><br>
                     <strong class="required text-danger">*</strong>
