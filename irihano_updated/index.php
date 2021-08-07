@@ -75,7 +75,6 @@
       
       <ul class="menu-items">
         <li><a href="index.php" class="menu-item">HOME</a> </li>
-        
         <li>
         <a href="#" class="menu-item">BUSINESS AGENT<i style="padding: 6px;" class="fa fa-chevron-down"></i></a>
           <div class="mega-menu">
