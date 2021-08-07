@@ -209,7 +209,7 @@ if(isset($item_id)) {
         <div class='col-md-6 m-auto'>
             
             
-            <img src="uploads/<?php echo $data['item_image'];?>" alt='image' style='width:100%; height:auto;' class='card-img-top' >
+            <img src="uploads/<?php echo $data['item_image'];?>" alt='image' style='width:auto; height:auto;' class='card-img-top' >
             
         </div>
         
