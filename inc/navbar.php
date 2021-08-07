@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg sticky-top mb-5">
-        <a class="navbar-brand ml-5" href="index.php"><img src='https://irihano.rw/assets/img/newirihano.png'  width='150px'></a>
+        <a class="navbar-brand ml-5" href="index.php" style='color:white;'><img src="assets/img/newirihano.png" style="height: 50px;width: 150px;margin-left: 40px;" alt="" class="img-fluid"></a>
         <button
             class="navbar-toggler"
             type="button"
@@ -10,25 +10,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navMenu">
             <ul class="navbar-nav text-center text-light ml-auto my-lg-0">
-                <li class="nav-item"><a class="nav-link"  href='index.php'>HOME</a></li>
-                <li class="nav-item"><a class="nav-link dropdown-toggle"  href='#'>BUSINESS AGENT</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link" href="lostItem.php" aria-haspopup="true" aria-expanded="false">
-                        LOST AND FOUND
-                    </a>
-                </li>
-                </li>
-                <li class="nav-item"><a class="nav-link" href='#'>PARTNERS</a></li>
-                <li class="nav-item"><a class="nav-link" href='#'>FAQ</a></li>
-                <li class="nav-item"><a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown" href='#'>ABOUT</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Link 1</a>
-                        <a class="dropdown-item" href="#">Link 2</a>
-                        <a class="dropdown-item" href="#">Link 3</a>
-                      </div>
-                </li>
-                <li class="nav-item"><a class="nav-link" href='/css/contact.html'>REQUEST</a></li>
-                <li class="nav-item"><a class="nav-link" href='/css/contact.html'>LOGIN</a></li>
+                <li class="nav-item active"><a class="nav-link active"  href='index.php'>ADD LOST ITEM</a></li>
+                <li class="nav-item"><a class="nav-link"  href='foundItem.php'>ADD FOUND ITEM</a></li>
+                <li class="nav-item"><a class="nav-link" href="viewPosts.php">RECENT POSTS</a></li>
                 
             </ul>
         </div>

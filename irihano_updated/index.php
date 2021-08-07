@@ -74,8 +74,7 @@
     <nav >
       
       <ul class="menu-items">
-        <li><a href="index.html" class="menu-item">HOME</a> </li>
-        
+        <li><a href="index.php" class="menu-item">HOME</a> </li>
         <li>
         <a href="#" class="menu-item">BUSINESS AGENT<i style="padding: 6px;" class="fa fa-chevron-down"></i></a>
           <div class="mega-menu">
@@ -135,7 +134,7 @@
           </div>
         </li>
         <li>
-          <a href="lostItem.php" class="menu-item">LOST AND FOUND<i style="padding: 6px;"></i></a>
+          <a href="../index.php" class="menu-item">LOST AND FOUND<i style="padding: 6px;"></i></a>
         </li>
         <li><a href="#clients" class="menu-item">PARTNERS</a></li>
         <li><a href="faq.html" class="menu-item">FAQ</a></li>

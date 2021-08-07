@@ -62,7 +62,6 @@
     ?>
     <head>
         <link rel="stylesheet" href="./css/lostItem.css">
-        <title>Lost and Found Item</title>
     </head>
     
     <main class='container'>
@@ -85,14 +84,11 @@
             <div class="container">
                 <div class='row'>
                     <div class='col-sm-5'>
-                        <h1>Submit Lost Property</h1>
+                        <h1>Submit Lost Property</h1><br><br>
                         <p>
                             Our system connects lost and found properties from all around the country with their owners. For every lost property, we send a notification to the owner when the system receives a matching found item.<br>
-                            <br><strong>Click the button below to the corresponding action you want</strong>
+                            
                         </p>
-                        <a href="#"><button type="button" class="btn btn-outline-secondary" style='background-color:rgb(34, 34, 102);color:white;'>Lost Item</button></a>
-                        <a href="foundItem.php"><button type="button" class="btn btn-outline-secondary">Found Item</button></a>
-                        <a href="viewPosts.php"><button type="button" class="btn btn-outline-secondary">View Post</button></a>
                         <br><br>
                         <strong class="required text-danger">*</strong>
                         <small>Please be descriptive when submitting your lost property report, the more information you give us the better chance you have of retrieving your items.</small>
