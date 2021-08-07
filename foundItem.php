@@ -1,5 +1,6 @@
 
 <?php
+    session_start();
     require('config/config.php');
     require('config/db.php');
 
@@ -44,7 +45,7 @@
 
         if(mysqli_query($conn, $query)) {
             
-            echo "<script>setTimeout(function(){alert('Contact saved')}, 3000);</script>";
+            $_SESSION['status'] = 'Your  post has been submitted successfully!';
             // move_uploaded_file($tempName, $tempName);
 
             move_uploaded_file($_FILES['item_image']['tmp_name'], $file_location);
@@ -59,12 +60,27 @@
 
 ?>
 
-    <?php include('inc/header.php'); ?>
+    <?php include('inc/header.php'); 
+    session_start();
+    ?>
 
     
-
+    <div class='col-md-12  mb-4'>
+    <?php
+        if(isset($_SESSION['status']))
+        {
+            ?>
+            <div class='alert alert-success alert-dismissible fade show text-center' role='alert'>
+                <?php echo $_SESSION['status']; ?>
+                <button type='button' class='btn-close' data-bs-dismiss='alert' arial-label='close'></button>
+            </div>
+            <?php
+            unset($_SESSION['status']);
+        }
+            ?>
+    </div>
   
-    <!-- showcase -->
+    
     <section >
         <div class="container">
            

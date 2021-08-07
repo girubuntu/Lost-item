@@ -13,14 +13,9 @@
                 <li class="nav-item"><a class="nav-link"  href='index.php'>HOME</a></li>
                 <li class="nav-item"><a class="nav-link dropdown-toggle"  href='#'>BUSINESS AGENT</a></li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        IRIHANO ONLINE
+                    <a class="nav-link" href="lostItem.php" aria-haspopup="true" aria-expanded="false">
+                        LOST AND FOUND
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" style='color:black;' href="lostItem.php">Submit Lost Property</a>
-                    <a class="dropdown-item" style="color: black;"href="foundItem.php">Submit Found Property</a>
-                    <a class="dropdown-item"  style="color: black;"href="viewPosts.php">View Recent Posts</a>    
-                    </div>
                 </li>
                 </li>
                 <li class="nav-item"><a class="nav-link" href='#'>PARTNERS</a></li>

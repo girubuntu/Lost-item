@@ -59,7 +59,6 @@
 ?>
 
     <?php include('inc/header.php'); 
-    session_start();
     ?>
     <head>
         <link rel="stylesheet" href="./css/lostItem.css">
@@ -91,7 +90,7 @@
                             Our system connects lost and found properties from all around the country with their owners. For every lost property, we send a notification to the owner when the system receives a matching found item.<br>
                             <br><strong>Click the button below to the corresponding action you want</strong>
                         </p>
-                        <a href="lostItem.php"><button type="button" class="btn btn-outline-secondary">Lost Item</button></a>
+                        <a href="lostItem.php"><button type="button" class="btn btn-default" style='background-color:rgb(34, 34, 102);color:white;'>Lost Item</button></a>
                         <a href="foundItem.php"><button type="button" class="btn btn-outline-secondary">Found Item</button></a>
                         <a href="viewPosts.php"><button type="button" class="btn btn-outline-secondary">View Post</button></a>
                         <br><br>
@@ -159,7 +158,7 @@
                         <span class="label-detail">Please add the approximate date of when the item was lost.</span>
                     </label>
                     <div class="input-group date">
-                        <input class="form-control" placeholder="Date Lost" name="incident_date" type="date" required>
+                        <input class="form-control" id='date' placeholder="Date Lost" type="text" data-format="DD-MM-YYYY" data-template="D MMM YYYY" name="incident_date" value="09-01-2013" required>
                     </div>
                 </div>
                 <div class="form-group">
@@ -300,5 +299,5 @@
     </main>
 
     <!--footer-->
-    
+
     <?php include('inc/footer.php'); ?>

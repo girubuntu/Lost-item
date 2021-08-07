@@ -20,9 +20,8 @@
     border-bottom: 4px solid rgb(32, 55, 155);
     transition: color .15s ease-in-out,background-color .15s ease-in-out;
 }
-.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+.nav-tabs .nav-link:hover {
     border: none;
-    border-bottom: 4px solid rgb(32, 55, 155);
     color:rgb(32, 55, 155);
     isolation: auto;
 }
