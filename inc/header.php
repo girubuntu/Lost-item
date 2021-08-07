@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicons -->
+    <link href="assets/img/cropped-Favicon.png" rel="icon">
+    <link href="assets/img/cropped-Favicon.png" rel="apple-touch-icon">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
     <link rel="stylesheet" href="./css/foundItem.css">
     <script src="https://kit.fontawesome.com/e8a97f7b71.js" crossorigin="anonymous"></script>
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -29,6 +34,8 @@
     <script src="js/moment.min.js"></script> 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/x-editable/1.4.3/inputs/combodate/combodate.js"></script>
     <script src="js/index.js"></script> 
+
+    <title>Lost And Found</title>
 </head>
 
 <body>
