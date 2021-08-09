@@ -213,7 +213,9 @@ if(isset($item_id)) {
             
         </div>
         
-        <a href="viewPosts.php"><button type="button" class="btn btn-outline-primary mb-7 mt-7" >Back to view </button></a>
+        <a  href= "<?php if ($data['status'] == "lost")
+                   echo "viewLostPosts.php";
+                   else echo "viewFoundPosts.php";?>"><button type="button" class="btn btn-outline-primary mb-7 mt-7"> Back to view posts</button></a>
         
 </div>
 </div>

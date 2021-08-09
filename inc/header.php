@@ -34,8 +34,6 @@
     <script src="js/moment.min.js"></script> 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/x-editable/1.4.3/inputs/combodate/combodate.js"></script>
     <script src="js/index.js"></script> 
-
-    <title>Lost And Found</title>
 </head>
 
 <body>

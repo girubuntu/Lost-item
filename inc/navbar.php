@@ -12,7 +12,12 @@
             <ul class="navbar-nav text-center text-light ml-auto my-lg-0">
                 <li class="nav-item active"><a class="nav-link active"  href='index.php'>ADD LOST ITEM</a></li>
                 <li class="nav-item"><a class="nav-link"  href='foundItem.php'>ADD FOUND ITEM</a></li>
-                <li class="nav-item"><a class="nav-link" href="viewPosts.php">RECENT POSTS</a></li>
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">RECENT POSTS</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="viewLostPosts.php" style='color:black;'>LOST ITEMS</a>
+                        <a class="dropdown-item" href="viewFoundPosts.php" style='color:black;'>FOUND ITEMS</a>
+                    </div>
+                </li>
                 
             </ul>
         </div>
