@@ -40,7 +40,14 @@ if(isset($item_id)) {
 <div class='row m-auto'>
 
     <br>
-    <h1>View details</h1>
+    <h1 class="mb-6" style="text-align:left;">View details</h1>
+    <div class='col-md-6 m-auto mt-7'>
+            
+            
+            <img src="uploads/<?php echo $data['item_image'];?>" alt='image' style='width:280px; height:250px; border-radius: 10px;' class='card-img-top' >
+            
+    </div>
+    <div></div>
     <div class='col-md-6'>
             <div class="form-group">
                 <label for="firstname" class="control-label lbl-descriptive">Status</label>
@@ -206,12 +213,7 @@ if(isset($item_id)) {
                 </div>
             </div>  
         </div>
-        <div class='col-md-6 m-auto'>
-            
-            
-            <img src="uploads/<?php echo $data['item_image'];?>" alt='image' style='width:auto; height:auto;' class='card-img-top' >
-            
-        </div>
+        
         
         <a  href= "<?php if ($data['status'] == "lost")
                    echo "viewLostPosts.php";
