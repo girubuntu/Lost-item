@@ -65,6 +65,9 @@
 <?php include('inc/header.php'); 
     
     ?>
+    <head>
+        <title>Lost And Found</title>
+    </head>
     <div class='col-md-12  mb-4'>
     <?php
         if(isset($_SESSION['status']))

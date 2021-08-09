@@ -62,6 +62,7 @@
     ?>
     <head>
         <link rel="stylesheet" href="./css/lostItem.css">
+        <title>Lost And Found</title>
     </head>
     
     <main class='container'>
@@ -154,7 +155,7 @@
                         <span class="label-detail">Please add the approximate date of when the item was lost.</span>
                     </label>
                     <div class="input-group date">
-                        <input class="form-control" id='date' placeholder="Date Lost" type="text" data-format="DD-MM-YYYY" data-template="D MMM YYYY" name="incident_date" value="09-01-2013" required>
+                        <input class="form-control" placeholder="Date Lost" name="incident_date" type="date" required>
                     </div>
                 </div>
                 <div class="form-group">
