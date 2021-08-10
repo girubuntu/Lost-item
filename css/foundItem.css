@@ -8,6 +8,9 @@ nav {
 form .btn {
   background-color: rgb(34, 34, 102);
 }
+.required{
+  color:rgb(255,0,0);
+}
 
 #main-footer {
     background: rgb(2, 2, 34);

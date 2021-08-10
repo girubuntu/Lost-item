@@ -76,7 +76,9 @@ if(isset($item_id)) {
             <div class="form-group">
                 <label for="firstname" class="control-label lbl-descriptive">Brand Name</label>
                 <div class="input-group date">
-                    <input id="incident_date" class="form-control" disabled name="brand" type="text" value="<?php echo $data['brand']; ?>">
+                    <input id="incident_date" class="form-control" disabled name="brand" type="text" value="<?php echo
+                        $retVal = (!empty($data['brand'])) ? $data['brand'] : 'Null' ;
+                    ?>">
                 </div>
             </div>  
         </div>
@@ -94,7 +96,7 @@ if(isset($item_id)) {
                 <div class="input-group date">
                     <input id="incident_date" class="form-control" disabled name="secondary_color" type="text" 
                     value="<?php echo
-                        $retVal = (!empty($data['secondary_color'])) ? $data['secondary_color'] : 'None' ;
+                        $retVal = (!empty($data['secondary_color'])) ? $data['secondary_color'] : 'Null' ;
                     ?>">
                 </div>
             </div>  
@@ -152,7 +154,7 @@ if(isset($item_id)) {
                 <label for="firstname" class="control-label lbl-descriptive">Cell</label>
                 <div class="input-group date">
                     <input id="incident_date" class="form-control" disabled name="cell" type="text"  value="<?php echo
-                        $retVal = (!empty($data['cell'])) ? $data['cell'] : 'None' ;
+                        $retVal = (!empty($data['cell'])) ? $data['cell'] : 'Null' ;
                     ?>"> 
                 </div>
             </div>  
@@ -162,7 +164,7 @@ if(isset($item_id)) {
                 <label for="firstname" class="control-label lbl-descriptive">Village</label>
                 <div class="input-group date">
                     <input id="incident_date" class="form-control" disabled name="village" type="text"value="<?php echo
-                        $retVal = (!empty($data['village'])) ? $data['village'] : 'None' ;
+                        $retVal = (!empty($data['village'])) ? $data['village'] : 'Null' ;
                     ?>">
                 </div>
             </div>  
@@ -196,7 +198,7 @@ if(isset($item_id)) {
                 <label for="firstname" class="control-label lbl-descriptive">Email</label>
                 <div class="input-group date">
                     <input id="incident_date" class="form-control" disabled name="email" type="text" value="<?php echo
-                        $retVal = (!empty($data['email'])) ? $data['email'] : 'None' ;
+                        $retVal = (!empty($data['email'])) ? $data['email'] : 'Null' ;
                     ?>">
                 </div>
             </div>  
@@ -208,7 +210,7 @@ if(isset($item_id)) {
                 
                     <textarea class="form-control pl-0" id="exampleFormControlTextarea1" rows="4" cols="50" disabled>
                         <?php echo
-                        $retVal = (!empty($data['additional_info'])) ? $data['additional_info'] : 'None' ;
+                        $retVal = (!empty($data['additional_info'])) ? $data['additional_info'] : 'Null' ;
                     ?></textarea> 
                 </div>
             </div>  
