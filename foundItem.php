@@ -1,66 +1,4 @@
 
-<?php
-    session_start();
-    require('config/config.php');
-    require('config/db.php');
-    
-
-    
-
-    if(isset($_POST['submit']) && isset($_FILES['item_image'])) { 
-
-        $item_image = $_FILES['item_image']['name'];
-
-        $target = "uploads/";
-        $file_location = $target . basename($_FILES["item_image"]["name"]);
-
-
-
-        $item_name =mysqli_real_escape_string($conn, $_POST['item_name']);
-        $category_name = mysqli_real_escape_string($conn, $_POST['category_name']);
-        $brand = mysqli_real_escape_string($conn, $_POST['brand']);
-        $primary_color = mysqli_real_escape_string($conn, $_POST['primary_color']);
-        $secondary_color = mysqli_real_escape_string($conn, $_POST['secondary_color']);
-        $incident_date = mysqli_real_escape_string($conn, date('Y-m-d', strtotime($_POST['incident_date'])));
-        $incident_time = mysqli_real_escape_string($conn, $_POST['incident_time']);
-        
-        $additional_info = mysqli_real_escape_string($conn, $_POST['additional_info']);
-
-        $location_type = mysqli_real_escape_string($conn, $_POST['location_type']);
-        $province = mysqli_real_escape_string($conn, $_POST['province']);
-        $district = mysqli_real_escape_string($conn, $_POST['district']);
-        $sector = mysqli_real_escape_string($conn, $_POST['sector']);
-        $cell = mysqli_real_escape_string($conn, $_POST['cell']);
-        $village = mysqli_real_escape_string($conn, $_POST['village']);
-            
-
-        $first_name = mysqli_real_escape_string($conn, $_POST['first_name']);
-        $last_name = mysqli_real_escape_string($conn,$_POST['last_name']);
-        $email = mysqli_real_escape_string($conn, $_POST['email']);
-        $phone_number = mysqli_real_escape_string($conn, $_POST['phone_number']);
-
-        
-        
-        
-        $query = "INSERT INTO foundItem(item_name, category_name, brand, primary_color, secondary_color, incident_date, incident_time, item_image, additional_info, location_type, province, district, sector, cell, village, first_name, last_name, phone_number, email)
-            VALUES('$item_name', '$category_name', '$brand', '$primary_color','$secondary_color', '$incident_date', '$incident_time', '$item_image', '$additional_info', '$location_type', '$province', '$district', '$sector', '$cell', '$village', '$first_name', '$last_name', '$phone_number', '$email')";
-
-            if(mysqli_query($conn, $query)) {
-                
-                $_SESSION['status'] = 'Your  post has been submitted successfully!';
-                // move_uploaded_file($tempName, $tempName);
-
-                move_uploaded_file($_FILES['item_image']['tmp_name'], $file_location);
-
-                // header('Location: '.ROOT_URL.'');
-            } else {
-                echo 'ERROR: '.mysqli_error($conn);
-            }
-
-            
-    }
-
-?>
 
 <?php include('inc/header.php'); 
     
@@ -107,7 +45,7 @@
     </section>
 
   
-<form class="container" action="<?php htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" enctype="multipart/form-data">
+<form class="container" action="checkout.php" method="post" enctype="multipart/form-data">
     <div class='row mb-5'>
     <div class='col-sm-6 mb-5'>
         <div class='form-group'>
@@ -319,7 +257,7 @@
         
     </div>
     
-    <button name="submit" class='btn submit mt-3 mb-5 pr-5 pl-5 btn-lg text-light'>Publish</button>
+    <button name="submit" class='btn submit mt-3 mb-5 pr-5 pl-5 btn-lg text-light'>Submit</button>
 </form>
    
 <?php include('inc/footer.php'); ?>
