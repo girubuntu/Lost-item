@@ -4,7 +4,7 @@
     
     ?>
     <head>
-        <title>Lost And Found</title>
+        <title>Submit a found item</title>
     </head>
     <div class='col-md-12  mb-4'>
     <?php
