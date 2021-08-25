@@ -2,16 +2,7 @@
 body{
   font-family: 'Open Sans', sans-serif;
 }
-nav {
-  background: rgb(34, 34, 102);
 
-}
-.nav-item a{
-  color: white;
-}
-nav li{
-  margin-right: 20px;
-}
 .form-group{
     padding:10px;
 }
