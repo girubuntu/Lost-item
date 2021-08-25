@@ -62,7 +62,7 @@
     ?>
     <head>
         <link rel="stylesheet" href="./css/lostItem.css">
-        <title>Lost And Found</title>
+        <title>Submit lost item</title>
     </head>
     
     <main class='container'>

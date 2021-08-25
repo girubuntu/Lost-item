@@ -61,11 +61,11 @@ require('config/db.php');
         </div>
         
     <div class='col-md-6'><img src='https://prod-refactor-cms.talkremit.com/wp-content/uploads/2021/05/MTN-MoMo-Logo_pages-to-jpg-0001-600x425.jpg'  width='20%;'><br>
-        <button name="pay_momo" class='submit mt-3 mb-5 btn btn-default' style='background-color:white; text-align:left;'>Pay with Mobile Money</button>
+        <button type="submit" name="pay_momo" class='submit mt-3 mb-5 btn btn-default' style='background-color:white; text-align:left;'>Pay with Mobile Money</button>
     </div>
 
     <div class='col-md-6'><img src='https://www.nicepng.com/png/detail/53-534638_mastercard-png-mastercard-logo-png-visa-mastercard-logo.png'  width='20%;'><br>
-        <button name="pay_card" class='submit mt-3 mb-5 btn btn-default' style='background-color:white; text-align:left;'>Pay with Visa or MasterCard</button>
+        <button type="submit" name="pay_card" class='submit mt-3 mb-5 btn btn-default' style='background-color:white; text-align:left;'>Pay with Visa or MasterCard</button>
     </div>
         </form>
     </div>
