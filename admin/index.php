@@ -95,7 +95,7 @@
         <div class="info d-flex">
         <i class="fas fa-user w-auto"></i>
           <div>
-                <a href="http://localhost/lost-item/login.php" class="d-block ml-3">LOG OUT</a>
+                <a href="../login.php" class="d-block ml-3">LOG OUT</a>
           </div>
         
         </div>
