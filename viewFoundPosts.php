@@ -13,6 +13,7 @@ mysqli_free_result($result);
 
 mysqli_close($conn);
 
+    
 ?>
 
 <head>
@@ -67,7 +68,9 @@ mysqli_close($conn);
                                             Found on <?php echo $post['incident_date']; ?> <br>
                                             Location: <?php echo $post['district'];?> - <?php echo $post['sector'];?>
                                         </div>
-                                        <div class="text-center my-4"> <a href="itemDetails.php?id=<?php echo $post['item_id']?> " class="btn">View Details</a> </div>
+                                        <div class="text-center my-4">
+                                            <a href='itemDetails.php?id=<?php echo $post['item_id']?>' class="btn">View Details</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
