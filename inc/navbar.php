@@ -194,7 +194,7 @@ background-color: none;
         <use xlink:href="#search"></use>
       </svg> -->
       <i class="fas fa-plus-circle fa-lg"></i>
-      <a href="index.php">Add Lost Item</a>
+      <a href="lostItem.php">Add Lost Item</a>
     </li>
       
     <li class="nav__items ">
@@ -209,7 +209,7 @@ background-color: none;
       <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 35.6">
         <use xlink:href="#planner"></use></svg> -->
       <i class="fas fa-columns fa-lg"></i>
-      <a href="viewFoundPosts.php">View Recent Posts<i class="fa fa-chevron-down" style='left:5px;'></i></a>
+      <a href="index.php">View Recent Posts<i class="fa fa-chevron-down" style='left:5px;'></i></a>
       <!-- <div class="dropdown-content">
           <a class="dropdown-item" href="viewLostPosts.php" >Lost Items</a>
           <a class="dropdown-item" href="viewFoundPosts.php">Found Items</a>
@@ -220,7 +220,7 @@ background-color: none;
       <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 35.6">
         <use xlink:href="#planner"></use></svg> -->
         <i class="far fa-user fa-lg"></i>
-      <a href="/lost-item/login.php">Login<i class="fa fa-chevron-down"  style='left:5px;'></i></a>
+      <a href="/Lost-item/login.php">Login<i class="fa fa-chevron-down"  style='left:5px;'></i></a>
       <!-- <div class="dropdown-content">
           <a class="dropdown-item" href="viewLostPosts.php">Admin</a>
           <a class="dropdown-item" href="viewFoundPosts.php">User</a>

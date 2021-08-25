@@ -14,7 +14,7 @@
         "tx_ref" => time(),
         "amount" => "100",
         "currency" => "RWF",
-        "redirect_url" => "http://localhost:8080/Lost-item/process.php",
+        "redirect_url" => "https://irihano.herokuapp.com/process.php",
         "payment_options"  => "card",
         "meta" => [
            "consumer_id" => "id",
@@ -46,7 +46,7 @@
     CURLOPT_CUSTOMREQUEST => 'POST',
     CURLOPT_POSTFIELDS => json_encode($request),
     CURLOPT_HTTPHEADER => array(
-        'Authorization: Bearer FLWSECK_TEST-e6d5ce4aa6175e74b58727735e9a4541-X',
+        'Authorization: Bearer FLWSECK-f567136b2f4ad68c1ff153336d218372-X',
         'Content-Type: application/json'
     )
     ));
@@ -83,7 +83,7 @@ $request = [
     "email" => $email,
     "phone_number" => $phone_number,
     "fullname" => $firstName." ".$lastName,
-    "redirect_url" => "http://localhost:8080/Lost-item/process.php",
+    "redirect_url" => "https://irihano.herokuapp.com/process.php",
     "meta" => [
        "consumer_id" => "id",
        "price" => "100",
@@ -114,7 +114,7 @@ CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
 CURLOPT_CUSTOMREQUEST => 'POST',
 CURLOPT_POSTFIELDS => json_encode($request),
 CURLOPT_HTTPHEADER => array(
-    'Authorization: Bearer FLWSECK_TEST-e6d5ce4aa6175e74b58727735e9a4541-X',
+    'Authorization: Bearer FLWSECK-f567136b2f4ad68c1ff153336d218372-X',
     'Content-Type: application/json'
 )
 ));

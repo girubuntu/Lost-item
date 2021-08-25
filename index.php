@@ -3,7 +3,7 @@
 require('config/config.php');
 require('config/db.php');
 
-$query = "SELECT * FROM founditem ORDER BY created_at DESC";
+$query = "SELECT * FROM lost_item ORDER BY created_at DESC";
 
 $result = mysqli_query($conn,$query);
 
@@ -64,7 +64,7 @@ mysqli_close($conn);
                                     <div class="card-body">
                                         <h4 class="card-title text-center"><?php echo $post['item_name']; ?></h4>
                                         <div class='text-center'>
-                                            Found on <?php echo $post['incident_date']; ?> <br>
+                                            Lost on <?php echo $post['incident_date']; ?> <br>
                                             Location: <?php echo $post['district'];?> - <?php echo $post['sector'];?>
                                         </div>
                                         <div class="text-center my-4"> <a href="itemDetails.php?id=<?php echo $post['item_id']?> " class="btn">View Details</a> </div>
@@ -81,7 +81,7 @@ mysqli_close($conn);
                 require('config/config.php');
                 require('config/db.php');
 
-                $query = 'SELECT * FROM founditem WHERE category_name = "Animals/Pets" ORDER BY created_at DESC';
+                $query = 'SELECT * FROM lost_item WHERE category_name = "Animals/Pets" ORDER BY created_at DESC';
 
                 $result = mysqli_query($conn,$query);
 
@@ -102,7 +102,7 @@ mysqli_close($conn);
                                     <div class="card-body">
                                         <h4 class="card-title text-center"><?php echo $post['item_name']; ?></h4>
                                         <div class='text-center'>
-                                            Found on <?php echo $post['incident_date']; ?> <br>
+                                            Lost on <?php echo $post['incident_date']; ?> <br>
                                             Location: <?php echo $post['district'];?> - <?php echo $post['sector'];?>
                                         </div>
                                         <div class="text-center my-4"> <a href='itemDetails.php?item_id=<?php echo " $post[item_id]";?> ' class="btn">View Details</a> </div>
@@ -120,7 +120,7 @@ mysqli_close($conn);
                 require('config/config.php');
                 require('config/db.php');
 
-                $query = 'SELECT * FROM founditem WHERE category_name = "Electronics" ORDER BY created_at DESC';
+                $query = 'SELECT * FROM lost_item WHERE category_name = "Electronics" ORDER BY created_at DESC';
 
                 $result = mysqli_query($conn,$query);
 
@@ -141,7 +141,7 @@ mysqli_close($conn);
                                     <div class="card-body">
                                         <h4 class="card-title text-center"><?php echo $post['item_name']; ?></h4>
                                         <div class='text-center'>
-                                            Found on <?php echo $post['incident_date']; ?> <br>
+                                            Lost on <?php echo $post['incident_date']; ?> <br>
                                             Location: <?php echo $post['district'];?> - <?php echo $post['sector'];?>
                                         </div>
                                         <div class="text-center my-4"> <a href='itemDetails.php?item_id=<?php echo " $post[item_id]";?> ' class="btn">View Details</a> </div>
@@ -158,7 +158,7 @@ mysqli_close($conn);
                 require('config/config.php');
                 require('config/db.php');
 
-                $query = 'SELECT * FROM founditem WHERE category_name = "Clothing" ORDER BY created_at DESC';
+                $query = 'SELECT * FROM lost_item WHERE category_name = "Clothing" ORDER BY created_at DESC';
 
                 $result = mysqli_query($conn,$query);
 
@@ -179,7 +179,7 @@ mysqli_close($conn);
                                     <div class="card-body">
                                         <h4 class="card-title text-center"><?php echo $post['item_name']; ?></h4>
                                         <div class='text-center'>
-                                            Found on <?php echo $post['incident_date']; ?> <br>
+                                            Lost on <?php echo $post['incident_date']; ?> <br>
                                             Location: <?php echo $post['district'];?> - <?php echo $post['sector'];?>
                                         </div>
                                         <div class="text-center my-4"> <a href='itemDetails.php?item_id=<?php echo " $post[item_id]";?> ' class="btn">View Details</a> </div>
@@ -196,7 +196,7 @@ mysqli_close($conn);
                 require('config/config.php');
                 require('config/db.php');
 
-                $query = 'SELECT * FROM founditem WHERE category_name = "Personal Accessories" ORDER BY created_at DESC';
+                $query = 'SELECT * FROM lost_item WHERE category_name = "Personal Accessories" ORDER BY created_at DESC';
 
                 $result = mysqli_query($conn,$query);
 
@@ -217,7 +217,7 @@ mysqli_close($conn);
                                     <div class="card-body">
                                         <h4 class="card-title text-center"><?php echo $post['item_name']; ?></h4>
                                         <div class='text-center'>
-                                            Found on <?php echo $post['incident_date']; ?> <br>
+                                            Lost on <?php echo $post['incident_date']; ?> <br>
                                             Location: <?php echo $post['district'];?> - <?php echo $post['sector'];?>
                                         </div>
                                         <div class="text-center my-4"> <a href='itemDetails.php?item_id=<?php echo " $post[item_id]";?> ' class="btn">View Details</a> </div>
@@ -234,7 +234,7 @@ mysqli_close($conn);
                 require('config/config.php');
                 require('config/db.php');
 
-                $query = 'SELECT * FROM founditem WHERE category_name = "Tools and Materials" ORDER BY created_at DESC';
+                $query = 'SELECT * FROM lost_item WHERE category_name = "Tools and Materials" ORDER BY created_at DESC';
 
                 $result = mysqli_query($conn,$query);
 
@@ -255,7 +255,7 @@ mysqli_close($conn);
                                     <div class="card-body">
                                         <h4 class="card-title text-center"><?php echo $post['item_name']; ?></h4>
                                         <div class='text-center'>
-                                            Found on <?php echo $post['incident_date']; ?> <br>
+                                            Lost on <?php echo $post['incident_date']; ?> <br>
                                             Location: <?php echo $post['district'];?> - <?php echo $post['sector'];?>
                                         </div>
                                         <div class="text-center my-4"> <a href='itemDetails.php?item_id=<?php echo " $post[item_id]";?> ' class="btn">View Details</a> </div>
@@ -272,7 +272,7 @@ mysqli_close($conn);
                 require('config/config.php');
                 require('config/db.php');
 
-                $query = 'SELECT * FROM founditem WHERE category_name = "Cards" ORDER BY created_at DESC';
+                $query = 'SELECT * FROM lost_item WHERE category_name = "Cards" ORDER BY created_at DESC';
 
                 $result = mysqli_query($conn,$query);
 
@@ -293,7 +293,7 @@ mysqli_close($conn);
                                     <div class="card-body">
                                         <h4 class="card-title text-center"><?php echo $post['item_name']; ?></h4>
                                         <div class='text-center'>
-                                            Found on <?php echo $post['incident_date']; ?> <br>
+                                            Lost on <?php echo $post['incident_date']; ?> <br>
                                             Location: <?php echo $post['district'];?> - <?php echo $post['sector'];?>
                                         </div>
                                         <div class="text-center my-4"> <a href='itemDetails.php?item_id=<?php echo " $post[item_id]";?> ' class="btn">View Details</a> </div>
@@ -310,7 +310,7 @@ mysqli_close($conn);
                 require('config/config.php');
                 require('config/db.php');
 
-                $query = 'SELECT * FROM founditem WHERE category_name = "Documents" ORDER BY created_at DESC';
+                $query = 'SELECT * FROM lost_item WHERE category_name = "Documents" ORDER BY created_at DESC';
 
                 $result = mysqli_query($conn,$query);
 
@@ -331,7 +331,7 @@ mysqli_close($conn);
                                     <div class="card-body">
                                         <h4 class="card-title text-center"><?php echo $post['item_name']; ?></h4>
                                         <div class='text-center'>
-                                            Found on <?php echo $post['incident_date']; ?> <br>
+                                            Lost on <?php echo $post['incident_date']; ?> <br>
                                             Location: <?php echo $post['district'];?> - <?php echo $post['sector'];?>
                                         </div>
                                         <div class="text-center my-4"> <a href='itemDetails.php?item_id=<?php echo " $post[item_id]";?> ' class="btn">View Details</a> </div>
@@ -349,7 +349,7 @@ mysqli_close($conn);
                 require('config/config.php');
                 require('config/db.php');
 
-                $query = 'SELECT * FROM founditem WHERE category_name = "Others" ORDER BY created_at DESC';
+                $query = 'SELECT * FROM lost_item WHERE category_name = "Others" ORDER BY created_at DESC';
 
                 $result = mysqli_query($conn,$query);
 
@@ -370,7 +370,7 @@ mysqli_close($conn);
                                     <div class="card-body">
                                         <h4 class="card-title text-center"><?php echo $post['item_name']; ?></h4>
                                         <div class='text-center'>
-                                            Found on <?php echo $post['incident_date']; ?> <br>
+                                            Lost on <?php echo $post['incident_date']; ?> <br>
                                             Location: <?php echo $post['district'];?> - <?php echo $post['sector'];?>
                                         </div>
                                         <div class="text-center my-4"> <a href='itemDetails.php?item_id=<?php echo " $post[item_id]";?> ' class="btn">View Details</a> </div>
