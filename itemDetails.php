@@ -33,7 +33,7 @@ if(isset($item_id)) {
 ?>
 
 <head>
-    <link rel="stylesheet" href="./css/itemDetails.php.css">
+    <link rel="stylesheet" href="./css/itemDetails.css">
     <title>Item Details</title>
 </head>
 <div class="container">

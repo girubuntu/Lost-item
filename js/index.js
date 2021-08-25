@@ -13,9 +13,3 @@ $('.count').each(function () {
     });
 
  });
-
- //combodate
- 
-$(function(){
-    $('#date').combodate();    
-});
