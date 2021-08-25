@@ -14,7 +14,7 @@ if (isset($_POST['pay_card'])) {
         "tx_ref" => time(),
         "amount" => "100",
         "currency" => "RWF",
-        "redirect_url" => "http://localhost/process.php",
+        "redirect_url" => "https://irihano.herokuapp.com/process.php",
         "payment_options"  => "card",
         "meta" => [
             "consumer_id" => "id",
