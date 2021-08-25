@@ -194,7 +194,7 @@ background-color: none;
         <use xlink:href="#search"></use>
       </svg> -->
       <i class="fas fa-plus-circle fa-lg"></i>
-      <a href="../lostItem.php">Add Lost Item</a>
+      <a href="lostItem.php">Add Lost Item</a>
     </li>
       
     <li class="nav__items ">
@@ -209,7 +209,7 @@ background-color: none;
       <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 35.6">
         <use xlink:href="#planner"></use></svg> -->
       <i class="fas fa-columns fa-lg"></i>
-      <a href="../index.php">View Recent Posts</a>
+      <a href="index.php">View Recent Posts</a>
       <!-- <div class="dropdown-content">
           <a class="dropdown-item" href="viewLostPosts.php" >Lost Items</a>
           <a class="dropdown-item" href="viewFoundPosts.php">Found Items</a>
@@ -220,7 +220,7 @@ background-color: none;
       <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 35.6">
         <use xlink:href="#planner"></use></svg> -->
         <i class="far fa-user fa-lg"></i>
-      <a href="../login.php">Login</a>
+      <a href="login.php">Login</a>
       <!-- <div class="dropdown-content">
           <a class="dropdown-item" href="viewLostPosts.php">Admin</a>
           <a class="dropdown-item" href="viewFoundPosts.php">User</a>
@@ -228,7 +228,7 @@ background-color: none;
     </li>
     <li class="nav__items">
         <i class="far fa-user fa-lg"></i>
-      <a href="../admin/index.php">Admin Dashboard</a>
+      <a href="admin/index.php">Admin Dashboard</a>
     </li>
   </ul>
 </nav>
