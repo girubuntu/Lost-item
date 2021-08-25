@@ -14,7 +14,7 @@ if (isset($_POST['pay_card'])) {
         "tx_ref" => time(),
         "amount" => "100",
         "currency" => "RWF",
-        "redirect_url" => "https://irihano.herokuapp.com/process.php",
+        "redirect_url" => "http://localhost:8080/Lost-item/process.php",
         "payment_options"  => "card",
         "meta" => [
             "consumer_id" => "id",
@@ -77,7 +77,7 @@ if (isset($_POST['pay_card'])) {
         "email" => $email,
         "phone_number" => $phone_number,
         "fullname" => $firstName . " " . $lastName,
-        "redirect_url" => "https://irihano.herokuapp.com/process.php",
+        "redirect_url" => "http://localhost:8080/Lost-item/process.php",
         "meta" => [
             "consumer_id" => "id",
             "price" => "100",

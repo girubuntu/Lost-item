@@ -80,6 +80,7 @@ if(isset($_GET['resp'])){
                 }
             
             }
+            header('Location:index.php');
 }
 else echo 'error in payment';
 
