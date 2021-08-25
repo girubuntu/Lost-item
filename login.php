@@ -3,7 +3,6 @@
 require('config/config.php');
 require('config/db.php');
 
-session_start();
 
 if(isset($_POST['submit'])) {
     $username = mysqli_real_escape_string($conn, $_POST['username']);
@@ -16,7 +15,7 @@ if(isset($_POST['submit'])) {
         $_SESSION['username'] = $username;
         if($username == "admin") {
 
-            header("Location: http://localhost/lost-item/admin/");
+            header("Location: http://localhost/lost-item/admin/index.php");
         } else {
             header("Location: http://localhost/lost-item/index.php");
             $username = "";
