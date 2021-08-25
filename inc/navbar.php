@@ -18,6 +18,7 @@
                         <a class="dropdown-item" href="viewFoundPosts.php" style='color:black;'>FOUND ITEMS</a>
                     </div>
                 </li>
+                <li class="nav-item active"><a class="nav-link active"  href='login.php'>LOGIN</a></li>
                 
             </ul>
         </div>

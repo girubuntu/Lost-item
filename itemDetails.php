@@ -15,7 +15,7 @@ if(isset($item_id)) {
    $lost_result = mysqli_query($conn, $query_lost);
    $data = mysqli_fetch_assoc($lost_result); 
    
-   if(gettype($data) == 'None') {
+   if($data['status'] == "Lost" || gettype($data) == 'NULL' ) {
 
     $query_found = "SELECT * from founditem WHERE item_id = '$item_id'";
     $found_result = mysqli_query($conn, $query_found);
@@ -23,11 +23,15 @@ if(isset($item_id)) {
 
     mysqli_free_result($found_result);   
      
+   } else {
+    mysqli_free_result($lost_result);
+   mysqli_close($conn);
    }
 
-   mysqli_free_result($lost_result);
-   mysqli_close($conn);
    
+   
+} else {
+    alert('no data');
 }
 
 ?>
@@ -60,7 +64,7 @@ if(isset($item_id)) {
         <div class="form-group">
             <label for="firstname" class="control-label lbl-descriptive">Item Name</label>
             <div class="input-group date">
-                <input id="incident_date" class="form-control" name="item_name" disabled type="text" value="<?php echo $data['item_name']; ?>">
+                <input id="incident_date" class="form-control" name="item_name" disabled type="text" value='<?php echo $data['item_name']; ?>'>
             </div>
         </div>  
     </div>
