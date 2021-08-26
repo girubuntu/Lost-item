@@ -228,7 +228,7 @@ background-color: none;
     </li>
     <li class="nav__items">
         <i class="far fa-user fa-lg"></i>
-      <a href="admin/index.php">Admin Dashboard</a>
+      <a href="login.php">Admin Dashboard</a>
     </li>
   </ul>
 </nav>

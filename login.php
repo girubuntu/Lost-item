@@ -1,5 +1,6 @@
-
-<?php include('inc/header.php');
+<?php 
+ob_start();
+include('inc/header.php');
 require('config/config.php');
 require('config/db.php');
 
@@ -14,10 +15,9 @@ if(isset($_POST['submit'])) {
     if(mysqli_fetch_assoc($result)) {
         $_SESSION['username'] = $username;
         if($username == "admin") {
-
-            header("Location: http://localhost/lost-item/admin/index.php");
-        } else {
-            header("Location: http://localhost/lost-item/index.php");
+            header("Location:http://localhost/lost-item/admin/index.php");
+        }else {
+            header("Location:http://localhost/lost-item/index.php");
             $username = "";
             $password = "";
         }
@@ -38,7 +38,7 @@ if(isset($_POST['submit'])) {
     
 
 } 
-
+ob_end_flush();
 ?>
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
