@@ -4,6 +4,9 @@
  require('../config/config.php');
  require('../config/db.php');
 
+ 
+
+
  $lost_query = "SELECT * FROM lost_item ORDER BY created_at DESC";
  $found_query = "SELECT * FROM founditem ORDER by created_at DESC";
  $user_query = "SELECT * FROM userlogin ORDER by created_at DESC";
@@ -59,7 +62,7 @@
   <!-- summernote -->
   <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
 </head>
-<body class="hold-transition sidebar-mini layout-fixed">
+<body class="hold-transition sidebar-mini layout-fixed"></body>
 <div class="wrapper">
 
   <!-- Preloader -->
@@ -198,23 +201,7 @@
 </div>
 
 
-<?php
 
-if(isset($_POST['deleteUserBtn'])) {
-  
-  $user_id = $_POST['user_id'];
-  
-  $query = "DELETE FROM lost_item WHERE item_id ='$user_id'";
-  $result = mysqli_query($conn, $query);
-  if($result) {
-    $_SESSION['status'] = 'delete complete!';
-    
-  } else {
-    $_SESSION['status'] = 'delete failed!';
-    
-  }
-}
-?>
 <!-- Delete user modal-->
 <div class="modal fade" id="deleteUserModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -258,6 +245,46 @@ if(isset($_POST['deleteUserBtn'])) {
     </div>
   </div>
 </div>
+<?php 
+  if(isset($_POST['approveUserBtn'])) {
+    
+    $user_id = $_POST['user_id'];
+    
+    
+    $query = "UPDATE lost_item SET verify='approved' WHERE item_id ='$user_id'";
+    $result = mysqli_query($conn, $query);
+    if($result) {
+      $_SESSION['status'] = 'approve complete!';
+      
+    } else {
+      $_SESSION['status'] = 'approve failed!';
+      // header(" Location: all_found_tem.php");
+    }
+  }
+?>
+
+<!-- view modal-->
+<div id="viewUserModal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+    <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">View item details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+        <div class="viewModalBody">
+          
+        </div>
+        
+        <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+      
+  </div>
+</div>
+</div>
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <div class="container-fluid">
@@ -283,7 +310,7 @@ if(isset($_POST['deleteUserBtn'])) {
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title">ALL Lost items </h3>
-                <a href="#" data-toggle="modal" data-target="#addLostModal" class="btn btn-primary btn-sm float-right">Add Lost Item</a>
+                
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -318,7 +345,7 @@ if(isset($_POST['deleteUserBtn'])) {
                                 <td>
                                 <button type="button" value="<?php echo $row['item_id'];?>" class="btn btn-danger btn-sm deleteBtn">Delete</button>
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                  <a href="#"><i data-toggle="modal" data-target="#viewUserModal" class="far fa-plus-square">  View more details</i></a>
+                                <button type="button" value="<?php echo $row['item_id'];?>" class="btn btn-info btn-sm viewBtn">View item details</button>
                                 </td>
                             </tr>
                             <?php
@@ -432,6 +459,29 @@ if(isset($_POST['deleteUserBtn'])) {
       $('.deleteBtn').val(user_id);
       $('#deleteUserModal').modal('show');
     })
+  });
+</script>
+<script>
+  $(document).ready(function() {
+    $('.viewBtn').click(function (e) {
+      e.preventDefault();
+      
+      var view_id = $(this).val();
+
+      $.ajax({
+        url: "pendingLostViewCode.php",
+        type: "post",
+        data: {
+          view_id: view_id,
+        },
+        success: function (data) {
+          $('.viewModalBody').html(data);
+          $('#viewUserModal').modal("show");          
+        }
+      });
+      
+      
+    });
   });
 </script>
 </body>
