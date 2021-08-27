@@ -302,7 +302,7 @@ if (isset($_POST['userSave'])) {
               <div class="card">
                 <div class="card-header">
                   <h3 class="card-title">ALL Users </h3>
-                  <a href="#" data-toggle="modal" data-target="#addUserModal" class="btn btn-primary btn-sm float-right">Add User</a>
+                  
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
@@ -326,7 +326,7 @@ if (isset($_POST['userSave'])) {
                             <td>
                               <button type="button" value="<?php echo $row['id']; ?>" class="btn btn-danger btn-sm deleteBtn">Delete</button>
                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                              <a href="#"><i data-toggle="modal" data-target="#editUserModal" class="fas fa-user-edit"> Update</i></a>
+                             
                             </td>
                           </tr>
                         <?php

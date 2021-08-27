@@ -74,7 +74,10 @@ ob_end_flush();
                             <input type="password" name="password2" class="form-control form-control-sm" required>
                         </div>
                         
-                        <button type="submit" name="submit" class="btn btn-primary btn-block">Register</button>                        
+                        <button type="submit" name="submit" class="btn btn-primary btn-block">Register</button>
+                        
+                        <p class="mt-1 float-right">Already have an account!<a href="login.php"> login Here</a></p>
+                                              
                     </form>
                 </div>
             </div>

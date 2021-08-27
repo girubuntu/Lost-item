@@ -247,8 +247,9 @@ if(isset($_POST['deleteUserBtn'])) {
   </div>
 </div>
 
+<!-- view modal -->
 <div class="modal fade" id="viewUserModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">View Found Item</h5>
@@ -256,16 +257,19 @@ if(isset($_POST['deleteUserBtn'])) {
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
+      <div class="viewModalBody">
         ...
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        
       </div>
     </div>
   </div>
 </div>
+
+
+
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <div class="container-fluid">
@@ -289,10 +293,6 @@ if(isset($_POST['deleteUserBtn'])) {
         <div class="row">
           <div class="col-12">
             <div class="card">
-              <div class="card-header">
-                <h3 class="card-title">ALL Found items </h3>
-                <a href="#" data-toggle="modal" data-target="#addFoundModal" class="btn btn-primary btn-sm float-right">Add Found Item</a>
-              </div>
               <!-- /.card-header -->
               <div class="card-body">
                 <table id="example2" class="table table-bordered table-hover">
@@ -326,7 +326,7 @@ if(isset($_POST['deleteUserBtn'])) {
                                 <td>
                                   <button type="button" value="<?php echo $row['item_id'];?>" class="btn btn-danger btn-sm deleteBtn">Delete</button>
                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                  <a href="all_found_item.php?id=<?php echo $row['item_id'];?>"><i data-toggle="modal" data-target="#viewUserModal" class="far fa-plus-square">  View more details</i></a>
+                                  <button type="button" value="<?php echo $row['item_id'];?>" class="btn btn-info btn-sm viewBtn">View item details</button>
                                 </td>
                             </tr>
                             <?php
@@ -438,9 +438,47 @@ if(isset($_POST['deleteUserBtn'])) {
       var user_id = $(this).val();
 
       $('.deleteBtn').val(user_id);
-      $('#deleteUserModal').modal('show');
+      $('#viewUserModal').modal('show');
     })
   });
 </script>
+
+<script>
+  $(document).ready(function() {
+    $('.viewBtn').click(function (e) {
+      e.preventDefault();
+
+      var user_id = $(this).val();
+
+      $('.viewBtn').val(user_id);
+      $('#viewUserModal').modal('show');
+    })
+  });
+</script>
+
+<script>
+  $(document).ready(function() {
+    $('.viewBtn').click(function (e) {
+      e.preventDefault();
+      
+      var view_id = $(this).val();
+
+      $.ajax({
+        url: "viewFound.php",
+        type: "post",
+        data: {
+          view_id: view_id,
+        },
+        success: function (data) {
+          $('.viewModalBody').html(data);
+          $('#viewUserModal').modal("show");          
+        }
+      });
+      
+      
+    });
+  });
+</script>
+
 </body>
 </html>

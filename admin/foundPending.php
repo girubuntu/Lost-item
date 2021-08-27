@@ -264,8 +264,9 @@ if(isset($_POST['approveUserBtn'])) {
   </div>
 </div>
 
+<!-- view modal -->
 <div class="modal fade" id="viewUserModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">View Found Item</h5>
@@ -273,12 +274,12 @@ if(isset($_POST['approveUserBtn'])) {
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
+      <div class="viewModalBody">
         ...
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        
       </div>
     </div>
   </div>
@@ -338,9 +339,9 @@ if(isset($_POST['approveUserBtn'])) {
                                 <td><?php echo $row['province'] ?></td>
                                 <td><?php echo $row['verify'] ?></td>
                                 <td>
-                                <button type="button" value="<?php echo $row['item_id'];?>" class="btn btn-danger btn-sm approveBtn">Approve</button>
+                                <button type="button" value="<?php echo $row['item_id'];?>" class="btn btn-success btn-sm approveBtn">Approve</button>
                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                  <a href="#"><i data-toggle="modal" data-target="#viewUserModal" class="far fa-plus-square">  View more details</i></a>
+                                  <button type="button" value="<?php echo $row['item_id'];?>" class="btn btn-info btn-sm viewBtn">View item details</button>
                                 </td>
                             </tr>
                             <?php
@@ -454,6 +455,29 @@ if(isset($_POST['approveUserBtn'])) {
       $('.approveBtn').val(user_id);
       $('#approveUserModal').modal('show');
     })
+  });
+</script>
+<script>
+  $(document).ready(function() {
+    $('.viewBtn').click(function (e) {
+      e.preventDefault();
+      
+      var view_id = $(this).val();
+
+      $.ajax({
+        url: "pendingFoundViewCode.php",
+        type: "post",
+        data: {
+          view_id: view_id,
+        },
+        success: function (data) {
+          $('.viewModalBody').html(data);
+          $('#viewUserModal').modal("show");          
+        }
+      });
+      
+      
+    });
   });
 </script>
 </body>
