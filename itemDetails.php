@@ -31,7 +31,7 @@ if(isset($item_id)) {
    
    
 } else {
-    alert('no data');
+    // alert('no data');
 }
 
 ?>
@@ -48,7 +48,7 @@ if(isset($item_id)) {
     <div class='col-md-6 m-auto mt-7'>
             
             
-            <img src="uploads/<?php echo $data['item_image'];?>" alt='image' style='width:280px; height:250px; border-radius: 10px;' class='card-img-top' >
+            <img src="https://irihano.s3.us-east-2.amazonaws.com/<?php echo $data['item_image'];?>" alt='image' style='width:280px; height:250px; border-radius: 10px;' class='card-img-top' >
             
     </div>
     <div></div>
