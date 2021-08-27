@@ -59,7 +59,7 @@ mysqli_close($conn);
                         <?php foreach($posts  as $post): ?>
                             <div class="col">
                                 <div class="card h-100 shadow-sm">
-                                    <img src="uploads/<?php echo $post['item_image'];?>" alt='image' style='width:100%; height:180px;' class='card-img-top' >
+                                    <img src="https://irihano.s3.us-east-2.amazonaws.com/<?php echo $post['item_image'];?>" alt='image' style='width:100%; height:180px;' class='card-img-top' >
                                     
                                     <div class="card-body">
                                         <h4 class="card-title text-center"><?php echo $post['item_name']; ?></h4>
@@ -97,7 +97,7 @@ mysqli_close($conn);
                         <?php foreach($posts  as $post): ?>
                             <div class="col">
                                 <div class="card h-100 shadow-sm">
-                                    <img src="uploads/<?php echo $post['item_image'];?>" alt='image' style='width:100%; height:180px;' class='card-img-top' >
+                                    <img src="https://irihano.s3.us-east-2.amazonaws.com/<?php echo $post['item_image'];?>" alt='image' style='width:100%; height:180px;' class='card-img-top' >
                                     
                                     <div class="card-body">
                                         <h4 class="card-title text-center"><?php echo $post['item_name']; ?></h4>
@@ -136,7 +136,7 @@ mysqli_close($conn);
                         <?php foreach($posts  as $post): ?>
                             <div class="col">
                                 <div class="card h-100 shadow-sm">
-                                    <img src="uploads/<?php echo $post['item_image'];?>" alt='image' style='width:100%; height:180px;' class='card-img-top' >
+                                    <img src="https://irihano.s3.us-east-2.amazonaws.com/<?php echo $post['item_image'];?>" alt='image' style='width:100%; height:180px;' class='card-img-top' >
                                     
                                     <div class="card-body">
                                         <h4 class="card-title text-center"><?php echo $post['item_name']; ?></h4>
@@ -174,7 +174,7 @@ mysqli_close($conn);
                         <?php foreach($posts  as $post): ?>
                             <div class="col">
                                 <div class="card h-100 shadow-sm">
-                                    <img src="uploads/<?php echo $post['item_image'];?>" alt='image' style='width:100%; height:180px;' class='card-img-top' >
+                                    <img src="https://irihano.s3.us-east-2.amazonaws.com/<?php echo $post['item_image'];?>" alt='image' style='width:100%; height:180px;' class='card-img-top' >
                                     
                                     <div class="card-body">
                                         <h4 class="card-title text-center"><?php echo $post['item_name']; ?></h4>
@@ -212,7 +212,7 @@ mysqli_close($conn);
                         <?php foreach($posts  as $post): ?>
                             <div class="col">
                                 <div class="card h-100 shadow-sm">
-                                    <img src="uploads/<?php echo $post['item_image'];?>" alt='image' style='width:100%; height:180px;' class='card-img-top' >
+                                    <img src="https://irihano.s3.us-east-2.amazonaws.com/<?php echo $post['item_image'];?>" alt='image' style='width:100%; height:180px;' class='card-img-top' >
                                     
                                     <div class="card-body">
                                         <h4 class="card-title text-center"><?php echo $post['item_name']; ?></h4>
@@ -250,7 +250,7 @@ mysqli_close($conn);
                         <?php foreach($posts  as $post): ?>
                             <div class="col">
                                 <div class="card h-100 shadow-sm">
-                                    <img src="uploads/<?php echo $post['item_image'];?>" alt='image' style='width:100%; height:180px;' class='card-img-top' >
+                                    <img src="https://irihano.s3.us-east-2.amazonaws.com/<?php echo $post['item_image'];?>" alt='image' style='width:100%; height:180px;' class='card-img-top' >
                                     
                                     <div class="card-body">
                                         <h4 class="card-title text-center"><?php echo $post['item_name']; ?></h4>
@@ -288,7 +288,7 @@ mysqli_close($conn);
                         <?php foreach($posts  as $post): ?>
                             <div class="col">
                                 <div class="card h-100 shadow-sm">
-                                    <img src="uploads/<?php echo $post['item_image'];?>" alt='image' style='width:100%; height:180px;' class='card-img-top' >
+                                    <img src="https://irihano.s3.us-east-2.amazonaws.com/<?php echo $post['item_image'];?>" alt='image' style='width:100%; height:180px;' class='card-img-top' >
                                     
                                     <div class="card-body">
                                         <h4 class="card-title text-center"><?php echo $post['item_name']; ?></h4>
@@ -326,7 +326,7 @@ mysqli_close($conn);
                         <?php foreach($posts  as $post): ?>
                             <div class="col">
                                 <div class="card h-100 shadow-sm">
-                                    <img src="uploads/<?php echo $post['item_image'];?>" alt='image' style='width:100%; height:180px;' class='card-img-top' >
+                                    <img src="https://irihano.s3.us-east-2.amazonaws.com/<?php echo $post['item_image'];?>" alt='image' style='width:100%; height:180px;' class='card-img-top' >
                                     
                                     <div class="card-body">
                                         <h4 class="card-title text-center"><?php echo $post['item_name']; ?></h4>
@@ -365,7 +365,7 @@ mysqli_close($conn);
                         <?php foreach($posts  as $post): ?>
                             <div class="col">
                                 <div class="card h-100 shadow-sm">
-                                    <img src="uploads/<?php echo $post['item_image'];?>" alt='image' style='width:100%; height:180px;' class='card-img-top' >
+                                    <img src="https://irihano.s3.us-east-2.amazonaws.com/<?php echo $post['item_image'];?>" alt='image' style='width:100%; height:180px;' class='card-img-top' >
                                     
                                     <div class="card-body">
                                         <h4 class="card-title text-center"><?php echo $post['item_name']; ?></h4>
