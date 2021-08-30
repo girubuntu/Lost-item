@@ -72,8 +72,7 @@ ob_end_flush();
                             <input type="text" name="username" class="form-control form-control-sm" required>
                         </div>
                         <div class="form-group">
-                            <label for="passord">Password</label>
-                            <a href="#" style="float:right; font-size: 12px:">Forgot Password?</a>
+                            <label for="passord">Password</label>                            
                             <input type="password" name="password" class="form-control form-control-sm" required>
                         </div>
                         

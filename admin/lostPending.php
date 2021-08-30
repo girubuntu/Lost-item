@@ -238,24 +238,27 @@ if(isset($_POST['approveUserBtn'])) {
   </div>
 </div>
 
-<div class="modal fade" id="editUserModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
+<!-- view modal-->
+<div id="viewUserModal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Edit Lost Item</h5>
+    <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">View item details</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
     </div>
+
+        <div class="viewModalBody">
+          
+        </div>
+        
+        <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+      
   </div>
+</div>
 </div>
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -314,7 +317,7 @@ if(isset($_POST['approveUserBtn'])) {
                                 <td>
                                 <button type="button" value="<?php echo $row['item_id'];?>" class="btn btn-success btn-sm approveBtn">Approve</button>
                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <a href="#"><i data-toggle="modal" data-target="#viewUserModal" class="far fa-plus-square">  View more details</i></a>
+                                  <button type="button" value="<?php echo $row['item_id'];?>" class="btn btn-info btn-sm viewBtn">View item details</button>
                               </td>
                             </tr>
                             <?php
@@ -428,6 +431,30 @@ if(isset($_POST['approveUserBtn'])) {
       $('.approveBtn').val(user_id);
       $('#approveUserModal').modal('show');
     })
+  });
+</script>
+
+<script>
+  $(document).ready(function() {
+    $('.viewBtn').click(function (e) {
+      e.preventDefault();
+      
+      var view_id = $(this).val();
+
+      $.ajax({
+        url: "pendingLostViewCode.php",
+        type: "post",
+        data: {
+          view_id: view_id,
+        },
+        success: function (data) {
+          $('.viewModalBody').html(data);
+          $('#viewUserModal').modal("show");          
+        }
+      });
+      
+      
+    });
   });
 </script>
 </body>
