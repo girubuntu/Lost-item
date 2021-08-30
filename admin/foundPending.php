@@ -119,7 +119,7 @@
         <div class="info d-flex">
         <i class="fas fa-user w-auto"></i>
           <div>
-                <a href="https://irihanolostandfound.herokuapp.com/lost-item/login.php" class="d-block ml-3">LOG OUT</a>
+                <a href="https://irihanolostandfound.herokuapp.com/login.php" class="d-block ml-3">LOG OUT</a>
           </div>
         
         </div>

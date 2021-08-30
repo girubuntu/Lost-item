@@ -11,7 +11,7 @@ if(isset($_POST['submit'])){
     $password2 = mysqli_real_escape_string($conn, ($_POST['password2']));
 
     if($password != $password2) {
-        header("Location: https://irihanolostandfound.herokuapp.com/lost-item/register.php?error= Password do not match");
+        header("Location: https://irihanolostandfound.herokuapp.com/register.php?error= Password do not match");
     } else {
         $query = "SELECT * FROM userlogin WHERE username= '$username'";
         $result = mysqli_query($conn, $query);
@@ -19,7 +19,7 @@ if(isset($_POST['submit'])){
         $user = mysqli_fetch_assoc($result);
         if($user) {
             if($user['username'] == $username) {
-                header("Location:https://irihanolostandfound.herokuapp.com/lost-item/register.php?error=Username/email already exist");
+                header("Location:https://irihanolostandfound.herokuapp.com/register.php?error=Username/email already exist");
             }
         }
 
@@ -27,7 +27,7 @@ if(isset($_POST['submit'])){
         mysqli_query($conn, $query);
         $_SESSION['username'] = $username;
         $_SESSION['success'] = "you are logged in";
-        header("Location: https://irihanolostandfound.herokuapp.com/localhost/lost-item/login.php");
+        header("Location: https://irihanolostandfound.herokuapp.com/login.php");
 
     }
 
