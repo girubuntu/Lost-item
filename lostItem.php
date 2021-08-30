@@ -42,8 +42,14 @@
 
         if(mysqli_query($conn, $query)) {
 
+            //storing cookies
+            
             $last_id = mysqli_insert_id($conn);
             setcookie("last_id", $last_id, time()+3600, "/","", 0);
+            setcookie("firstName", $first_name, time()+3600, "/","", 0);
+            setcookie("lastName", $last_name, time()+3600, "/","", 0);
+            setcookie("email", $email, time()+3600, "/","", 0);
+
             move_uploaded_file($_FILES['item_image']['tmp_name'], $file_location);
 
             header('Location: checkout.php');

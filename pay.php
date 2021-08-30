@@ -4,11 +4,9 @@ require('config/config.php');
 require('config/db.php');
 
 if (isset($_POST['pay_card'])) {
-    $firstName = $_POST['firstName'];
-    $lastName = $_POST['lastName'];
-    $email = $_POST['email'];
-    $phone_number = $_POST['phone_number'];
-
+    $firstName = $_COOKIE["firstName"];
+    $lastName = $_COOKIE["lastName"];
+    $email = $_COOKIE["email"];
     //preparing a payment request
     $request = [
         "tx_ref" => time(),
@@ -22,8 +20,7 @@ if (isset($_POST['pay_card'])) {
         ],
         "customer" => [
             "name" => $firstName . " " . $lastName,
-            "email" => $email,
-            "phonenumber" => $phone_number,
+            "email" => $email
 
         ],
         "customizations" => [
@@ -63,9 +60,9 @@ if (isset($_POST['pay_card'])) {
         'We can not process your payment';
     }
 } else if (isset($_POST['pay_momo'])) {
-    $firstName = $_POST['firstName'];
-    $lastName = $_POST['lastName'];
-    $email = $_POST['email'];
+    $firstName = $_COOKIE["firstName"];
+    $lastName = $_COOKIE["lastName"];
+    $email = $_COOKIE["email"];
     $phone_number = $_POST['phone_number'];
 
     //preparing a payment request
