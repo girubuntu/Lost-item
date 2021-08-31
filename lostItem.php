@@ -32,7 +32,6 @@ if (isset($_POST['submit']) && isset($_FILES['item_image'])) {
     $incident_time = mysqli_real_escape_string($conn, $_POST['incident_time']);
     $additional_info = mysqli_real_escape_string($conn, $_POST['additional_info']);
 
-
     $location_type = mysqli_real_escape_string($conn, $_POST['location_type']);
     $province = mysqli_real_escape_string($conn, $_POST['province']);
     $district = mysqli_real_escape_string($conn, $_POST['district']);
@@ -79,6 +78,14 @@ if (isset($_POST['submit']) && isset($_FILES['item_image'])) {
 
         $last_id = mysqli_insert_id($conn);
         setcookie("last_id", $last_id, time() + 3600, "/", "", 0);
+           //storing cookies
+            
+        $last_id = mysqli_insert_id($conn);
+        setcookie("last_id", $last_id, time()+3600, "/","", 0);
+        setcookie("firstName", $first_name, time()+3600, "/","", 0);
+        setcookie("lastName", $last_name, time()+3600, "/","", 0);
+        setcookie("email", $email, time()+3600, "/","", 0);
+
         move_uploaded_file($_FILES['item_image']['tmp_name'], $file_location);
 
         header('Location: checkout.php');

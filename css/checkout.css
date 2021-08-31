@@ -1,0 +1,33 @@
+
+.pay {
+    font-size: normal;
+    font-size:large;
+    font-weight: 500;
+    padding: 10px 15px 10px 15px;
+    width:auto;
+    white-space: normal;
+}
+
+.card{
+    text-align: center;
+}
+.btn {
+    color:#fff;
+    white-space: normal;
+    margin:2px;
+}
+
+.pay, form .btn-default{
+    color: rgb(29, 35, 94);
+    background-color: rgb(255, 255, 255);
+    border: none;
+    text-decoration: none;
+    outline: 0;
+    border-radius: 5px;
+    border: 1px solid rgb(34, 34, 102);
+}
+
+.btn:hover {
+    color: #ffffff;
+    background-color: rgb(34, 34, 102);
+}

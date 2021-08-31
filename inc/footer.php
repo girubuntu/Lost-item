@@ -20,7 +20,7 @@
         
       </div>
       <div class="footer-group">
-        <h3>Useful Linkks</h3>
+        <h3>Useful Links</h3>
         
             <a href="#"><li>&gt; Testimonial</li></a>
             <a href="#"><li>&gt; Partners</li></a>
