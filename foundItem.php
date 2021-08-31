@@ -109,15 +109,15 @@ if (isset($_POST['submit']) && isset($_FILES['item_image'])) {
             <div class='col-sm-5 col-sm-pull-7 feature_list'>
                 <h1>Submit Found Property</h1><br><br>
                 <p>
-                    Our system connects lost and found properties from all around the country with their owners. For every lost property, we send a notification to the owner when the system receives a matching found item.<br>
+                    Our system connects lost and found properties from all around the Rwanda with their owners. <br>
 
                 </p>
-                <br><br><br>
+                <br>
                 <strong class="required text-danger">*</strong>
                 <small>Please be descriptive when submitting your Found property report, the more information you give us the better chance you have of retrieving your items.</small>
             </div>
             <div class='col-sm-7 col-sm-push-5'>
-                <div class='losting_image'><img src='./img/submit_found_property.jpg' class='img-responsive d-none d-sm-block' alt='image' width='100%'></div>
+                <div class='losting_image'><img src='./img/submit_found_property.jpg' class='img-responsive d-none d-sm-block' alt='image' width='80%'></div>
             </div>
         </div>
     </div>
@@ -196,9 +196,10 @@ if (isset($_POST['submit']) && isset($_FILES['item_image'])) {
             </div>
             <div class="form-group upload_image">
                 <label class="control-label lbl-descriptive">Upload Image
+                    <small class="required text-danger">*</small>
                     <span class="label-detail">(This image will be display on the website.)<span>
                         </span></span></label>
-                <input type="file" name="item_image" placeholder="Upload an image or file of the item" class="form-control" id="item_image" accept="image/*">
+                <input type="file" name="item_image" placeholder="Upload an image or file of the item" class="form-control" id="item_image" accept="image/*" required>
             </div>
             <div class='form-group'>
                 <label for="additional_info" class="control-label lbl-descriptive">Additional Information
@@ -285,6 +286,7 @@ if (isset($_POST['submit']) && isset($_FILES['item_image'])) {
         <div class="col-sm-6">
             <div class="form-group">
                 <label for="item_current_location" class="control-label lbl-descriptive">Item Current Location
+                    <small class="required text-danger">*</small>
                     <span class="label-detail">Please provide the location where the owner of the item will find it</span>
                     <input id="item_current_location" class="form-control" placeholder="Item Current Location" name="item_current_location" type="text" required>
             </div>
@@ -296,7 +298,6 @@ if (isset($_POST['submit']) && isset($_FILES['item_image'])) {
     </div>
     <h4 class='mb-5'>Contact Information</h4>
     <div class='row'>
-        <br>
         <div class='col-md-6'>
             <div class="form-group">
                 <label for="firstname" class="control-label lbl-descriptive">First Name
@@ -333,18 +334,16 @@ if (isset($_POST['submit']) && isset($_FILES['item_image'])) {
         <div class='col-md-6'>
             <div class="form-group">
                 <label for="email" class="control-label lbl-descriptive">Email
-
-                    <span class="label-detail">Please enter your email (Optional)</span>
+                    <small class="required text-danger">*</small>
+                    <span class="label-detail">Please enter your email</span>
                 </label>
                 <div class="input-group date">
-                    <input id="incident_date" class="form-control" placeholder="Email" name="email" type="email">
+                    <input id="incident_date" class="form-control" placeholder="Email" name="email" type="email" required>
                 </div>
             </div>
         </div>
 
     </div>
 
-    <button name="submit" class='btn submit mt-3 mb-5 pr-5 pl-5 btn-lg text-light'>Submit</button>
+    <button name="submit" class='btn submit mt-3 mb-5 pr-5 pl-5 btn-lg text-light' style='width: 50%; margin-left: 25%;'>Submit</button>
 </form>
-
-<?php include('inc/footer.php'); ?>
