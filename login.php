@@ -15,15 +15,15 @@ if(isset($_POST['submit'])) {
     if(mysqli_fetch_assoc($result)) {
         $_SESSION['username'] = $username;
         if($username == "admin") {
-            header("Location:http://localhost/lost-item/admin/index.php");
+            header("Location:https://irihanolostandfound.herokuapp.com/admin/index.php");
         }else {
-            header("Location:http://localhost/lost-item/index.php");
+            header("Location:https://irihanolostandfound.herokuapp.com/index.php");
             $username = "";
             $password = "";
         }
     
     } else {
-        header("location:http://localhost/lost-item/login.php?error= Please enter the correct Username/Email or Password");
+        header("location:https://irihanolostandfound.herokuapp.com/login.php?error= Please enter the correct Username/Email or Password");
     }
 
     // if($result->num_rows > 0) {
