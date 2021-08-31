@@ -67,7 +67,7 @@ if (isset($_POST['submit']) && isset($_FILES['item_image'])) {
                 ]
             ]);
             try {
-                $res = $s3->upload($s3_bucket, $newnm, file_get_contents($file_location) );
+                $res = $s3->upload($s3_bucket, $newnm, file_get_contents($file_location));
             } catch (S3Exception $e) {
                 echo 'error uploading image';
                 echo $e;
@@ -78,13 +78,13 @@ if (isset($_POST['submit']) && isset($_FILES['item_image'])) {
 
         $last_id = mysqli_insert_id($conn);
         setcookie("last_id", $last_id, time() + 3600, "/", "", 0);
-           //storing cookies
-            
+        //storing cookies
+
         $last_id = mysqli_insert_id($conn);
-        setcookie("last_id", $last_id, time()+3600, "/","", 0);
-        setcookie("firstName", $first_name, time()+3600, "/","", 0);
-        setcookie("lastName", $last_name, time()+3600, "/","", 0);
-        setcookie("email", $email, time()+3600, "/","", 0);
+        setcookie("last_id", $last_id, time() + 3600, "/", "", 0);
+        setcookie("firstName", $first_name, time() + 3600, "/", "", 0);
+        setcookie("lastName", $last_name, time() + 3600, "/", "", 0);
+        setcookie("email", $email, time() + 3600, "/", "", 0);
 
         move_uploaded_file($_FILES['item_image']['tmp_name'], $file_location);
 
@@ -126,15 +126,16 @@ if (isset($_POST['submit']) && isset($_FILES['item_image'])) {
                 <div class='col-sm-5'>
                     <h1>Submit Lost Property</h1><br><br>
                     <p>
-                        Our system connects lost and found properties from all around the country with their owners. For every lost property, we send a notification to the owner when the system receives a matching found item.<br>
+                        Our system connects lost and found properties from all around the Rwanda with their owners.<br>
 
                     </p>
-                    <br><br>
+                    <br>
                     <strong class="required text-danger">*</strong>
                     <small>Please be descriptive when submitting your lost property report, the more information you give us the better chance you have of retrieving your items.</small>
+                    <br>
                 </div>
                 <div class='col-sm-7 col-sm-push-5'>
-                    <div class='losting_image'><img src='https://www.lostings.com/public/assets/images/submit_lost_property.jpg' class='img-responsive d-none d-sm-block' alt='image' width='100%'></div>
+                    <div class='losting_image'><img src='https://www.lostings.com/public/assets/images/submit_lost_property.jpg' class='img-responsive d-none d-sm-block' alt='image' width='80%'></div>
                 </div>
             </div>
         </div>
@@ -208,6 +209,7 @@ if (isset($_POST['submit']) && isset($_FILES['item_image'])) {
             </div>
             <div class="form-group upload_image">
                 <label class="control-label lbl-descriptive">Upload Image
+                    <small class="required">*</small>
                     <span class="label-detail">(This image will be display on the website.)<span>
                         </span></span></label>
                 <input placeholder="Upload an image or file of the item" class="form-control" id="upload_image_name" name="item_image" type="file" required>
@@ -329,16 +331,12 @@ if (isset($_POST['submit']) && isset($_FILES['item_image'])) {
             <div class="form-group">
                 <label for="email" class="control-label lbl-descriptive">Email
                     <small class="required">*</small>
-                    <span class="label-detail">Please enter your email (Optional)</span>
+                    <span class="label-detail">Please enter your email</span>
                 </label>
-                <input id="email" class="form-control" placeholder="Email" name="email" type="email">
+                <input id="email" class="form-control" placeholder="Email" name="email" type="email" required>
             </div>
         </div>
-        <button name="submit" class='btn submit mt-3 mb-5 pr-5 pl-5 btn-lg text-light' style='width:auto;'>Submit</button>
+        <button name="submit" class='btn submit mt-3 mb-5 pr-5 pl-5 btn-lg text-light' style='width: 50%; margin-left: 25%;'>Submit</button>
 
     </form>
 </main>
-
-<!--footer-->
-
-<?php include('inc/footer.php'); ?>
