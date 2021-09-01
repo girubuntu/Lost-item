@@ -40,31 +40,51 @@ if(isset($_POST['submit'])) {
 } 
 ob_end_flush();
 ?>
+<style>
+    section {
+        height: 80vh;
+    }
+    #img-login {
+      width: 100%;
+      height: 100%;
+      margin-top: 1rem;
+    }
+    @media only screen and (max-width: 1000px) {
+        #img-login {
+            display: none;
+        }
+    }
+</style>
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/login.css">
     <title>Login</title>
 </head>
 
-    <div class="global-container">
-        <div class="card login-form">
-            <div class="card-body">
-                <h1 class="card-title text-center">LOGIN</h1>
-                <div class="card-text">
+<section class="form my-4 mx-5">
+    <div class="container mh-100">
+        <div class="row no-gutters">
+            <div class="col-lg-7">
+                <img src="./img/loginpic.png" alt="" class="img-fluid w-100" id="img-login">
+            </div>
+            <div class="col-lg-5">
+                <div class="card-body">
+                    <h1 class="card-title text-center">LOGIN</h1>
+                    <div class="card-text">
                     <?php 
                         if(@$_GET['error'] == true){
 
                     ?>
-                        <div class="alert-light text-danger text-center my-3">
-                            <?php echo $_GET['error']
-                                
-                            ?>
-                            
-                        </div>
-                    <?php
+                    <div class="alert-light text-danger text-center my-3">
+                        <?php echo $_GET['error']
+                                                
+                        ?>
+                                            
+                    </div>
+                        <?php
                         }
-                    ?>
-                    
+                        ?>
+                                    
 
                     <form method="POST" action="#">
                         <div class="form-group">
@@ -75,17 +95,20 @@ ob_end_flush();
                             <label for="passord">Password</label>                            
                             <input type="password" name="password" class="form-control form-control-sm" required>
                         </div>
-                        
+                                        
                         <button type="submit" name="submit" class="btn btn-primary btn-block">Login</button>
                         <div class="signup">
-                        <p>Don't have an account?<a href="register.php">Register Here</a></p>
+                            <p>Don't have an account?<a href="register.php">Register Here</a></p>
                         </div>
-                        
+                                        
                     </form>
                 </div>
+            </div>               
+
             </div>
         </div>
-        
     </div>
+</section>
 
+    
     <?php include('inc/footer.php'); ?>
