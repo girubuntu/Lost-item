@@ -41,7 +41,6 @@ if (isset($_POST['submit'])) {
 }
 ob_end_flush();
 ?>
-<<<<<<< HEAD
 <style>
     section {
         height: 80vh;
@@ -57,16 +56,12 @@ ob_end_flush();
         }
     }
 </style>
-=======
-
->>>>>>> main
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/login.css">
     <title>Login</title>
 </head>
 
-<<<<<<< HEAD
 <section class="form my-4 mx-5">
     <div class="container mh-100">
         <div class="row no-gutters">
@@ -111,52 +106,9 @@ ob_end_flush();
                 </div>
             </div>               
 
-=======
-<div class="global-container">
-    <div class="card login-form">
-        <div class="card-body">
-            <h1 class="card-title text-center">LOGIN</h1>
-            <div class="card-text">
-                <?php
-                if (@$_GET['error'] == true) {
-
-                ?>
-                    <div class="alert-light text-danger text-center my-3">
-                        <?php echo $_GET['error']
-
-                        ?>
-
-                    </div>
-                <?php
-                }
-                ?>
-
-
-                <form method="POST" action="#">
-                    <div class="form-group">
-                        <label for="email">Username or Email</label>
-                        <input type="text" name="username" class="form-control form-control-sm" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="passord">Password</label>
-                        <input type="password" name="password" class="form-control form-control-sm" required>
-                    </div>
-
-                    <button type="submit" name="submit" class="btn btn-primary btn-block">Login</button>
-                    <div class="signup">
-                        <p>Don't have an account?<a href="register.php"> Register Here</a></p>
-                    </div>
-
-                </form>
->>>>>>> main
             </div>
         </div>
     </div>
 </section>
 
-<<<<<<< HEAD
-    
-    <?php include('inc/footer.php'); ?>
-=======
 </div>
->>>>>>> main

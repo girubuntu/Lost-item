@@ -11,74 +11,29 @@ if (isset($_POST['submit'])) {
     $password2 = mysqli_real_escape_string($conn, ($_POST['password2']));
     $pattern = '/^(?=.*[!@#$%^&*-.?])(?=.*[0-9])(?=.*[A-Z]).{8,20}$/';
 
-<<<<<<< HEAD
     $query = "SELECT * FROM userlogin WHERE username= '$username'";
     $result = mysqli_query($conn, $query);
     $user = mysqli_fetch_assoc($result);
     if(!$user) {
         if(!preg_match($pattern, $password)){
-            header("Location: https://localhost/lost-item/register.php?error= Password is weak");
+            header("Location: https://irihanolostandfound.herokuapp.com/register.php?error= Password is weak");
         } elseif($password != $password2) {
-            header("Location: https://localhost/lost-item/register.php?error= Password do not match");
+            header("Location: https://irihanolostandfound.herokuapp.com/register.php?error= Password do not match");
         } elseif($user['username'] == $username){
-            header("Location:https://localhost/lost-item/register.php?error=Username/email already exist");
+            header("Location:https://irihanolostandfound.herokuapp.com/register.php?error=Username/email already exist");
         } else {
             $query = "INSERT INTO userlogin (username, pass) VALUES ('$username', '$password')";
             mysqli_query($conn, $query);
             $_SESSION['username'] = $username;
             $_SESSION['success'] = "you are logged in";
-            header("Location: https://localhost/lost-item/login.php");
+            header("Location:https://irihanolostandfound.herokuapp.com/login.php");
         }
         
     
-=======
-    if ($password != $password2) {
-        header("Location: https://irihanolostandfound.herokuapp.com/register.php?error= Password do not match");
->>>>>>> main
     } else {
-        header("Location:https://localhost/lost-item/register.php?error=Username/email already exist");
+        header("Location:https://irihanolostandfound.herokuapp.com/register.php?error=Username/email already exist");
     }
 
-<<<<<<< HEAD
-    
-    // if($password != $password2) {
-    //     header("Location: https://irihanolostandfound.herokuapp.com/register.php?error= Password do not match");
-    // } else {
-    //     $query = "SELECT * FROM userlogin WHERE username= '$username'";
-    //     $result = mysqli_query($conn, $query);
-
-    //     $user = mysqli_fetch_assoc($result);
-    //     if($user) {
-    //         if($user['username'] == $username) {
-    //             header("Location:https://irihanolostandfound.herokuapp.com/register.php?error=Username/email already exist");
-    //         }
-    //     }
-
-    //     $query = "INSERT INTO userlogin (username, pass) VALUES ('$username', '$password')";
-    //     mysqli_query($conn, $query);
-    //     $_SESSION['username'] = $username;
-    //     $_SESSION['success'] = "you are logged in";
-    //     header("Location: https://irihanolostandfound.herokuapp.com/login.php");
-
-    // }
-
-
-
-=======
-        $user = mysqli_fetch_assoc($result);
-        if ($user) {
-            if ($user['username'] == $username) {
-                header("Location:https://irihanolostandfound.herokuapp.com/register.php?error=Username/email already exist");
-            }
-        }
-
-        $query = "INSERT INTO userlogin (username, pass) VALUES ('$username', '$password')";
-        mysqli_query($conn, $query);
-        $_SESSION['username'] = $username;
-        $_SESSION['success'] = "you are logged in";
-        header("Location: https://irihanolostandfound.herokuapp.com/login.php");
-    }
->>>>>>> main
 }
 ob_end_flush();
 ?>
@@ -107,35 +62,6 @@ ob_end_flush();
                 <?php
                 }
                 ?>
-                <form method="POST" action="#">
-                    <div class="form-group">
-                        <label for="email">Username or Email</label>
-                        <input type="type" name="username" class="form-control form-control-sm" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" name="password" class="form-control form-control-sm" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Re-enter Password</label>
-                        <input type="password" name="password2" class="form-control form-control-sm" required>
-                    </div>
-
-                    <button type="submit" name="submit" class="btn btn-primary btn-block">Register</button>
-
-                    <p class="mt-1 float-right">Already have an account?<a href="login.php"> Login Here</a></p>
-
-<<<<<<< HEAD
-                    ?>
-                        <div class="alert-light text-danger text-center my-3">
-                            <?php echo $_GET['error']
-                                
-                            ?>
-                            
-                        </div>
-                    <?php
-                        }
-                    ?>
                     <form method="POST" action="#">
                         <div class="form-group">
                             <label for="email">Username or Email</label>
@@ -157,9 +83,6 @@ ob_end_flush();
                                               
                     </form>
                 </div>
-=======
-                </form>
->>>>>>> main
             </div>
         </div>
     </div>
