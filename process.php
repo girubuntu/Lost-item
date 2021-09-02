@@ -29,7 +29,7 @@ if(isset($_GET['status'])){
             CURLOPT_CUSTOMREQUEST => "GET",
             CURLOPT_HTTPHEADER => array(
               "Content-Type: application/json",
-              "Authorization: Bearer FLWSECK_TEST-e6d5ce4aa6175e74b58727735e9a4541-X"
+              "Authorization: Bearer FLWSECK_TEST-bdc6045695d4fb00b746ffdac00d6b07-X"
             ),
           ));
           
@@ -74,7 +74,8 @@ if(isset($_GET['resp'])){
             if (mysqli_query($conn, $query)) {
 
                 $_SESSION['status'] = 'Your  post has been submitted successfully!';
-                header('Location:index.php');
+                echo "great";
+                // header('Location:index.php');
                 } else {
                 echo "Error accessing the record " . $conn->error;
                 }
