@@ -4,26 +4,28 @@ require('config/config.php');
 require('config/db.php');
 
 if (isset($_POST['pay_card'])) {
+
     $firstName = $_COOKIE["firstName"];
     $lastName = $_COOKIE["lastName"];
     $email = $_COOKIE["email"];
     $price = $_COOKIE["price"];
+  
     //preparing a payment request
     $request = [
         "tx_ref" => time(),
         "amount" => $price,
         "currency" => "RWF",
-        "redirect_url" => "http://localhost:8080/Lost-item/process.php",
+        "redirect_url" => "http://localhost/process.php",
         "payment_options"  => "card",
         "meta" => [
             "consumer_id" => "id",
             "price" => $price,
         ],
-        "customer" => [
-            "name" => $firstName . " " . $lastName,
-            "email" => $email
+        // "customer" => [
+        //     "name" => $firstName . " " . $lastName,
+        //     "email" => $email
 
-        ],
+        // ],
         "customizations" => [
             "title" => "Submit Lost Item Payment",
             "description" => "Our services are worthwhile. Pay the price to display your lost item to the whole world and increase your chance to get it back",
@@ -75,7 +77,7 @@ if (isset($_POST['pay_card'])) {
         "email" => $email,
         "phone_number" => $phone_number,
         "fullname" => $firstName . " " . $lastName,
-        "redirect_url" => "http://localhost:8080/Lost-item/process.php",
+        "redirect_url" => "http://localhost/process.php",
         "meta" => [
             "consumer_id" => "id",
             "price" => $price,

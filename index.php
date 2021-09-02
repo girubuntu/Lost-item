@@ -18,10 +18,10 @@ mysqli_close($conn);
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/viewPosts.css">
-    <title>Recent Posts</title>
+    <title>Lost Items</title>
 </head>
 
-    <main class='container-fluid mb-5'>
+    <main class='container-fluid mb-5 ml-3'>
         <ul class="nav nav-tabs justify-content-center text-dark mb-5" role="tablist">
             <li class="nav-item">
             <a class="nav-link active" data-toggle="tab" href="#all">All</a>
@@ -61,7 +61,7 @@ mysqli_close($conn);
                     <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
                         <?php foreach($posts  as $post): ?>
                             <div class="col">
-                                <div class="card h-100 shadow-sm">
+                                <div class="card h-100 shadow">
                                     <img src="https://irihano.s3.us-east-2.amazonaws.com/<?php echo $post['item_image'];?>" alt='image' style='width:100%; height:180px;' class='card-img-top' >
                                     
                                     <div class="card-body">
@@ -99,7 +99,7 @@ mysqli_close($conn);
                     <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
                         <?php foreach($posts  as $post): ?>
                             <div class="col">
-                                <div class="card h-100 shadow-sm">
+                                <div class="card h-100 shadow">
                                     <img src="https://irihano.s3.us-east-2.amazonaws.com/<?php echo $post['item_image'];?>" alt='image' style='width:100%; height:180px;' class='card-img-top' >
                                     
                                     <div class="card-body">
@@ -138,7 +138,7 @@ mysqli_close($conn);
                     <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
                         <?php foreach($posts  as $post): ?>
                             <div class="col">
-                                <div class="card h-100 shadow-sm">
+                                <div class="card h-100 shadow">
                                     <img src="https://irihano.s3.us-east-2.amazonaws.com/<?php echo $post['item_image'];?>" alt='image' style='width:100%; height:180px;' class='card-img-top' >
                                     
                                     <div class="card-body">
@@ -176,7 +176,7 @@ mysqli_close($conn);
                     <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
                         <?php foreach($posts  as $post): ?>
                             <div class="col">
-                                <div class="card h-100 shadow-sm">
+                                <div class="card h-100 shadow">
                                     <img src="https://irihano.s3.us-east-2.amazonaws.com/<?php echo $post['item_image'];?>" alt='image' style='width:100%; height:180px;' class='card-img-top' >
                                     
                                     <div class="card-body">
@@ -214,7 +214,7 @@ mysqli_close($conn);
                     <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
                         <?php foreach($posts  as $post): ?>
                             <div class="col">
-                                <div class="card h-100 shadow-sm">
+                                <div class="card h-100 shadow">
                                     <img src="https://irihano.s3.us-east-2.amazonaws.com/<?php echo $post['item_image'];?>" alt='image' style='width:100%; height:180px;' class='card-img-top' >
                                     
                                     <div class="card-body">
@@ -252,7 +252,7 @@ mysqli_close($conn);
                     <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
                         <?php foreach($posts  as $post): ?>
                             <div class="col">
-                                <div class="card h-100 shadow-sm">
+                                <div class="card h-100 shadow">
                                     <img src="https://irihano.s3.us-east-2.amazonaws.com/<?php echo $post['item_image'];?>" alt='image' style='width:100%; height:180px;' class='card-img-top' >
                                     
                                     <div class="card-body">
@@ -328,7 +328,7 @@ mysqli_close($conn);
                     <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
                         <?php foreach($posts  as $post): ?>
                             <div class="col">
-                                <div class="card h-100 shadow-sm">
+                                <div class="card h-100 shadow">
                                     <img src="https://irihano.s3.us-east-2.amazonaws.com/<?php echo $post['item_image'];?>" alt='image' style='width:100%; height:180px;' class='card-img-top' >
                                     
                                     <div class="card-body">
@@ -366,7 +366,7 @@ mysqli_close($conn);
                     <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
                         <?php foreach($posts  as $post): ?>
                             <div class="col">
-                                <div class="card h-100 shadow-sm">
+                                <div class="card h-100 shadow">
                                     <img src="https://irihano.s3.us-east-2.amazonaws.com/<?php echo $post['item_image'];?>" alt='image' style='width:100%; height:180px;' class='card-img-top' >
                                     
                                     <div class="card-body">
@@ -405,7 +405,7 @@ mysqli_close($conn);
                     <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
                         <?php foreach($posts  as $post): ?>
                             <div class="col">
-                                <div class="card h-100 shadow-sm">
+                                <div class="card h-100 shadow">
                                     <img src="https://irihano.s3.us-east-2.amazonaws.com/<?php echo $post['item_image'];?>" alt='image' style='width:100%; height:180px;' class='card-img-top' >
                                     
                                     <div class="card-body">
@@ -427,8 +427,3 @@ mysqli_close($conn);
         </div>
       
     </main>
-
-
-       <!--footer-->
-    
-       <?php include('inc/footer.php'); ?>
