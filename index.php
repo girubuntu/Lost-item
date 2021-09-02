@@ -27,7 +27,7 @@ mysqli_close($conn);
             <a class="nav-link active" data-toggle="tab" href="#all">All</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#animals">Animals/Pets</a>
+            <a class="nav-link" data-toggle="tab" href="#animals">Animals/People</a>
             </li>
             <li class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#electronics">Electronics</a>
@@ -40,6 +40,9 @@ mysqli_close($conn);
             </li>
             <li class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#materials">Tools and Materials</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#licence">Licence Cards</a>
             </li>
             <li class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#cards">Cards</a>
@@ -81,7 +84,7 @@ mysqli_close($conn);
                 require('config/config.php');
                 require('config/db.php');
 
-                $query = 'SELECT * FROM lost_item WHERE category_name = "Animals/Pets" ORDER BY created_at DESC';
+                $query = 'SELECT * FROM lost_item WHERE category_name = "Animals/People" ORDER BY created_at DESC';
 
                 $result = mysqli_query($conn,$query);
 
@@ -250,6 +253,44 @@ mysqli_close($conn);
                         <?php foreach($posts  as $post): ?>
                             <div class="col">
                                 <div class="card h-100 shadow">
+                                    <img src="https://irihano.s3.us-east-2.amazonaws.com/<?php echo $post['item_image'];?>" alt='image' style='width:100%; height:180px;' class='card-img-top' >
+                                    
+                                    <div class="card-body">
+                                        <h4 class="card-title text-center"><?php echo $post['item_name']; ?></h4>
+                                        <div class='text-center'>
+                                            Lost on <?php echo $post['incident_date']; ?> <br>
+                                            Location: <?php echo $post['district'];?> - <?php echo $post['sector'];?>
+                                        </div>
+                                        <div class="text-center my-4"> <a href='itemDetails.php?item_id=<?php echo " $post[item_id]";?> ' class="btn">View Details</a> </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
+                        
+                    </div>
+                </div>
+            </section>
+            <section id='licence' class="container tab-pane">
+            <?php
+                require('config/config.php');
+                require('config/db.php');
+
+                $query = 'SELECT * FROM lost_item WHERE category_name = "Driving Licence" ORDER BY created_at DESC';
+
+                $result = mysqli_query($conn,$query);
+
+                $posts = mysqli_fetch_all($result,MYSQLI_ASSOC);
+
+                mysqli_free_result($result);
+
+                mysqli_close($conn);
+
+            ?>
+                <div class="container my-4">
+                    <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
+                        <?php foreach($posts  as $post): ?>
+                            <div class="col">
+                                <div class="card h-100 shadow-sm">
                                     <img src="https://irihano.s3.us-east-2.amazonaws.com/<?php echo $post['item_image'];?>" alt='image' style='width:100%; height:180px;' class='card-img-top' >
                                     
                                     <div class="card-body">

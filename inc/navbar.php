@@ -144,6 +144,7 @@
     z-index: -10;
     color: #fff;
   }
+
 </style>
 <nav class="nav__cont">
   <ul class="nav">
