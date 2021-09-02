@@ -1,6 +1,6 @@
 <?php include('inc/header.php');
 
-session_start();
+
 require('config/config.php');
 require('config/db.php');
 require('vendor/autoload.php');
