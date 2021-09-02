@@ -45,6 +45,20 @@ if (isset($_POST['submit']) && isset($_FILES['item_image'])) {
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $phone_number = mysqli_real_escape_string($conn, $_POST['phone_number']);
 
+    $pricesArr = [
+        'Cards' => 200,
+        'Driving Licence' => 1500,
+        'Documents' => 2000,
+        'Animals/People' => 3000,
+        'Personal Accessories' => 1000,
+        'Tools and Materials' => 3000,
+        'Electronics' => 1500,
+        'Clothing' => 1000,
+        'Others' => 1000,
+    ];
+    $price = $pricesArr[$category_name];
+
+    $names['bob'];
 
 
     $query = "INSERT INTO lost_item(item_name,category_name,brand,primary_color,secondary_color,incident_date,incident_time,item_image,additional_info,location_type,province,district,sector,cell,village,first_name, last_name, email, phone_number) 
@@ -75,16 +89,11 @@ if (isset($_POST['submit']) && isset($_FILES['item_image'])) {
         } else {
             echo mysqli_error($conn);
         }
-
-        $last_id = mysqli_insert_id($conn);
-        setcookie("last_id", $last_id, time() + 3600, "/", "", 0);
-           //storing cookies
-            
-        $last_id = mysqli_insert_id($conn);
         setcookie("last_id", $last_id, time()+3600, "/","", 0);
         setcookie("firstName", $first_name, time()+3600, "/","", 0);
         setcookie("lastName", $last_name, time()+3600, "/","", 0);
         setcookie("email", $email, time()+3600, "/","", 0);
+        setcookie("price", $price, time()+3600, "/","", 0);
 
         move_uploaded_file($_FILES['item_image']['tmp_name'], $file_location);
 
@@ -156,10 +165,11 @@ if (isset($_POST['submit']) && isset($_FILES['item_image'])) {
                 </label>
                 <select class="form-select" name='category_name' required>
                     <option selected="selected" value="">Select Category</option>
-                    <option value="Animals/Pets">Animals/Pets</option>
+                    <option value="Animals/People">Animals/Pets</option>
                     <option value="Electronics">Electronics</option>
                     <option value="Clothing">Clothing</option>
                     <option value="Tools and Materials">Tools and Materials</option>
+                    <option value="Driving Licence">Driving Licence</option>
                     <option value="Cards">Cards</option>
                     <option value="Documents">Documents</option>
                     <option value="Personal Accessories">Personal Accessories</option>

@@ -95,7 +95,6 @@
   position: absolute;
   left:60px;
   top:21px;
-  background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -108,6 +107,7 @@
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
+  background: none;
 }
  .dropdown-content a {
   position: static;

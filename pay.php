@@ -7,16 +7,17 @@ if (isset($_POST['pay_card'])) {
     $firstName = $_COOKIE["firstName"];
     $lastName = $_COOKIE["lastName"];
     $email = $_COOKIE["email"];
+    $price = $_COOKIE["price"];
     //preparing a payment request
     $request = [
         "tx_ref" => time(),
-        "amount" => "100",
+        "amount" => $price,
         "currency" => "RWF",
         "redirect_url" => "http://localhost:8080/Lost-item/process.php",
         "payment_options"  => "card",
         "meta" => [
             "consumer_id" => "id",
-            "price" => "100",
+            "price" => $price,
         ],
         "customer" => [
             "name" => $firstName . " " . $lastName,
@@ -42,7 +43,7 @@ if (isset($_POST['pay_card'])) {
         CURLOPT_CUSTOMREQUEST => 'POST',
         CURLOPT_POSTFIELDS => json_encode($request),
         CURLOPT_HTTPHEADER => array(
-            'Authorization: Bearer FLWSECK_TEST-e6d5ce4aa6175e74b58727735e9a4541-X',
+            'Authorization: Bearer FLWSECK_TEST-bdc6045695d4fb00b746ffdac00d6b07-X',
             'Content-Type: application/json'
         )
     ));
@@ -68,7 +69,7 @@ if (isset($_POST['pay_card'])) {
     //preparing a payment request
     $request = [
         "tx_ref" => time(),
-        "amount" => "100",
+        "amount" => $price,
         "currency" => "RWF",
         "network" => "MTN",
         "email" => $email,
@@ -77,7 +78,7 @@ if (isset($_POST['pay_card'])) {
         "redirect_url" => "http://localhost:8080/Lost-item/process.php",
         "meta" => [
             "consumer_id" => "id",
-            "price" => "100",
+            "price" => $price,
         ],
         "customer" => [
             "name" => $firstName . " " . $lastName,
