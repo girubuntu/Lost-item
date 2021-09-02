@@ -67,36 +67,7 @@
 </head>
 <body>
   
-
-<div class="wrapper">
-  <!-- /.navbar -->
-
-  <!-- Main Sidebar Container -->
-  <?php include('../inc/navbar.php'); ?>
-
-  <!-- Content Wrapper. Contains page content -->
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-  <div class="modal fade" id="addFoundModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Add Found Item</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-
+<?php include('../inc/navbar.php'); ?>
 <?php
 
 if(isset($_POST['deleteUserBtn'])) {
@@ -160,7 +131,7 @@ if(isset($_POST['deleteUserBtn'])) {
 </div>
 
 
-
+<div class="container">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <div class="container-fluid">
@@ -244,15 +215,7 @@ if(isset($_POST['deleteUserBtn'])) {
     </section>
     <!-- /.content -->
   </div>
-  <!-- /.content-wrapper -->
-
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
-  </aside>
-  <!-- /.control-sidebar -->
-</div>
-<!-- ./wrapper -->
+  </div>
 
 <!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>

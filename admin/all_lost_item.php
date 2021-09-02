@@ -63,106 +63,7 @@
   <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed"></body>
-<div class="wrapper">
-  <!-- /.navbar -->
-
-  <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
-    <!-- Brand Logo -->
-    <a href="../index.php" class="brand-link">
-      <img src="../img/irihano.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">IRIHANO</span>
-    </a>
-
-    <!-- Sidebar -->
-    <div class="sidebar">
-      <!-- Sidebar user panel (optional) -->
-      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <div class="info d-flex">
-        <i class="fas fa-user w-auto"></i>
-          <div>
-                <a href="https://irihanolostandfound.herokuapp.com/login.php" class="d-block ml-3">LOG OUT</a>
-          </div>
-        
-        </div>
-      </div> 
-      
-      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <div class="info">
-          <a href="#" class="d-block">Lost Items</a>
-        </div>
-      </div>
-      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <div class="info">
-          <a href="all_found_item.php" class="d-block">Found Items</a>
-        </div>
-      </div>
-      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <div class="info">
-          <a href="all_users.php" class="d-block">Users</a>
-        </div>
-      </div>
-
-      <!-- Sidebar Menu -->
-      <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-          <li class="nav-item menu-open">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>
-                Pending Actions
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="foundPending.php" class="nav-link">
-                <i class="fas fa-arrow-circle-right"></i>
-                  <p>Found Item</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="lostPending.php" class="nav-link">
-                <i class="fas fa-arrow-circle-right"></i>
-                  <p>Lost Item</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-         
-        
-        </ul>
-      </nav>
-      <!-- /.sidebar-menu -->
-    </div>
-    <!-- /.sidebar -->
-  </aside>
-
-  <!-- Content Wrapper. Contains page content -->
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-  <div class="modal fade" id="addLostModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Add Lost Item</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-
+<?php include('../inc/navbar.php'); ?>
 
 
 <!-- Delete user modal-->
@@ -189,25 +90,7 @@
   </div>
 </div>
 
-<div class="modal fade" id="editUserModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Edit Lost Item</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
+
 <?php 
   if(isset($_POST['approveUserBtn'])) {
     
@@ -248,6 +131,7 @@
   </div>
 </div>
 </div>
+<div class="container">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <div class="container-fluid">
@@ -334,15 +218,7 @@
     </section>
     <!-- /.content -->
   </div>
-  <!-- /.content-wrapper -->
-
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
-  </aside>
-  <!-- /.control-sidebar -->
-</div>
-<!-- ./wrapper -->
+  </div>
 
 <!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>

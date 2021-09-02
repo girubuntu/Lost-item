@@ -43,11 +43,11 @@ ob_end_flush();
 ?>
 <style>
     section {
-        height: 80vh;
+        height: 70vh;
     }
     #img-login {
-      width: 100%;
-      height: 100%;
+      width: 90%;
+      height: 90%;
       margin-top: 1rem;
     }
     @media only screen and (max-width: 1000px) {
@@ -62,11 +62,11 @@ ob_end_flush();
     <title>Login</title>
 </head>
 
-<section class="form my-4 mx-5">
-    <div class="container mh-100">
-        <div class="row no-gutters">
-            <div class="col-lg-7">
-                <img src="./img/loginpic.png" alt="" class="img-fluid w-100" id="img-login">
+<section class="form my-5 mx-auto">
+    <div class="container">
+        <div class="row no-gutters my-5">
+            <div class="col-lg-6">
+                <img src="./img/brabus.jpg" alt="" class="img-fluid w-100" id="img-login">
             </div>
             <div class="col-lg-5">
                 <div class="card-body">
