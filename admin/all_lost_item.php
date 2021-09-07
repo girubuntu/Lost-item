@@ -4,13 +4,11 @@
  require('../config/config.php');
  require('../config/db.php');
 
- 
-
 
  $lost_query = "SELECT * FROM lost_item ORDER BY created_at DESC";
  $found_query = "SELECT * FROM founditem ORDER by created_at DESC";
  $user_query = "SELECT * FROM userlogin ORDER by created_at DESC";
-//  $pending_query = "SELECT * FROM lost_item ORDER by created_at DESC WHERE verify='false'";
+//  $pending_query = "SELECT * FROM lost_item ORDER by created_at DESC WHERE verify='approved'";
 //  $pending_query2 = "SELECT * FROM founditem ORDER by created_at DESC WHERE verify='false'";
 
  
@@ -23,10 +21,9 @@
 //  $pending_result2 = mysqli_query($conn, $pending_query2);
  
  $lost_count = mysqli_num_rows($lost_result);
-
  $found_count = mysqli_num_rows($found_result );
  $user_count = mysqli_num_rows($user_result );
-//  $pendig_count = $pending_result-> mysqli_num_rows();
+//  $pendig_count = mysqli_num_rows($pending_result);
 //  $pendig_count2 = $pending_result2-> mysqli_num_rows();
 
 //  $pending_total = $pendig_count + $pendig_count2;
@@ -170,7 +167,16 @@
                   </thead>
                   <tbody>
                   <?php
-                      $query = "SELECT * FROM lost_item WHERE verify = 'approved'";
+
+                      if(isset($_GET['page'])) {
+                        $page = $_GET['page'];
+                      } else {
+                        $page = 1;
+                      }
+
+                      $num_per_pages = 5;
+                      $start_from = ($page -1)*5;
+                      $query = "SELECT * FROM lost_item WHERE verify = 'approved' LIMIT $start_from, $num_per_pages";
                       $data = mysqli_query($conn, $query);
 
                       if(mysqli_num_rows($data) > 0 ) {
@@ -202,6 +208,20 @@
                   
                   </tbody>
                 </table>
+                <?php
+                  $pr_query = "SELECT * FROM lost_item";
+                  $pr_result = mysqli_query($conn, $pr_query);
+                  $total_record = mysqli_num_rows($pr_result);
+                  $total_page = ceil($total_record / $num_per_pages);
+
+                  if($page > 1) {
+                    echo "<a href='all_lost_item.php?page=".($page-1)."' class='btn btn-danger m-2'>prev</a>";
+                  }
+                  
+                  for ($i=1; $i<=$total_page ; $i++) {
+                    echo "<a href='all_lost_item.php?page=".$i."' class='btn btn-primary m-2'>$i</a>";
+                  }
+                ?>
               </div>
               <!-- /.card-body -->
             </div>
