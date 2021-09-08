@@ -95,7 +95,7 @@ if(isset($_POST['approveUserBtn'])) {
       <form action="<?php htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
         <div class="modal-body">
           <input type="hidden" name="user_id" class="approveBtn">
-          <p>Are you sure, you want to approve this user? </p>
+          <p>Are you sure, you want to approve this item? </p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

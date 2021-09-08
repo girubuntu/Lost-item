@@ -8,11 +8,14 @@ require('vendor/autoload.php');
 use Aws\S3\S3Client;
 use Aws\S3\Exception\S3Exception;
 
-// $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-// $dotenv->load();
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
 
-$s3_key = getenv('AWS_KEY');
-$s3_secret = getenv('AWS_SECRET');
+$s3_key = $_ENV['AWS_KEY'];
+$s3_secret = $_ENV['AWS_SECRET'];
+
+// $s3_key = getenv('AWS_KEY');
+// $s3_secret = getenv('AWS_SECRET');
 $s3_bucket = 'irihano';
 
 if (isset($_POST['submit']) && isset($_FILES['item_image'])) {
@@ -38,13 +41,10 @@ if (isset($_POST['submit']) && isset($_FILES['item_image'])) {
     $village = mysqli_real_escape_string($conn, $_POST['village']);
     $item_current_location = mysqli_real_escape_string($conn, $_POST['item_current_location']);
 
-
     $first_name = mysqli_real_escape_string($conn, $_POST['first_name']);
     $last_name = mysqli_real_escape_string($conn, $_POST['last_name']);
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $phone_number = mysqli_real_escape_string($conn, $_POST['phone_number']);
-
-
 
     $query = "INSERT INTO founditem(item_name,category_name,brand,primary_color,secondary_color,incident_date,incident_time,item_image,additional_info,location_type,province,district,sector,cell,village,item_current_location,first_name, last_name, email, phone_number) 
    VALUES('$item_name','$category_name','$brand','$primary_color','$secondary_color','$incident_date','$incident_time','$item_image','$additional_info','$location_type','$province','$district','$sector','$cell','$village','$item_current_location','$first_name', '$last_name', '$email', '$phone_number')";
@@ -68,8 +68,7 @@ if (isset($_POST['submit']) && isset($_FILES['item_image'])) {
             try {
                 $res = $s3->upload($s3_bucket, $newnm, file_get_contents($file_location));
             } catch (S3Exception $e) {
-                echo 'error uploading image';
-                // echo $e;
+                echo 'error';
             }
         } else {
             echo mysqli_error($conn);

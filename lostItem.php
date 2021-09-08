@@ -84,7 +84,7 @@ if (isset($_POST['submit']) && isset($_FILES['item_image'])) {
                 $res = $s3->upload($s3_bucket, $newnm, file_get_contents($file_location));
             } catch (S3Exception $e) {
                 echo 'error uploading image';
-                echo $e;
+                // echo $e;
             }
         } else {
             echo mysqli_error($conn);

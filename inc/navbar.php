@@ -22,7 +22,7 @@
   }
 
   .nav__cont:hover {
-    width: 280px;
+    width: 320px;
   }
 
   .nav {
@@ -35,13 +35,16 @@
   }
 
   .nav__items {
-    padding-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
   }
 
   .nav__items a {
     position: relative;
     display: block;
-    top: -35px;
+    top: -25px;
     padding-left: 35px;
     padding-right: 5px;
     transition: all .3s ease;
@@ -49,7 +52,6 @@
     margin-right: 10px;
     text-decoration: none;
     color: white;
-
     font-size: 1.35em;
 
   }
@@ -58,7 +60,6 @@
   .nav__items a:after {
     content: '';
     width: 100%;
-    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -68,6 +69,7 @@
     transition: all .5s ease;
     z-index: -10;
     color: #fff;
+    margin: 0;
   }
 
   .home a:after {
@@ -78,6 +80,7 @@
   .nav__items:hover a:after {
     opacity: 1;
     color: #fff;
+    margin: 0;
   }
 
   .nav__items svg,
@@ -144,7 +147,6 @@
     z-index: -10;
     color: #fff;
   }
-
 </style>
 <nav class="nav__cont">
   <ul class="nav">
@@ -155,26 +157,30 @@
 
     <li class="nav__items ">
       <i class="fas fa-plus-circle fa-lg"></i>
-      <a href="lostItem.php">Add Lost Item</a>
+      <a href="../lostItem.php">Add Lost Item</a>
     </li>
 
     <li class="nav__items ">
       <i class="fas fa-plus-circle fa-lg"></i>
-      <a href="foundItem.php">Add Found Item</a>
+      <a href="../foundItem.php">Add Found Item</a>
     </li>
 
     <li class="nav__items dropdown">
       <i class="fas fa-columns fa-lg"></i>
       <a href="#" class='dropbtn'>View Recent Posts</a>
       <div style="width: 100%;" class="dropdown-content">
-        <a style="background-color: rgb(34, 34, 102); color: #fff;" class="dropdown-item" href="index.php">&bull; View Lost Items</a>
-        <a style="background-color: rgb(34, 34, 102); color: #fff;" class="dropdown-item" href="viewFoundPosts.php">&bull; View Found Items</a>
+        <a style="background-color: rgb(34, 34, 102); color: #fff;" class="dropdown-item" href="../index.php">&bull; View Lost Items</a>
+        <a style="background-color: rgb(34, 34, 102); color: #fff;" class="dropdown-item" href="../viewFoundPosts.php">&bull; View Found Items</a>
       </div>
     </li>
 
     <li class="nav__items">
       <i class="far fa-user fa-lg"></i>
-      <a href="login.php">Login</a>
+      <a href="../login.php">Login</a>
+    </li>
+    <li class="nav__items">
+      <i class="fa fa-envelope-o" aria-hidden="true"></i>
+      <a href="../contact.php">Contact Us</a>
     </li>
   </ul>
 </nav>
