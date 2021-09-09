@@ -10,25 +10,20 @@ $item_id = $_GET['id'];
 
 if (isset($item_id)) {
     $item_id = mysqli_real_escape_string($conn, $item_id);
+
     $query_lost = "SELECT * from lost_item WHERE item_id = '$item_id'";
     $lost_result = mysqli_query($conn, $query_lost);
     $data = mysqli_fetch_assoc($lost_result);
 
-    if ($data['status'] == "Lost" || gettype($data) == 'NULL') {
 
-        $query_found = "SELECT * from founditem WHERE item_id = '$item_id'";
-        $found_result = mysqli_query($conn, $query_found);
-        $data = mysqli_fetch_assoc($found_result);
+    $query_found = "SELECT * from founditem WHERE item_id = '$item_id'";
+    $query_found = mysqli_query($conn, $query_found);
+    $data1 = mysqli_fetch_assoc($query_found);
 
-        mysqli_free_result($found_result);
-    } else {
-        mysqli_free_result($lost_result);
-        mysqli_close($conn);
+    if (!$data) {
+        $data = $data1;
     }
-} else {
-    // alert('no data');
 }
-
 ?>
 
 <head>
@@ -39,9 +34,9 @@ if (isset($item_id)) {
     <div class='row m-auto'>
 
         <br>
-        <h1 class="mb-6" style="text-align:left;">View details</h1>
+        <h1 class="mb-6" style="text-align:center;">View details</h1>
         <div class='col-md-6 m-auto mt-7'>
-            <img src="https://irihano.s3.us-east-2.amazonaws.com/<?php echo $data['item_image']; ?>" alt='image' style='width:280px; height:250px; border-radius: 10px;' class='card-img-top'>
+            <img src="https://irihano.s3.us-east-2.amazonaws.com/<?php echo $data['item_image']; ?>" alt='image' style='width:280px; height:250px; border-radius: 10px; margin-left: 27%;' class='card-img-top'>
         </div>
         <div></div>
         <div class='col-md-6'>

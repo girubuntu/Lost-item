@@ -5,11 +5,7 @@ require('../config/db.php');
 
 $lost_query = "SELECT * FROM lost_item ORDER BY created_at DESC";
 $found_query = "SELECT * FROM founditem ORDER by created_at DESC";
-$user_query = "SELECT * FROM userlogin ORDER by created_at DESC";
-//  $pending_query = "SELECT * FROM lost_item ORDER by created_at DESC WHERE verify='false'";
-//  $pending_query2 = "SELECT * FROM founditem ORDER by created_at DESC WHERE verify='false'";
-
-
+$user_query = "SELECT * FROM userlogin WHERE NOT username = 'admin' ORDER by created_at DESC";
 
 $lost_result = mysqli_query($conn, $lost_query);
 
@@ -68,87 +64,7 @@ if (isset($_POST['userSave'])) {
 
 <body class="hold-transition sidebar-mini layout-fixed">
   <div class="wrapper">
-
-    
-    <!-- /.navbar -->
-
-    <!-- Main Sidebar Container -->
-    <aside class="main-sidebar sidebar-dark-primary elevation-4">
-      <!-- Brand Logo -->
-      <a href="../index.php" class="brand-link">
-        <img src="../img/irihano.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-        <span class="brand-text font-weight-light">IRIHANO</span>
-      </a>
-
-      <!-- Sidebar -->
-      <div class="sidebar">
-        <!-- Sidebar user panel (optional) -->
-        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-          <div class="info d-flex">
-            <i class="fas fa-user w-auto"></i>
-            <div>
-              <a href="https://irihanolostandfound.herokuapp.com/login.php" class="d-block ml-3">LOG OUT</a>
-            </div>
-
-          </div>
-        </div>
-
-        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-          <div class="info">
-            <a href="all_lost_item.php" class="d-block">Lost Items</a>
-          </div>
-        </div>
-        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-          <div class="info">
-            <a href="all_found_item.php" class="d-block">Found Items</a>
-          </div>
-        </div>
-        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-          <div class="info">
-            <a href="#" class="d-block">Users</a>
-          </div>
-        </div>
-
-        <!-- Sidebar Menu -->
-        <nav class="mt-2">
-          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-            <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-            <li class="nav-item menu-open">
-              <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-tachometer-alt"></i>
-                <p>
-                  Pending Actions
-                  <i class="right fas fa-angle-left"></i>
-                </p>
-              </a>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="foundPending.php" class="nav-link">
-                    <i class="fas fa-arrow-circle-right"></i>
-                    <p>Found Item</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="lostPending.php" class="nav-link">
-                    <i class="fas fa-arrow-circle-right"></i>
-                    <p>Lost Item</p>
-                  </a>
-                </li>
-
-              </ul>
-            </li>
-
-
-          </ul>
-        </nav>
-        <!-- /.sidebar-menu -->
-      </div>
-      <!-- /.sidebar -->
-    </aside>
-
-    <!-- Content Wrapper. Contains page content -->
-    <!-- Content Wrapper. Contains page content -->
+    <?php include('../inc/navbar.php'); ?>
     <div class="content-wrapper">
 
       <div class="modal fade" id="addUserModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -261,7 +177,7 @@ if (isset($_POST['userSave'])) {
               <div class="card">
                 <div class="card-header">
                   <h3 class="card-title">ALL Users </h3>
-                  
+
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
@@ -274,7 +190,7 @@ if (isset($_POST['userSave'])) {
                     </thead>
                     <tbody>
                       <?php
-                      $query = "SELECT * FROM userlogin";
+                      $query = "SELECT * FROM userlogin where NOT username = 'admin'";
                       $data = mysqli_query($conn, $query);
 
                       if (mysqli_num_rows($data) > 0) {
@@ -285,7 +201,7 @@ if (isset($_POST['userSave'])) {
                             <td>
                               <button type="button" value="<?php echo $row['id']; ?>" class="btn btn-danger btn-sm deleteBtn">Delete</button>
                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                             
+
                             </td>
                           </tr>
                         <?php
@@ -293,7 +209,7 @@ if (isset($_POST['userSave'])) {
                       } else {
                         ?>
                         <tr>
-                          <td>No record found</td>
+                          <td>No records found</td>
                         </tr>
                       <?php
                       }
@@ -301,11 +217,11 @@ if (isset($_POST['userSave'])) {
 
 
                     </tbody>
-                    
+
                   </table>
                 </div>
                 <!-- /.card-body -->
-              
+
               </div>
               <!-- /.card -->
 
@@ -321,13 +237,6 @@ if (isset($_POST['userSave'])) {
       <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
-    <footer class="main-footer">
-      <strong>Copyright &copy; <a href="https://adminlte.io">IRIHANO</a>.</strong>
-      All rights reserved.
-      <div class="float-right d-none d-sm-inline-block">
-        <b>Version</b> 3.1.0
-      </div>
-    </footer>
 
     <!-- Control Sidebar -->
     <aside class="control-sidebar control-sidebar-dark">

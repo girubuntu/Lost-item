@@ -17,21 +17,26 @@ if (isset($_POST['submit'])) {
     if(!$user) {
         if(!preg_match($pattern, $password)){
             header("Location: https://irihanolostandfound.herokuapp.com/register.php?error= Password is weak");
+            // header("Location:http://localhost/register.php?error= Password is weak");
         } elseif($password != $password2) {
             header("Location: https://irihanolostandfound.herokuapp.com/register.php?error= Password do not match");
+            // header("Location:http://localhost/register.php?error= Password do not match");
         } elseif($user['username'] == $username){
             header("Location:https://irihanolostandfound.herokuapp.com/register.php?error=Username/email already exist");
+            // header("Location:http://localhost/register.php?error=Username/email already exist");
         } else {
             $query = "INSERT INTO userlogin (username, pass) VALUES ('$username', '$password')";
             mysqli_query($conn, $query);
             $_SESSION['username'] = $username;
             $_SESSION['success'] = "you are logged in";
             header("Location:https://irihanolostandfound.herokuapp.com/login.php");
+            // header("Location:http://localhost/login.php");
         }
         
     
     } else {
         header("Location:https://irihanolostandfound.herokuapp.com/register.php?error=Username/email already exist");
+        // header("Location:http://localhost/register.php?error=Username/email already exist");
     }
 
 }
@@ -79,7 +84,7 @@ ob_end_flush();
                         
                         <button type="submit" name="submit" class="btn btn-primary btn-block">Register</button>
                         
-                        <p class="mt-1 float-right">Already have an account!<a href="login.php"> login Here</a></p>
+                        <p class="mt-1 float-right">Already have an account!<a href="login.php"> Login Here</a></p>
                                               
                     </form>
                 </div>

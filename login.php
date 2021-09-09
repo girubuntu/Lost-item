@@ -24,9 +24,9 @@ if (isset($_POST['submit'])) {
             $password = "";
         }
     } else {
+        // header("Location:http://localhost/login.php?error= Please enter the correct Username/Email or Password");
         header("Location:https://irihanolostandfound.herokuapp.com/login.php?error= Please enter the correct Username/Email or Password");
     }
-
 }
 ob_end_flush();
 ?>
@@ -34,17 +34,20 @@ ob_end_flush();
     section {
         height: 70vh;
     }
+
     #img-login {
-      width: 90%;
-      height: 90%;
-      margin-top: 1rem;
+        width: 90%;
+        height: 90%;
+        margin-top: 1rem;
     }
+
     @media only screen and (max-width: 1000px) {
         #img-login {
             display: none;
         }
     }
 </style>
+
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/login.css">
@@ -61,39 +64,39 @@ ob_end_flush();
                 <div class="card-body">
                     <h1 class="card-title text-center">LOGIN</h1>
                     <div class="card-text">
-                    <?php 
-                        if(@$_GET['error'] == true){
+                        <?php
+                        if (@$_GET['error'] == true) {
 
-                    ?>
-                    <div class="alert-light text-danger text-center my-3">
-                        <?php echo $_GET['error']
-                                                
                         ?>
-                                            
-                    </div>
+                            <div class="alert-light text-danger text-center my-3">
+                                <?php echo $_GET['error']
+
+                                ?>
+
+                            </div>
                         <?php
                         }
                         ?>
-                                    
 
-                    <form method="POST" action="#">
-                        <div class="form-group">
-                            <label for="email">Username or Email</label>
-                            <input type="text" name="username" class="form-control form-control-sm" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="passord">Password</label>                            
-                            <input type="password" name="password" class="form-control form-control-sm" required>
-                        </div>
-                                        
-                        <button type="submit" name="submit" class="btn btn-primary btn-block">Login</button>
-                        <div class="signup">
-                            <p>Don't have an account?<a href="register.php">Register Here</a></p>
-                        </div>
-                                        
-                    </form>
+
+                        <form method="POST" action="#">
+                            <div class="form-group">
+                                <label for="email">Username or Email</label>
+                                <input type="text" name="username" class="form-control form-control-sm" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="passord">Password</label>
+                                <input type="password" name="password" class="form-control form-control-sm" required>
+                            </div>
+
+                            <button type="submit" name="submit" class="btn btn-primary btn-block">Login</button>
+                            <div class="signup">
+                                <p>Don't have an account?<a href="register.php"> Register Here</a></p>
+                            </div>
+
+                        </form>
+                    </div>
                 </div>
-            </div>               
 
             </div>
         </div>

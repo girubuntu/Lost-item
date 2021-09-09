@@ -82,7 +82,7 @@ mysqli_close($conn);
                                         Lost on <?php echo $post['incident_date']; ?> <br>
                                         Location: <?php echo $post['district']; ?> - <?php echo $post['sector']; ?>
                                     </div>
-                                    <div class="text-center my-4"> <a href="itemDetails.php?id=<?php echo $post['item_id'] ?> " class="btn">View Details</a> </div>
+                                    <div class="text-center my-4"> <a href='itemDetails.php?id=<?php echo $post['item_id'] ?>' class="btn">View Details</a> </div>
                                 </div>
                             </div>
                         </div>
@@ -120,7 +120,7 @@ mysqli_close($conn);
                                         Lost on <?php echo $post['incident_date']; ?> <br>
                                         Location: <?php echo $post['district']; ?> - <?php echo $post['sector']; ?>
                                     </div>
-                                    <div class="text-center my-4"> <a href='itemDetails.php?item_id=<?php echo " $post[item_id]"; ?> ' class="btn">View Details</a> </div>
+                                    <div class="text-center my-4"> <a href='itemDetails.php?id=<?php echo $post['item_id'] ?>' class="btn">View Details</a> </div>
                                 </div>
                             </div>
                         </div>
@@ -159,7 +159,7 @@ mysqli_close($conn);
                                         Lost on <?php echo $post['incident_date']; ?> <br>
                                         Location: <?php echo $post['district']; ?> - <?php echo $post['sector']; ?>
                                     </div>
-                                    <div class="text-center my-4"> <a href='itemDetails.php?item_id=<?php echo " $post[item_id]"; ?> ' class="btn">View Details</a> </div>
+                                    <div class="text-center my-4"> <a href='itemDetails.php?id=<?php echo $post['item_id'] ?>' class="btn">View Details</a> </div>
                                 </div>
                             </div>
                         </div>
@@ -197,7 +197,7 @@ mysqli_close($conn);
                                         Lost on <?php echo $post['incident_date']; ?> <br>
                                         Location: <?php echo $post['district']; ?> - <?php echo $post['sector']; ?>
                                     </div>
-                                    <div class="text-center my-4"> <a href='itemDetails.php?item_id=<?php echo " $post[item_id]"; ?> ' class="btn">View Details</a> </div>
+                                    <div class="text-center my-4"> <a href='itemDetails.php?id=<?php echo $post['item_id'] ?>' class="btn">View Details</a> </div>
                                 </div>
                             </div>
                         </div>
@@ -235,7 +235,7 @@ mysqli_close($conn);
                                         Lost on <?php echo $post['incident_date']; ?> <br>
                                         Location: <?php echo $post['district']; ?> - <?php echo $post['sector']; ?>
                                     </div>
-                                    <div class="text-center my-4"> <a href='itemDetails.php?item_id=<?php echo " $post[item_id]"; ?> ' class="btn">View Details</a> </div>
+                                    <div class="text-center my-4"> <a href='itemDetails.php?id=<?php echo $post['item_id'] ?>' class="btn">View Details</a> </div>
                                 </div>
                             </div>
                         </div>
@@ -273,7 +273,7 @@ mysqli_close($conn);
                                         Lost on <?php echo $post['incident_date']; ?> <br>
                                         Location: <?php echo $post['district']; ?> - <?php echo $post['sector']; ?>
                                     </div>
-                                    <div class="text-center my-4"> <a href='itemDetails.php?item_id=<?php echo " $post[item_id]"; ?> ' class="btn">View Details</a> </div>
+                                    <div class="text-center my-4"> <a href='itemDetails.php?id=<?php echo $post['item_id'] ?>' class="btn">View Details</a> </div>
                                 </div>
                             </div>
                         </div>
@@ -311,7 +311,7 @@ mysqli_close($conn);
                                         Lost on <?php echo $post['incident_date']; ?> <br>
                                         Location: <?php echo $post['district']; ?> - <?php echo $post['sector']; ?>
                                     </div>
-                                    <div class="text-center my-4"> <a href='itemDetails.php?item_id=<?php echo " $post[item_id]"; ?> ' class="btn">View Details</a> </div>
+                                    <div class="text-center my-4"> <a href='itemDetails.php?id=<?php echo $post['item_id'] ?>' class="btn">View Details</a> </div>
                                 </div>
                             </div>
                         </div>
@@ -349,7 +349,7 @@ mysqli_close($conn);
                                         Lost on <?php echo $post['incident_date']; ?> <br>
                                         Location: <?php echo $post['district']; ?> - <?php echo $post['sector']; ?>
                                     </div>
-                                    <div class="text-center my-4"> <a href='itemDetails.php?item_id=<?php echo " $post[item_id]"; ?> ' class="btn">View Details</a> </div>
+                                    <div class="text-center my-4"> <a href='itemDetails.php?id=<?php echo $post['item_id'] ?>' class="btn">View Details</a> </div>
                                 </div>
                             </div>
                         </div>
@@ -387,7 +387,7 @@ mysqli_close($conn);
                                         Lost on <?php echo $post['incident_date']; ?> <br>
                                         Location: <?php echo $post['district']; ?> - <?php echo $post['sector']; ?>
                                     </div>
-                                    <div class="text-center my-4"> <a href='itemDetails.php?item_id=<?php echo " $post[item_id]"; ?> ' class="btn">View Details</a> </div>
+                                    <div class="text-center my-4"> <a href='itemDetails.php?id=<?php echo $post['item_id'] ?>' class="btn">View Details</a> </div>
                                 </div>
                             </div>
                         </div>
@@ -426,7 +426,7 @@ mysqli_close($conn);
                                         Lost on <?php echo $post['incident_date']; ?> <br>
                                         Location: <?php echo $post['district']; ?> - <?php echo $post['sector']; ?>
                                     </div>
-                                    <div class="text-center my-4"> <a href='itemDetails.php?item_id=<?php echo " $post[item_id]"; ?> ' class="btn">View Details</a> </div>
+                                    <div class="text-center my-4"> <a href='itemDetails.php?id=<?php echo $post['item_id'] ?>' class="btn">View Details</a> </div>
                                 </div>
                             </div>
                         </div>

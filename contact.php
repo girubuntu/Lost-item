@@ -12,7 +12,7 @@ if (isset($_POST['submit'])) {
         $message = "Your contact information is received successfully.";
         $type = "success";
     }
-    echo "<span class='success'>" . 'We have received your message, ' . $name . "</span>";;
+    echo "<span class='success'>" . 'We have received your message, ' . $name . "</span>";
 }
 ?>
 
