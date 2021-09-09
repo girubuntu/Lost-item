@@ -8,8 +8,8 @@ require('vendor/autoload.php');
 use Aws\S3\S3Client;
 use Aws\S3\Exception\S3Exception;
 
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-$dotenv->load();
+// $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+// $dotenv->load();
 
 // $s3_key = $_ENV['AWS_KEY'];
 // $s3_secret = $_ENV['AWS_SECRET'];
