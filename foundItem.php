@@ -11,11 +11,11 @@ use Aws\S3\Exception\S3Exception;
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
-$s3_key = $_ENV['AWS_KEY'];
-$s3_secret = $_ENV['AWS_SECRET'];
+// $s3_key = $_ENV['AWS_KEY'];
+// $s3_secret = $_ENV['AWS_SECRET'];
 
-// $s3_key = getenv('AWS_KEY');
-// $s3_secret = getenv('AWS_SECRET');
+$s3_key = getenv('AWS_KEY');
+$s3_secret = getenv('AWS_SECRET');
 $s3_bucket = 'irihano';
 
 if (isset($_POST['submit']) && isset($_FILES['item_image'])) {
