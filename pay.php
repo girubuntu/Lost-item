@@ -45,7 +45,7 @@ if (isset($_POST['pay_card'])) {
         CURLOPT_CUSTOMREQUEST => 'POST',
         CURLOPT_POSTFIELDS => json_encode($request),
         CURLOPT_HTTPHEADER => array(
-            'Authorization: Bearer FLWSECK_TEST-bdc6045695d4fb00b746ffdac00d6b07-X',
+            'Authorization: Bearer FLWSECK-f567136b2f4ad68c1ff153336d218372-X',
             'Content-Type: application/json'
         )
     ));
@@ -109,7 +109,7 @@ if (isset($_POST['pay_card'])) {
         CURLOPT_CUSTOMREQUEST => 'POST',
         CURLOPT_POSTFIELDS => json_encode($request),
         CURLOPT_HTTPHEADER => array(
-            'Authorization: Bearer FLWSECK_TEST-e6d5ce4aa6175e74b58727735e9a4541-X',
+            'Authorization: Bearer FLWSECK-f567136b2f4ad68c1ff153336d218372-X',
             'Content-Type: application/json'
         )
     ));
