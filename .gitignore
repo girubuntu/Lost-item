@@ -1,2 +1,3 @@
 vendor/
 .env
+._.DS_Store
